@@ -5,7 +5,6 @@ import Link from "next/link";
 
 const FOOTER_NAV = [
     { label: "Home", href: "#hero" },
-    { label: "Kickstarter", href: "#kickstarter" },
     { label: "Wholesale", href: "#wholesale" },
     { label: "About", href: "#about" },
     { label: "Contact", href: "#contact" },

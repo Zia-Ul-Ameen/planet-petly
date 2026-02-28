@@ -45,15 +45,15 @@ export default function Navbar() {
     };
 
     const navBg = scrolled
-        ? "bg-primary/95 backdrop-blur-md shadow-lg border-b border-white/5"
-        : "bg-transparent";
+        ? "bg-primary/95 backdrop-blur-md shadow-lg border-white/5"
+        : "bg-transparent shadow-none border-transparent";
 
     const textColor = scrolled ? "text-secondary" : "text-black";
     const logoFilter = scrolled ? "brightness-0 invert" : "";
 
     return (
         <header
-            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out ${navBg}`}
+            className={`fixed top-0 left-0 right-0 z-50 border-b transition-all duration-300 ease-in-out ${navBg}`}
         >
             <div className="max-w-[1280px] mx-auto px-6 lg:px-10">
                 <div className="flex items-center justify-between h-20 lg:h-[88px]">
