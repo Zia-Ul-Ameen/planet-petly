@@ -1,10 +1,10 @@
 import { z } from "zod";
 
+// General Contact Schema — the single form on the site
 export const contactSchema = z.object({
-    email: z
-        .string()
-        .min(1, "Email address is required.")
-        .email("Please enter a valid email address."),
+    name: z.string().min(2, "Name is required"),
+    email: z.string().email("Valid email is required"),
+    message: z.string().min(10, "Message must be at least 10 characters"),
 });
 
 export type ContactFormData = z.infer<typeof contactSchema>;

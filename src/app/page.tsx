@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Overview from "@/components/Overview";
-import ProductSection from "@/components/ProductSection";
+import WholesaleSection from "@/components/WholesaleSection";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -12,7 +12,7 @@ export default function HomePage() {
       <Navbar />
       <Hero />
       <Overview />
-      <ProductSection />
+      <WholesaleSection />
       <About />
       <Contact />
       <Footer />

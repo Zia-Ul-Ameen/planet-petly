@@ -5,9 +5,10 @@ import Image from "next/image";
 import Link from "next/link";
 
 const NAV_LINKS = [
-    { label: "Overview", href: "#overview" },
-    { label: "Product", href: "#product" },
+    { label: "Home", href: "#hero" },
+    { label: "Wholesale", href: "#wholesale" },
     { label: "About", href: "#about" },
+    { label: "Contact", href: "#contact" },
 ] as const;
 
 export default function Navbar() {
@@ -23,121 +24,117 @@ export default function Navbar() {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
-    // Close mobile menu on nav link click
-    const handleNavClick = () => setMenuOpen(false);
+    const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+        e.preventDefault();
+        const id = href.replace("#", "");
+        const element = document.getElementById(id);
+        if (element) {
+            const offset = 80; // Approximate navbar height
+            const bodyRect = document.body.getBoundingClientRect().top;
+            const elementRect = element.getBoundingClientRect().top;
+            const elementPosition = elementRect - bodyRect;
+            const offsetPosition = elementPosition - offset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: "smooth"
+            });
+        }
+        setMenuOpen(false);
+        window.history.pushState(null, "", href);
+    };
 
     const navBg = scrolled
-        ? "bg-primary/95 backdrop-blur-md shadow-lg border-b border-white/10"
+        ? "bg-primary/95 backdrop-blur-md shadow-lg border-b border-white/5"
         : "bg-transparent";
 
-    const textColor = scrolled ? "text-white" : "text-white";
-    const logoFilter = scrolled ? "brightness-0 invert" : "brightness-0 invert";
+    const textColor = scrolled ? "text-secondary" : "text-black";
+    const logoFilter = scrolled ? "brightness-0 invert" : "";
 
     return (
         <header
             className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out ${navBg}`}
-            role="banner"
         >
             <div className="max-w-[1280px] mx-auto px-6 lg:px-10">
                 <div className="flex items-center justify-between h-20 lg:h-[88px]">
 
                     {/* Left: Logo */}
                     <Link
-                        href="/"
-                        aria-label="Planet Pelty Home"
-                        className="flex-shrink-0 flex items-center gap-2"
+                        href="#hero"
+                        onClick={(e) => scrollToSection(e, "#hero")}
+                        className="flex-shrink-0"
                     >
                         <Image
                             src="/logo.svg"
-                            alt="Planet Pelty"
+                            alt="ADRARECOM Logo"
                             width={170}
                             height={44}
                             priority
-                            className={`hidden md:block transition-all duration-300 ${logoFilter}`}
-                        />
-                        <Image
-                            src="/logo.svg"
-                            alt="Planet Pelty"
-                            width={130}
-                            height={34}
-                            priority
-                            className={`md:hidden transition-all duration-300 ${logoFilter}`}
+                            className={`transition-all duration-300 ${logoFilter}`}
                         />
                     </Link>
 
                     {/* Center: Desktop Navigation Links */}
-                    <nav
-                        className="hidden md:flex items-center gap-1"
-                        aria-label="Primary navigation"
-                    >
+                    <nav className="hidden md:flex items-center gap-1" aria-label="Primary navigation">
                         {NAV_LINKS.map((link) => (
                             <Link
                                 key={link.label}
                                 href={link.href}
-                                className={`relative px-4 py-2 text-sm font-medium tracking-wide rounded-full transition-all duration-200
-                  ${textColor} hover:opacity-100 opacity-80 hover:bg-white/10`}
+                                onClick={(e) => scrollToSection(e, link.href)}
+                                className={`px-4 py-2 text-sm font-medium tracking-wide rounded-full transition-all duration-200 ${textColor} hover:opacity-100 opacity-80 hover:bg-black/5`}
                             >
                                 {link.label}
                             </Link>
                         ))}
                     </nav>
 
-                    {/* Right: CTA + Mobile burger */}
-                    <div className="flex items-center gap-3">
+                    {/* Right: CTA */}
+                    <div className="hidden md:block">
                         <Link
-                            href="#waitlist"
-                            className="hidden md:inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold tracking-wide rounded-full border-2 border-white text-white hover:bg-white hover:text-primary transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary"
-                            aria-label="Join Planet Pelty waitlist"
+                            href="#contact"
+                            onClick={(e) => scrollToSection(e, "#contact")}
+                            className={`px-5 py-2.5 text-sm font-semibold tracking-wide rounded-full border-2 transition-all duration-300
+                ${scrolled
+                                    ? "border-secondary text-secondary hover:bg-secondary hover:text-primary"
+                                    : "border-primary text-primary hover:bg-primary hover:text-white"
+                                }`}
                         >
-                            Join Waitlist
+                            Notify Me
                         </Link>
-
-                        {/* Mobile hamburger */}
-                        <button
-                            className={`md:hidden flex flex-col gap-1.5 p-2 rounded-md ${textColor} hover:opacity-80 focus:outline-none focus:ring-2 focus:ring-white`}
-                            aria-label={menuOpen ? "Close menu" : "Open menu"}
-                            aria-expanded={menuOpen}
-                            onClick={() => setMenuOpen((prev) => !prev)}
-                        >
-                            <span
-                                className={`block w-5 h-0.5 bg-current transition-all duration-200 ${menuOpen ? "rotate-45 translate-y-2" : ""}`}
-                            />
-                            <span
-                                className={`block w-5 h-0.5 bg-current transition-all duration-200 ${menuOpen ? "opacity-0" : ""}`}
-                            />
-                            <span
-                                className={`block w-5 h-0.5 bg-current transition-all duration-200 ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`}
-                            />
-                        </button>
                     </div>
+
+                    {/* Mobile hamburger */}
+                    <button
+                        className={`md:hidden flex flex-col gap-1.5 p-2 rounded-md ${textColor} hover:opacity-80 focus:outline-none`}
+                        onClick={() => setMenuOpen((prev) => !prev)}
+                    >
+                        <span className={`block w-5 h-0.5 bg-current transition-all ${menuOpen ? "rotate-45 translate-y-2" : ""}`} />
+                        <span className={`block w-5 h-0.5 bg-current transition-all ${menuOpen ? "opacity-0" : ""}`} />
+                        <span className={`block w-5 h-0.5 bg-current transition-all ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`} />
+                    </button>
                 </div>
             </div>
 
-            {/* Mobile dropdown menu */}
+            {/* Mobile dropdown */}
             {menuOpen && (
-                <div className="md:hidden bg-primary/98 backdrop-blur-sm border-t border-white/10 px-6 pb-6 pt-4">
-                    <nav aria-label="Mobile navigation">
-                        <ul className="flex flex-col gap-1" role="list">
+                <div className={`md:hidden border-t px-6 pb-6 pt-4 shadow-xl transition-colors duration-300 ${scrolled ? "bg-primary border-white/5" : "bg-white border-black/5"
+                    }`}>
+                    <nav>
+                        <ul className="flex flex-col gap-1">
                             {NAV_LINKS.map((link) => (
                                 <li key={link.label}>
                                     <Link
                                         href={link.href}
-                                        onClick={handleNavClick}
-                                        className="block text-white/80 hover:text-white text-base font-medium py-3 border-b border-white/10 last:border-0 transition-colors"
+                                        onClick={(e) => scrollToSection(e, link.href)}
+                                        className={`block text-base font-medium py-3 border-b last:border-0 transition-colors ${scrolled
+                                            ? "text-secondary hover:text-white border-white/5"
+                                            : "text-primary/80 hover:text-primary border-black/5"
+                                            }`}
                                     >
                                         {link.label}
                                     </Link>
                                 </li>
                             ))}
-                            <li className="pt-4">
-                                <Link
-                                    href="#waitlist"
-                                    onClick={handleNavClick}
-                                    className="block text-center w-full px-5 py-3 text-sm font-semibold rounded-full border-2 border-white text-white hover:bg-white hover:text-primary transition-all duration-300"
-                                >
-                                    Join Waitlist
-                                </Link>
-                            </li>
                         </ul>
                     </nav>
                 </div>
