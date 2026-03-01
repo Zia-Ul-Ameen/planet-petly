@@ -12,12 +12,15 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   title: "Planet Pelty | Eco-Friendly Pet Products",
   description:
-    "Planet Pelty creates sustainable, eco-friendly pet products for conscious pet owners. Explore our compostable poop bags and more.",
-  keywords: ["eco-friendly pet products", "compostable poop bags", "sustainable pets", "planet pelty"],
+    "Never search for waste bags again. Our poop bag holder with included rolls and built-in dispenser keeps bags easily accessible on every walk. Lightweight, durable, and easy to attach to any leash for clean, hassle-free pet outings.",
+  keywords: ["eco-friendly pet products", "compostable poop bags", "sustainable pets", "planet pelty", "leak-proof poop bag holder"],
+  icons: {
+    icon: "/favicon.svg",
+  },
   openGraph: {
-    title: "Planet Pelty | Eco-Friendly Pet Products",
+    title: "Poop Bag Holder with Rolls & Dispenser – Portable, Leak-Proof Dog Waste Bag Holder",
     description:
-      "Sustainable, eco-friendly pet products for conscious pet owners.",
+      "Never search for waste bags again. Our poop bag holder with included rolls and built-in dispenser keeps bags easily accessible on every walk.",
     type: "website",
   },
 };
