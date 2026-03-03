@@ -22,6 +22,7 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: "/favicon.svg",
+    apple: "/favicon.svg",
   },
   openGraph: {
     title: "Planet Petly | Poop Bag Holder with Rolls & Dispenser",
