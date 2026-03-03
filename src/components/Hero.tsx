@@ -7,6 +7,7 @@ export default function Hero() {
             className="relative w-full overflow-hidden"
             aria-label="Hero section"
         >
+            <h1 className="sr-only">Planet Petly - Eco-Friendly Poop Bag Holders & Sustainable Pet Products</h1>
             <div className="w-full relative h-[60vh] md:h-[80vh] flex items-center justify-center overflow-hidden">
                 <video
                     src="/heroVideo.mp4"
