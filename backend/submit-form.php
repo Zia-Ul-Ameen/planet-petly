@@ -51,8 +51,8 @@ $name = isset($data['name']) ? trim($data['name']) : '';
 $email = isset($data['email']) ? trim($data['email']) : '';
 $message = isset($data['message']) ? trim($data['message']) : '';
 
-if (empty($name) || empty($email) || empty($message)) {
-    echo json_encode(["status" => "error", "message" => "All fields are required"]);
+if (empty($name) || empty($email)) {
+    echo json_encode(["status" => "error", "message" => "Name and Email are required"]);
     exit();
 }
 

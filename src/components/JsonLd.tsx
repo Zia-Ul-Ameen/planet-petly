@@ -5,12 +5,21 @@ export default function JsonLd() {
         "@context": "https://schema.org",
         "@type": "Organization",
         "name": "Planet Petly",
+        "alternateName": "Petly",
         "url": "https://planetpetly.com",
         "logo": "https://planetpetly.com/logo.svg",
+        "image": "https://planetpetly.com/overview-1.jpeg",
         "sameAs": [
-            "https://www.instagram.com/planetpetly"
+            "https://www.instagram.com/planetpetly",
+            "https://www.facebook.com/profile.php?id=61583994294451",
+            "https://www.tiktok.com/@planetpetly.com?_r=1&_t=ZS-94UFqTFHEAS"
         ],
-        "description": "Eco-friendly pet products including compostable poop bags and leak-proof holders."
+        "description": "Planet Petly is a premium pet brand dedicated to high-performance, eco-friendly pet essentials. We specialize in sustainable waste bags, holders, and innovative pet care solutions.",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "customercare@adrarecom.com",
+            "contactType": "customer support"
+        }
     };
 
     const productData = {
