@@ -13,21 +13,29 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://planetpetly.com"),
-  title: "Planet Petly | Eco-Friendly Pet Products",
+  title: "Dog Poop Bag Holder Tray & Dispenser | 150 Eco Bags",
   description:
-    "Never search for waste bags again. Our poop bag holder with included rolls and built-in dispenser keeps bags easily accessible on every walk. Lightweight, durable, and easy to attach to any leash for clean, hassle-free pet outings.",
-  keywords: ["eco-friendly pet products", "compostable poop bags", "sustainable pets", "planet petly", "leak-proof poop bag holder"],
+    "Never search for poop bags again. Organized holder tray with dispenser and 150 compostable bags for easy, mess-free dog walks.",
+  keywords: [
+    "eco-friendly pet products",
+    "compostable poop bags",
+    "sustainable pet care",
+    "planet petly",
+    "leak-proof poop bag holder",
+    "biodegradable pet waste bags",
+    "premium pet accessories"
+  ],
   alternates: {
     canonical: "/",
   },
   icons: {
-    icon: "/favicon.svg",
-    apple: "/favicon.svg",
+    icon: "/favicon.svg?v=2",
+    apple: "/favicon.svg?v=2",
   },
   openGraph: {
-    title: "Planet Petly | Poop Bag Holder with Rolls & Dispenser",
+    title: "Dog Poop Bag Holder Tray & Dispenser | 150 Eco Bags",
     description:
-      "Never search for waste bags again. Our poop bag holder with included rolls and built-in dispenser keeps bags easily accessible on every walk.",
+      "Never search for poop bags again. Organized holder tray with dispenser and 150 compostable bags for easy, mess-free dog walks.",
     url: "https://planetpetly.com",
     siteName: "Planet Petly",
     locale: "en_US",
@@ -37,14 +45,14 @@ export const metadata: Metadata = {
         url: "/overview-1.jpeg",
         width: 1200,
         height: 630,
-        alt: "Planet Petly - Eco-Friendly Pet Products",
+        alt: "Planet Petly - Premium Sustainable Pet Products",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Planet Petly | Eco-Friendly Pet Products",
-    description: "Never search for waste bags again. Lightweight, durable, and sustainable pet essentials.",
+    title: "Dog Poop Bag Holder Tray & Dispenser | 150 Eco Bags",
+    description: "Never search for poop bags again. Organized holder tray with dispenser and 150 compostable bags for easy, mess-free dog walks.",
     images: ["/overview-1.jpeg"],
   },
   robots: {

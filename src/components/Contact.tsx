@@ -42,73 +42,77 @@ export default function Contact() {
     };
 
     return (
-        <section id="contact" className="py-24 bg-primary px-6 overflow-hidden">
-            <div className="max-w-[1280px] mx-auto">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:items-start">
+        <section id="contact" className="relative pb-10 px-6 z-20 pt-16 overflow-visible bg-white">
+            <div className="max-w-6xl mx-auto -mb-32 md:-mb-48 lg:-mb-56 relative z-30">
+                <div className="bg-white rounded-[44px] p-8 lg:p-14 shadow-[0_32px_80px_-20px_rgba(0,0,0,0.15)] border border-gray-100">
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
 
-                    <div className="text-white">
-                        <span className="inline-block px-4 py-1 rounded-full bg-white/10 text-secondary text-xs font-bold tracking-widest uppercase mb-6">Contact Us</span>
-                        <h2 className="text-3xl sm:text-5xl font-semibold leading-tight mb-8 font-outfit">
-                            Let&apos;s Connect.
-                        </h2>
-
-                        <div className="space-y-10">
+                        {/* Info Side */}
+                        <div className="lg:col-span-5 flex flex-col gap-8">
                             <div>
-                                <h4 className="text-xs font-bold tracking-widest uppercase text-white/40 mb-3">Company</h4>
-                                <p className="text-2xl font-semibold">ADRARECOM LLC</p>
+                                <span className="inline-block px-4 py-1.5 rounded-full bg-[#2a7dc9]/5 text-[#2a7dc9] text-xs font-black tracking-widest uppercase mb-6 border border-[#2a7dc9]/10">
+                                    Contact Us
+                                </span>
+                                <h2 className="text-4xl md:text-5xl font-black text-[#1a3a2a] leading-tight font-outfit uppercase tracking-tighter mb-4">
+                                    Let&apos;s Start A <br />
+                                    <span className="text-[#2a7dc9]">Conversation.</span>
+                                </h2>
+                                <p className="text-gray-500 text-lg">
+                                    Have questions about our products or mission? We&apos;re here to help you and your pet. <br />
+                                    <span className="text-[#2a7dc9] font-medium">Wholesale opportunities also available.</span>
+                                </p>
                             </div>
 
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                                <div>
-                                    <h4 className="text-xs font-bold tracking-widest uppercase text-white/40 mb-3">Customer Support</h4>
-                                    <a href="mailto:customercare@adrarecom.com" className="text-lg hover:text-secondary transition-colors underline underline-offset-8 decoration-white/20">customercare@adrarecom.com</a>
-                                </div>
-                                <div>
-                                    <h4 className="text-xs font-bold tracking-widest uppercase text-white/40 mb-3">Business &amp; Wholesale</h4>
-                                    <a href="mailto:admin@adrarecom.com" className="text-lg hover:text-secondary transition-colors underline underline-offset-8 decoration-white/20">admin@adrarecom.com</a>
-                                </div>
+                            <div className="flex flex-col gap-6">
+                                <a href="mailto:customercare@adrarecom.com" className="flex items-center gap-4 group cursor-pointer">
+                                    <div className="w-12 h-12 rounded-2xl bg-gray-50 flex items-center justify-center text-[#2a7dc9] group-hover:bg-[#2a7dc9] group-hover:text-white transition-all duration-300">
+                                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                                    </div>
+                                    <div className="flex flex-col">
+                                        <span className="text-xs font-bold text-gray-400 uppercase tracking-widest">Email Us</span>
+                                        <span className="font-medium text-[#1a3a2a] group-hover:text-[#2a7dc9] transition-colors duration-300">customercare@adrarecom.com</span>
+                                    </div>
+                                </a>
                             </div>
                         </div>
-                    </div>
 
-                    <div className="bg-white rounded-[44px] p-8 lg:p-12">
-                        <h3 className="text-2xl font-bold text-primary mb-2 font-outfit">Send a Message</h3>
-                        <p className="text-primary/50 text-sm mb-8">We look forward to hearing from you.</p>
-
-                        {isSubmitSuccessful ? (
-                            <div className="py-12 text-center text-primary font-bold bg-primary/5 rounded-3xl border border-primary/10">
-                                ✔️ Message sent. We will get back to you soon.
-                            </div>
-                        ) : (
-                            <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
-                                {apiError && (
-                                    <div className="p-4 text-sm text-red-500 bg-red-50 rounded-2xl border border-red-100 mb-4">
-                                        ❌ {apiError}
-                                    </div>
-                                )}
-                                <div className="grid grid-cols-1 gap-4">
-                                    <div className="space-y-1">
-                                        <input {...register("name")} placeholder="Name" className="w-full px-6 py-4 rounded-full bg-primary/5 border border-primary/10 text-primary placeholder:text-primary/30 focus:outline-none focus:ring-2 focus:ring-primary text-base" />
-                                        {errors.name && <p className="text-red-500 text-sm px-4">{errors.name.message}</p>}
-                                    </div>
-                                    <div className="space-y-1">
-                                        <input {...register("email")} placeholder="Email" className="w-full px-6 py-4 rounded-full bg-primary/5 border border-primary/10 text-primary placeholder:text-primary/30 focus:outline-none focus:ring-2 focus:ring-primary text-base" />
-                                        {errors.email && <p className="text-red-500 text-sm px-4">{errors.email.message}</p>}
-                                    </div>
+                        {/* Form Side */}
+                        <div className="lg:col-span-7">
+                            {isSubmitSuccessful ? (
+                                <div className="py-12 text-center text-[#2a7dc9] font-black bg-[#2a7dc9]/5 rounded-3xl border border-[#2a7dc9]/10 uppercase font-outfit tracking-widest">
+                                    ✔️ Message sent. Stay paws-itive!
                                 </div>
-                                <div className="space-y-1">
-                                    <textarea {...register("message")} placeholder="Message" rows={4} className="w-full px-6 py-4 rounded-3xl bg-primary/5 border border-primary/10 text-primary placeholder:text-primary/30 focus:outline-none focus:ring-2 focus:ring-primary text-base resize-none" />
-                                    {errors.message && <p className="text-red-500 text-sm px-4">{errors.message.message}</p>}
-                                </div>
-                                <button
-                                    type="submit"
-                                    disabled={isSubmitting}
-                                    className="w-full py-4 bg-primary text-white font-bold rounded-full hover:bg-black transition-all shadow-xl text-sm tracking-widest uppercase mt-4"
-                                >
-                                    {isSubmitting ? "Sending..." : "Submit Message"}
-                                </button>
-                            </form>
-                        )}
+                            ) : (
+                                <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+                                    {apiError && (
+                                        <div className="p-4 text-sm text-red-500 bg-red-50 rounded-2xl border border-red-100 mb-4">
+                                            ❌ {apiError}
+                                        </div>
+                                    )}
+                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                        <div className="space-y-1">
+                                            <input {...register("name")} placeholder="Full Name" className="w-full px-6 py-4 rounded-2xl bg-gray-50 border-transparent focus:bg-white focus:border-[#2a7dc9] focus:ring-0 transition-all text-gray-800 placeholder:text-gray-400 font-medium" />
+                                            {errors.name && <p className="text-red-500 text-xs px-2">{errors.name.message}</p>}
+                                        </div>
+                                        <div className="space-y-1">
+                                            <input {...register("email")} placeholder="Email Address" className="w-full px-6 py-4 rounded-2xl bg-gray-50 border-transparent focus:bg-white focus:border-[#2a7dc9] focus:ring-0 transition-all text-gray-800 placeholder:text-gray-400 font-medium" />
+                                            {errors.email && <p className="text-red-500 text-xs px-2">{errors.email.message}</p>}
+                                        </div>
+                                    </div>
+                                    <div className="space-y-1">
+                                        <textarea {...register("message")} placeholder="How can we help?" rows={3} className="w-full px-6 py-4 rounded-2xl bg-gray-50 border-transparent focus:bg-white focus:border-[#2a7dc9] focus:ring-0 transition-all text-gray-800 placeholder:text-gray-400 font-medium resize-none" />
+                                        {errors.message && <p className="text-red-500 text-xs px-2">{errors.message.message}</p>}
+                                    </div>
+                                    <button
+                                        type="submit"
+                                        disabled={isSubmitting}
+                                        className="w-full py-5 bg-[#2a7dc9] text-white font-black rounded-3xl hover:bg-[#2176c1] hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 shadow-xl shadow-blue-500/20 text-xs tracking-[0.2em] uppercase mt-2 cursor-pointer"
+                                    >
+                                        {isSubmitting ? "Sending..." : "Submit Message"}
+                                    </button>
+                                </form>
+                            )}
+                        </div>
                     </div>
                 </div>
             </div>

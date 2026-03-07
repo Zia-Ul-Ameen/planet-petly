@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import BackgroundDecoration from "./FloatingDecorations";
 
 const OVERVIEW_ITEMS = [
     {
@@ -21,47 +22,59 @@ const OVERVIEW_ITEMS = [
     },
 ] as const;
 
-function OverviewCard({
-    src,
-    alt,
-}: (typeof OVERVIEW_ITEMS)[number]) {
-    return (
-        <article
-            className="group relative overflow-hidden rounded-xl cursor-default"
-            aria-label={alt}
-        >
-            <div className="aspect-[16/12] w-full overflow-hidden rounded-xl">
-                <Image
-                    src={src}
-                    alt={alt}
-                    width={960}
-                    height={720}
-                    className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
-                />
-            </div>
-        </article>
-    );
-}
+
 
 export default function Overview() {
     return (
         <section
             id="overview"
-            className="pb-24 pt-16 px-6 bg-white"
+            className="relative pb-24 pt-20 px-6 bg-white overflow-hidden"
             aria-label="Features overview"
         >
-            <div className="max-w-[1280px] mx-auto">
-                <div className="text-center mb-12">
-                    <span className="inline-block px-4 py-1.5 rounded-full bg-primary/5 text-primary text-xs font-bold tracking-widest uppercase mb-3">
-                        Designed for Convenience                    </span>
-                    <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-primary font-outfit">
-                        Built for Everyday Life.
+            {/* Background Decorations */}
+            <BackgroundDecoration type="paw" className="top-10 left-[5%] w-32 h-32 rotate-[-15deg]" />
+            <BackgroundDecoration type="leaf" className="bottom-20 right-[2%] w-40 h-40 rotate-[15deg]" />
+            <BackgroundDecoration type="paw" className="top-1/2 right-[10%] w-24 h-24 rotate-[45deg]" />
+
+            <div className="max-w-7xl mx-auto relative z-10">
+                <div className="mb-16">
+                    <span className="inline-block px-4 py-1.5 rounded-full bg-[#2a7dc9]/5 text-[#2a7dc9] text-[10px] font-black tracking-widest uppercase mb-6 border border-[#2a7dc9]/10">
+                        Designed for Convenience
+                    </span>
+                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-[#1a3a2a] leading-[1.1] font-outfit uppercase tracking-tighter mb-8">
+                        Built for <br />
+                        <span className="text-[#2a7dc9]">Everyday Life.</span>
                     </h2>
+
+                    {/* Dashed Separator */}
+                    <div className="w-full h-px border-t border-dashed border-gray-200 mb-4" />
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 lg:gap-10">
-                    {OVERVIEW_ITEMS.map((item) => (
-                        <OverviewCard key={item.src} {...item} />
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 lg:gap-12">
+                    {OVERVIEW_ITEMS.map((item, index) => (
+                        <article
+                            key={item.src}
+                            className="group relative overflow-hidden rounded-[32px] cursor-default bg-gray-50"
+                            aria-label={item.alt}
+                        >
+                            <div className="aspect-[16/11] w-full overflow-hidden">
+                                <Image
+                                    src={item.src}
+                                    alt={item.alt}
+                                    width={960}
+                                    height={720}
+                                    className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
+                                />
+                            </div>
+
+                            {/* Overlay Label */}
+                            <div className="absolute bottom-6 left-6 right-6">
+                                <div className="bg-white/90 backdrop-blur-md p-5 rounded-2xl shadow-xl transform transition-all duration-500 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 border border-white/20">
+                                    <span className="text-[10px] font-black uppercase tracking-[0.2em] text-[#2a7dc9] block mb-1">Feature 0{index + 1}</span>
+                                    <p className="font-bold text-[#1a3a2a] text-sm leading-tight uppercase font-outfit">{item.alt}</p>
+                                </div>
+                            </div>
+                        </article>
                     ))}
                 </div>
             </div>
