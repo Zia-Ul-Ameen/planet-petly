@@ -13,9 +13,9 @@ export default function About() {
                     {/* Left: Content Card */}
                     <div className="flex flex-col gap-6">
                         <div className="flex flex-col gap-3">
-                            <h2 className="text-4xl mb-4 sm:text-5xl font-black leading-[1] font-outfit text-white uppercase tracking-tighter">
+                            <h2 className="text-4xl mb-4 sm:text-5xl font-black leading-[1] font-outfit text-white uppercase tracking-normal">
                                 THE STORY BEHIND <br />
-                                <span className="text-yellow-400 underline decoration-white/20 underline-offset-8">PLANET PETLY</span>
+                                <span className="text-yellow-400 underline decoration-white/20 underline-offset-8 tracking-tighter">PLANET PETLY</span>
                             </h2>
 
                             <div className="space-y-3.5 text-white text-base sm:text-[17px] leading-snug max-w-2xl font-medium">

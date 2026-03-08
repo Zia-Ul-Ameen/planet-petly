@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/overview-1.jpeg",
+        url: "/meta-share.png",
         width: 1200,
         height: 630,
         alt: "Planet Petly - Premium Sustainable Pet Products",
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Dog Poop Bag Holder Tray & Dispenser | 150 Eco Bags",
     description: "Never search for poop bags again. Organized holder tray with dispenser and 150 compostable bags for easy, mess-free dog walks.",
-    images: ["/overview-1.jpeg"],
+    images: ["/meta-share.png"],
   },
   robots: {
     index: true,
