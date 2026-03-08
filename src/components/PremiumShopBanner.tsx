@@ -24,7 +24,7 @@ export default function PremiumShopBanner() {
             {/* Content Area */}
             <div className="max-w-5xl mx-auto px-6 text-center relative z-20">
                 <h2 className="text-xl md:text-3xl lg:text-4xl font-black text-[#1a3a2a] leading-tight md:leading-snug tracking-tight font-outfit uppercase">
-                    Shop Premium Food, Grooming, Health & Accessories for Dogs, Cats, and More All in One Place.
+                    PLANET-FRIENDLY DOG WALK ESSENTIALS — BIODEGRADABLE WASTE BAGS AND CONVENIENT DISPENSERS FOR RESPONSIBLE PET OWNERS.
                 </h2>
             </div>
 

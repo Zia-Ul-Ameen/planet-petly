@@ -92,7 +92,7 @@ export default function Navbar() {
                                 width={180}
                                 height={40}
                                 priority
-                                className="brightness-0 invert"
+                                className="brightness-0 invert w-[140px] md:w-[180px] h-auto"
                             />
                         </Link>
 

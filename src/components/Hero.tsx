@@ -4,7 +4,7 @@ export default function Hero() {
     return (
         <section
             id="hero"
-            className="relative w-full h-[50vh] md:h-[80vh] mt-[74px] overflow-hidden flex flex-col"
+            className="relative w-full h-[60vh] md:h-auto md:aspect-[16/9] mt-[74px] overflow-hidden flex flex-col"
             aria-label="Hero section"
         >
             {/* Screen-reader heading */}

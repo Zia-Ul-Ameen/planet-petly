@@ -21,9 +21,9 @@ export default function HomePage() {
       <ProductComingSoon />
       <PremiumShopBanner />
       <FeatureHighlight />
-      <Overview />
+      {/* <Overview /> */}
       <About />
-      <Reviews />
+      {/* <Reviews /> */}
       <FAQ />
       <Contact />
       <Footer />
