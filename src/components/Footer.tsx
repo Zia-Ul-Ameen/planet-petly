@@ -34,10 +34,10 @@ export default function Footer() {
                     </div>
 
                     {/* Legal Links: Stacks on mobile, floats on desktop */}
-                    <div className="flex flex-col sm:flex-row items-center gap-6 md:absolute md:bottom-2 md:right-0">
+                    {/* <div className="flex flex-col sm:flex-row items-center gap-6 md:absolute md:bottom-2 md:right-0">
                         <Link href="/privacy" className="text-xs font-bold uppercase tracking-widest text-white/50 hover:text-white transition-colors">Privacy Policy</Link>
                         <Link href="/terms" className="text-xs font-bold uppercase tracking-widest text-white/50 hover:text-white transition-colors">Terms & Conditions</Link>
-                    </div>
+                    </div> */}
                 </div>
 
                 {/* Dashed Separator */}
@@ -106,7 +106,7 @@ export default function Footer() {
                 {/* Bottom Legal */}
                 <div className="mt-18 pt-10 pb-2 border-t border-white/10 text-center md:text-left">
                     <p className="text-white/30 text-xs font-bold uppercase tracking-[0.2em]">
-                        &copy; 2024 Planet Petly. All Rights Reserved. Crafted with love for pets.
+                        &copy; 2025 Planet Petly. All Rights Reserved. Crafted with love for pets.
                     </p>
                 </div>
             </div>
