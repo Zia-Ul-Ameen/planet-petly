@@ -81,8 +81,8 @@
             "NO MARKETING EMAILS"
         ],
         "badge": "Designed for Convenience",
-        "title_start": "BUILT FOR",
-        "title_highlight": "EVERYDAY LIFE.",
+        "title_start": "Built For",
+        "title_highlight": "Everyday Life.",
         "description": "Make your dog walks cleaner with biodegradabe poop bags and convenient dispensers.",
         "features": [
             {
@@ -95,6 +95,10 @@
             }
         ]
     },
+    "overview": {
+        "title_start": "Built for",
+        "title_highlight": "Everyday Life."
+    },
     "branding_banner": {
         "sub_title": "Care Smarter. Love Deeper.",
         "title_start": "with",
@@ -104,7 +108,7 @@
         "text": "PLANET-FRIENDLY DOG WALK ESSENTIALS — BIODEGRADABLE WASTE BAGS AND CONVENIENT DISPENSERS FOR RESPONSIBLE PET OWNERS."
     },
     "products": {
-        "title": "Explore our",
+        "title_start": "Explore Our",
         "title_highlight": "Products",
         "description": "Explore our upcoming products to find high-quality, innovative solutions designed to meet your pet's needs.",
         "badge": "Coming Soon",
@@ -121,38 +125,62 @@
     },
     "reviews": {
         "badge": "Early Supporters Speaking",
-        "title_start": "Dog Owners Are",
+        "title_start": "Pet Owners Are",
         "title_highlight": "Already Talking",
         "description": "Real messages from pet owners who discovered Planet Petly before launch.",
         "description_italic": "They can't wait.",
         "supporter": "Early Supporter",
-        "cta_title": "Join the waiting list ✨",
+        "cta_title": "Join The Waiting List ✨",
         "cta_description": "Be the first to know when Planet Petly launches.",
         "cta_btn": "Notify Me When it Launches 🚀",
         "items": [
             {
+                "name": "rudy.booboo",
+                "message": "Love this idea! Would be happy to learn more 😊"
+            },
+            {
+                "name": "Simba",
+                "message": "Wow that's nice of you and good ❤️ ... I wish you good luck ❤️"
+            },
+            {
+                "name": "beandourocane",
+                "message": "Hi 🐶🐾 very nice your project!! ... Yes it seems to be really useful 🐶🐾"
+            },
+            {
+                "name": "groza",
+                "message": "Hi, I looked at your work and I really liked your work. As a dog owner, I can say it's very convenient."
+            },
+            {
                 "name": "Trent",
-                "message": "Absolutely love this idea. So convenient for every walk!"
+                "message": "Absolutely"
             },
             {
                 "name": "Rich & Steeler",
-                "message": "Ooo it's lovely. As a dog trainer, I recommend this to all my clients."
+                "message": "Ooo it's lovey"
             },
             {
-                "name": "luciahvostikova",
-                "message": "Sounds interesting. I've been looking for something like this for a while."
+                "name": "kathapuranstori...",
+                "message": "Hey, that's wonderful ❤️"
+            },
+            {
+                "name": "Kiara",
+                "message": "Hi, we would absolutely love to support you on your journey 😍"
+            },
+            {
+                "name": "Wilson Squad...",
+                "message": "That would be amazing for us :)"
+            },
+            {
+                "name": "ياسمين",
+                "message": "I will for sure order Thank you so much"
             },
             {
                 "name": "Mabel",
-                "message": "Oh yes, great. Always running out of bags on walks — this is the solution!"
+                "message": "Oh yes great"
             },
             {
-                "name": "kathapuranstory",
-                "message": "Hey, that's wonderful ❤️ Such a smart solution for dog owners."
-            },
-            {
-                "name": "Life With Czar",
-                "message": "It looks like a really practical idea for keeping waste bags organized and easy to grab before walks. I like the concept."
+                "name": "Muffin Toffee",
+                "message": "Hey! So nice! Tell me more about how this will work?"
             }
         ]
     },

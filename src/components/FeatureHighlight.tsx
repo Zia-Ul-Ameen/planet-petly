@@ -47,7 +47,7 @@ export default function FeatureHighlight() {
     return (
         <section className="relative w-full bg-white overflow-hidden">
             {/* Main Content Area */}
-            <div className="max-w-7xl mx-auto px-6 py-20 lg:py-32">
+            <div className="max-w-7xl mx-auto px-6 py-20 md:py-24">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
                     {/* Left Side: Product/Lifestyle Image */}
@@ -70,9 +70,12 @@ export default function FeatureHighlight() {
                             <span className="inline-block w-fit px-4 py-1.5 rounded-full bg-[#2a7dc9]/5 text-[#2a7dc9] text-[10px] font-black tracking-widest uppercase border border-[#2a7dc9]/10">
                                 {t("feature_highlight.badge")}
                             </span>
-                            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black leading-tight font-outfit uppercase">
-                                <span className="text-[#1a3a2a]">{t("feature_highlight.title_start")}</span> <br />
-                                <span className="text-[#2a7dc9]">{t("feature_highlight.title_highlight")}</span>
+                            <h2 className="text-4xl w-fit flex flex-col items-start md:text-6xl font-black text-[#1a3a2a] font-outfit mb-3 leading-[1.1] tracking-tight">
+                                {t("feature_highlight.title_start")}{" "}
+                                <span className="relative w-fit">
+                                    <span className="relative z-10 text-[#2a7dc9]">{t("feature_highlight.title_highlight")}</span>
+                                    <span className="absolute bottom-1 left-0 w-full h-4 bg-yellow-200/70 -rotate-1 -z-0 rounded" />
+                                </span>
                             </h2>
                             <p className="text-gray-500 text-lg max-w-lg leading-relaxed">
                                 {t("feature_highlight.description")}

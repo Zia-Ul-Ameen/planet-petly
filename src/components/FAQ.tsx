@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import Image from "next/image";
 import { useLanguage } from "@/lib/LanguageContext";
 
@@ -49,16 +48,19 @@ export default function FAQ() {
     const faqItems = t("faq.items") as { q: string; a: string }[];
 
     return (
-        <section id="faq" className="py-24 lg:pt-32 pb-10 px-6 bg-[#fbfaf7] overflow-hidden">
+        <section id="faq" className="py-20 md:py-24 px-6 bg-[#fbfaf7] overflow-hidden">
             <div className="max-w-7xl mx-auto">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-20">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-20">
 
                     {/* Left Column: Branding/Intro */}
-                    <div className="lg:col-span-5 flex flex-col items-start gap-8">
+                    <div className="lg:col-span-5 flex flex-col items-start gap-3 md:gap-5">
                         <div className="flex flex-col gap-4">
-                            <h2 className="text-4xl md:text-6xl font-black text-[#1a3a2a] leading-[1.1] font-outfit uppercase tracking-tighter">
-                                {t("faq.title")} <br />
-                                <span className="text-[#2a7dc9]">{t("faq.title_highlight")}</span>
+                            <h2 className="text-4xl w-fit flex flex-col items-start md:text-6xl font-black text-[#1a3a2a] font-outfit leading-[1.1] tracking-tight">
+                                {t("faq.title")}{" "}
+                                <span className="relative w-fit">
+                                    <span className="relative z-10 text-[#2a73c1]">{t("faq.title_highlight")}</span>
+                                    <span className="absolute bottom-1 left-0 w-full h-4 bg-yellow-200/70 -rotate-1 -z-0 rounded" />
+                                </span>
                             </h2>
                         </div>
 
@@ -66,13 +68,13 @@ export default function FAQ() {
                             {t("faq.description")}
                         </p>
 
-                        <Link
-                            href="#contact"
-                            className="group relative px-8 py-4 bg-[#ffce00] text-[#1a3a2a] font-black text-sm tracking-widest uppercase rounded-full transition-all duration-300 shadow-xl hover:shadow-yellow-200 hover:-translate-y-1 overflow-hidden"
+                        <button
+                            onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
+                            className="group relative mt-1 px-8 py-4 bg-[#ffce00] text-[#1a3a2a] font-black text-sm tracking-widest uppercase rounded-full transition-all duration-300 shadow-xl shadow-yellow-900/10 hover:-translate-y-1 active:scale-95 overflow-hidden cursor-pointer"
                         >
                             <span className="relative z-10 font-outfit">{t("faq.contact_btn")}</span>
-                            <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
-                        </Link>
+                            <div className="absolute inset-0 w-1/4 h-full bg-white/20 skew-x-[-20deg] -translate-x-full group-hover:translate-x-[400%] transition-transform duration-700" />
+                        </button>
 
                         {/* Decorative Brand Element (Official Favicon) */}
                         <div className="mt-12 hidden lg:block opacity-[0.06]">

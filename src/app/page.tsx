@@ -3,7 +3,6 @@ import BrandingBanner from "@/components/BrandingBanner";
 import ProductComingSoon from "@/components/ProductComingSoon";
 import PremiumShopBanner from "@/components/PremiumShopBanner";
 import FeatureHighlight from "@/components/FeatureHighlight";
-import Overview from "@/components/Overview";
 import FAQ from "@/components/FAQ";
 import Reviews from "@/components/Reviews";
 import Contact from "@/components/Contact";
@@ -23,7 +22,7 @@ export default function HomePage() {
       <FeatureHighlight />
       {/* <Overview /> */}
       <About />
-      {/* <Reviews /> */}
+      <Reviews />
       <FAQ />
       <Contact />
       <Footer />

@@ -55,9 +55,12 @@ export default function Contact() {
                                 <span className="inline-block px-4 py-1.5 rounded-full bg-[#2a7dc9]/5 text-[#2a7dc9] text-xs font-black tracking-widest uppercase mb-6 border border-[#2a7dc9]/10">
                                     {t("contact.badge")}
                                 </span>
-                                <h2 className="text-4xl md:text-5xl font-black text-[#1a3a2a] leading-tight font-outfit uppercase tracking-tighter mb-4">
-                                    {t("contact.title_start")} <br />
-                                    <span className="text-[#2a7dc9]">{t("contact.title_highlight")}</span>
+                                <h2 className="text-4xl w-fit flex flex-col items-start md:text-6xl font-black text-[#1a3a2a] font-outfit mb-3 leading-[1.1] tracking-tight">
+                                    {t("contact.title_start")}{" "}
+                                    <span className="relative w-fit">
+                                        <span className="relative z-10 text-[#2a73c1]">{t("contact.title_highlight")}</span>
+                                        <span className="absolute bottom-1 left-0 w-full h-4 bg-yellow-200/70 -rotate-1 -z-0 rounded" />
+                                    </span>
                                 </h2>
                                 <p className="text-gray-500 text-lg">
                                     {t("contact.description")} <br />
@@ -108,9 +111,10 @@ export default function Contact() {
                                     <button
                                         type="submit"
                                         disabled={isSubmitting}
-                                        className="w-full py-5 bg-[#2a7dc9] text-white font-black rounded-3xl hover:bg-[#2176c1] hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 shadow-xl shadow-blue-500/20 text-xs tracking-[0.2em] uppercase mt-2 cursor-pointer"
+                                        className="relative group w-full overflow-hidden py-5 bg-[#2a7dc9] text-white font-black rounded-3xl hover:bg-[#2176c1] shadow-xl shadow-yellow-900/10 hover:-translate-y-1 active:scale-95 text-xs tracking-[0.2em] transition-all duration-300 uppercase mt-2 cursor-pointer"
                                     >
-                                        {isSubmitting ? t("contact.sending") : t("contact.submit")}
+                                        <span className="relative z-10">{isSubmitting ? t("contact.sending") : t("contact.submit")}</span>
+                                        <div className="absolute inset-0 w-1/4 h-full bg-white/20 skew-x-[-20deg] -translate-x-full group-hover:translate-x-[400%] transition-transform duration-700" />
                                     </button>
                                 </form>
                             )}

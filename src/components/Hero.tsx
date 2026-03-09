@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useLanguage } from "@/lib/LanguageContext";
 
 export default function Hero() {
@@ -7,20 +8,43 @@ export default function Hero() {
     return (
         <section
             id="hero"
-            className="relative w-full h-[60vh] md:h-auto md:aspect-[16/9] mt-[74px] overflow-hidden flex flex-col"
+            className="relative w-full aspect-[1/1] md:aspect-[16/9] mt-[74px] overflow-hidden flex flex-col"
             aria-label="Hero section"
         >
             {/* Screen-reader heading */}
             <h1 className="sr-only">{t("hero.sr_heading")}</h1>
 
-            {/* Background Video */}
+            {/* Poster Image — loads instantly as priority resource */}
+            <Image
+                src="/make-life-easy.jpeg"
+                alt=""
+                fill
+                priority
+                className="absolute inset-0 object-cover"
+                aria-hidden="true"
+            />
+
+            {/* Background Video - Desktop */}
             <video
-                src="/heroVideo.mp4"
+                src="/heroVideoDesktop.mp4"
+                poster="/make-life-easy.jpeg"
                 autoPlay
                 muted
                 loop
                 playsInline
-                className="absolute inset-0 w-full h-full object-cover"
+                className="absolute inset-0 w-full h-full object-cover hidden md:block"
+                aria-hidden="true"
+            />
+
+            {/* Background Video - Mobile */}
+            <video
+                src="/heroVideoMobile.mp4"
+                poster="/make-life-easy.jpeg"
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="absolute inset-0 w-full h-full object-cover block md:hidden"
                 aria-hidden="true"
             />
 

@@ -81,8 +81,8 @@
             "SIN CORREOS DE MARKETING"
         ],
         "badge": "Diseñado para la Conveniencia",
-        "title_start": "CONSTRUIDO PARA LA",
-        "title_highlight": "VIDA DIARIA.",
+        "title_start": "Construido Para La",
+        "title_highlight": "Vida Diaria.",
         "description": "Haz que los paseos de tu perro sean más limpios con bolsas de basura biodegradables y dispensadores convenientes.",
         "features": [
             {
@@ -95,6 +95,10 @@
             }
         ]
     },
+    "overview": {
+        "title_start": "Construido para la",
+        "title_highlight": "Vida Diaria."
+    },
     "branding_banner": {
         "sub_title": "Cuida con Inteligencia. Ama con Profundidad.",
         "title_start": "con",
@@ -104,7 +108,7 @@
         "text": "ESENCIALES PARA EL PASEO DE PERROS RESPETUOSOS CON EL PLANETA — BOLSAS DE BASURA BIODEGRADABLES Y DISPENSADORES CONVENIENTES PARA DUEÑOS DE MASCOTAS RESPONSABLES."
     },
     "products": {
-        "title": "Explora nuestros",
+        "title_start": "Explora Nuestros",
         "title_highlight": "Productos",
         "description": "Explora nuestros próximos productos para encontrar soluciones innovadoras y de alta calidad diseñadas para satisfacer las necesidades de tu mascota.",
         "badge": "Próximamente",
@@ -121,38 +125,62 @@
     },
     "reviews": {
         "badge": "Lo que dicen los primeros seguidores",
-        "title_start": "Dueños de Perros",
+        "title_start": "Dueños de Mascotas",
         "title_highlight": "Ya Están Hablando",
         "description": "Mensajes reales de dueños de mascotas que descubrieron Planet Petly antes del lanzamiento.",
         "description_italic": "No pueden esperar.",
         "supporter": "Primer Seguidor",
-        "cta_title": "Únete a la lista de espera ✨",
+        "cta_title": "Únete a la Lista de Espera ✨",
         "cta_description": "Sé el primero en saber cuándo se lanza Planet Petly.",
         "cta_btn": "Notificarme cuando se lance 🚀",
         "items": [
             {
+                "name": "rudy.booboo",
+                "message": "¡Me encanta esta idea! Me encantaría saber más 😊"
+            },
+            {
+                "name": "Simba",
+                "message": "Guau, qué amable de tu parte y qué bueno ❤️ ... Te deseo mucha suerte ❤️"
+            },
+            {
+                "name": "beandourocane",
+                "message": "¡Hola 🐶🐾 muy bonito tu proyecto!! ... Sí, parece ser realmente útil 🐶🐾"
+            },
+            {
+                "name": "groza",
+                "message": "Hola, vi tu trabajo y me gustó mucho. Como dueño de un perro, puedo decir que es muy conveniente."
+            },
+            {
                 "name": "Trent",
-                "message": "Absolutamente me encanta esta idea. ¡Tan conveniente para cada paseo!"
+                "message": "Absolutamente"
             },
             {
                 "name": "Rich & Steeler",
-                "message": "Ooo es encantador. Como entrenador de perros, lo recomiendo a todos mis clientes."
+                "message": "Ooh, es encantador"
             },
             {
-                "name": "luciahvostikova",
-                "message": "Parece interesante. He estado buscando algo como esto por un tiempo."
+                "name": "kathapuranstori...",
+                "message": "¡Oye, eso es maravilloso! ❤️"
+            },
+            {
+                "name": "Kiara",
+                "message": "Hola, nos encantaría apoyarte en tu viaje 😍"
+            },
+            {
+                "name": "Wilson Squad...",
+                "message": "¡Eso sería increíble para nosotros! :)"
+            },
+            {
+                "name": "ياسمين",
+                "message": "Seguro que haré un pedido. Muchas gracias."
             },
             {
                 "name": "Mabel",
-                "message": "Oh sí, genial. Siempre me quedo sin bolsas en los paseos — ¡esta es la solución!"
+                "message": "Oh sí, genial"
             },
             {
-                "name": "kathapuranstory",
-                "message": "Oye, eso es maravilloso ❤️ Una solución tan inteligente para los dueños de perros."
-            },
-            {
-                "name": "Life With Czar",
-                "message": "Parece una idea realmente práctica para mantener las bolsas de basura organizadas y fáciles de agarrar antes de los paseos. Me gusta el concepto."
+                "name": "Muffin Toffee",
+                "message": "¡Hola! ¡Qué bien! Cuéntame más sobre cómo funcionará esto."
             }
         ]
     },

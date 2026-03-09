@@ -1,6 +1,7 @@
 "use client";
 
-import Image from "next/image";
+import { useState, useEffect } from "react";
+
 import { useLanguage } from "@/lib/LanguageContext";
 
 // REVIEWS updated in component to use t()
@@ -8,65 +9,49 @@ import { useLanguage } from "@/lib/LanguageContext";
 export default function Reviews() {
     const { t } = useLanguage();
     const reviewItems = t("reviews.items") as { name: string; message: string }[];
+    const [currentPage, setCurrentPage] = useState(0);
+    const [itemsPerPage, setItemsPerPage] = useState(2);
 
-    const REVIEWS = [
-        {
-            id: 1,
-            name: reviewItems[0].name,
-            verified: true,
-            avatar: "/overview-1.jpeg",
-            message: reviewItems[0].message,
-            accent: "from-blue-50 to-sky-50",
-            border: "border-blue-100"
-        },
-        {
-            id: 2,
-            name: reviewItems[1].name,
-            handle: "Lead",
-            verified: true,
-            avatar: "/overview-2.jpeg",
-            message: reviewItems[1].message,
-            accent: "from-violet-50 to-purple-50",
-            border: "border-violet-100"
-        },
-        {
-            id: 3,
-            name: reviewItems[2].name,
-            avatar: "/overview-3.jpeg",
-            message: reviewItems[2].message,
-            accent: "from-rose-50 to-pink-50",
-            border: "border-rose-100"
-        },
-        {
-            id: 4,
-            name: reviewItems[3].name,
-            verified: true,
-            avatar: "/overview-4.jpeg",
-            message: reviewItems[3].message,
-            accent: "from-amber-50 to-yellow-50",
-            border: "border-amber-100"
-        },
-        {
-            id: 5,
-            name: reviewItems[4].name,
-            avatar: "/overview-2.jpeg",
-            message: reviewItems[4].message,
-            accent: "from-teal-50 to-emerald-50",
-            border: "border-teal-100"
-        },
-        {
-            id: 6,
-            name: reviewItems[5].name,
-            handle: "🐾",
-            avatar: "/product-1.jpeg",
-            message: reviewItems[5].message,
-            accent: "from-blue-50 to-indigo-50",
-            border: "border-indigo-100"
-        }
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth >= 1024) {
+                setItemsPerPage(6); // 2 rows * 3 columns
+            } else if (window.innerWidth >= 640) {
+                setItemsPerPage(4); // 2 rows * 2 columns
+            } else {
+                setItemsPerPage(2); // 2 rows * 1 column
+            }
+            setCurrentPage(0); // Reset to first page on resize
+        };
+
+        handleResize(); // Initial call
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
+    const ACCENTS = [
+        { accent: "from-blue-50 to-sky-50", border: "border-blue-100" },
+        { accent: "from-violet-50 to-purple-50", border: "border-violet-100" },
+        { accent: "from-rose-50 to-pink-50", border: "border-rose-100" },
+        { accent: "from-amber-50 to-yellow-50", border: "border-amber-100" },
+        { accent: "from-teal-50 to-emerald-50", border: "border-teal-100" },
+        { accent: "from-blue-50 to-indigo-50", border: "border-indigo-100" },
+        { accent: "from-rose-50 to-orange-50", border: "border-rose-100" },
+        { accent: "from-blue-50 to-cyan-50", border: "border-blue-100" },
+        { accent: "from-emerald-50 to-green-50", border: "border-emerald-100" },
+        { accent: "from-amber-50 to-orange-50", border: "border-amber-100" },
+        { accent: "from-violet-50 to-fuschia-50", border: "border-violet-100" },
+        { accent: "from-sky-50 to-blue-50", border: "border-sky-100" }
     ];
 
+    const REVIEWS = reviewItems.map((item, idx) => ({
+        id: idx + 1,
+        ...item,
+        ...ACCENTS[idx % ACCENTS.length]
+    }));
+
     return (
-        <section id="reviews" className="relative py-28 px-6 bg-[#f0f4ff] overflow-hidden">
+        <section id="reviews" className="relative py-20 md:py-24 px-6 bg-[#f0f4ff] overflow-hidden">
             {/* Decorative Background Blobs */}
             <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-blue-300/20 rounded-full blur-[120px] -translate-y-1/2 pointer-events-none" />
             <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-violet-300/20 rounded-full blur-[100px] translate-y-1/2 pointer-events-none" />
@@ -75,14 +60,10 @@ export default function Reviews() {
             <div className="max-w-7xl mx-auto relative z-10">
 
                 {/* Header */}
-                <div className="text-center max-w-3xl mx-auto mb-20">
-                    <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/80 backdrop-blur-sm text-[#2a73c1] text-xs font-black tracking-widest uppercase mb-8 border border-blue-100 shadow-sm">
-                        <span className="w-2 h-2 rounded-full bg-[#2a73c1] animate-pulse" />
-                        {t("reviews.badge")}
-                    </div>
-                    <h2 className="text-4xl md:text-6xl font-black text-[#1a3a2a] font-outfit mb-6 leading-[1.1] tracking-tight">
+                <div className="text-center w-full mx-auto mb-8">
+                    <h2 className="text-4xl w-fit mx-auto flex flex-col items-center md:text-6xl font-black text-[#1a3a2a] font-outfit mb-3 leading-[1.1] tracking-tight text-center">
                         {t("reviews.title_start")}{" "}
-                        <span className="relative inline-block">
+                        <span className="relative w-fit">
                             <span className="relative z-10 text-[#2a73c1]">{t("reviews.title_highlight")}</span>
                             <span className="absolute bottom-1 left-0 w-full h-4 bg-yellow-200/70 -rotate-1 -z-0 rounded" />
                         </span>
@@ -93,66 +74,95 @@ export default function Reviews() {
                     </p>
                 </div>
 
-                {/* Review Grid — Masonry */}
-                <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 [column-fill:balance] mb-20">
-                    {REVIEWS.map((review) => (
+                {/* Review Grid — Minimalist Message-First Layout */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+                    {REVIEWS.slice(currentPage * itemsPerPage, (currentPage + 1) * itemsPerPage).map((review) => (
                         <div
                             key={review.id}
-                            className={`
-                                break-inside-avoid mb-6 group relative
-                                bg-gradient-to-br ${review.accent}
-                                rounded-[28px] p-6 border ${review.border}
-                                shadow-sm hover:shadow-xl hover:shadow-blue-100/50
-                                transition-all duration-500 hover:-translate-y-1.5
-                                backdrop-blur-sm
-                            `}
+                            className="flex flex-col gap-4 group"
                         >
-                            {/* Quote Icon */}
-                            <div className="text-5xl font-serif text-blue-200/80 leading-none mb-2 select-none">"</div>
+                            {/* Message Bubble */}
+                            <div className={`
+                                relative p-4 rounded-3xl
+                                bg-white border border-gray-100
+                                filter drop-shadow-sm group-hover:drop-shadow-md
+                                transition-all duration-500
+                                flex-grow
+                            `}>
+                                <div className="text-gray-700 text-base md:text-[17px] leading-relaxed font-medium italic">
+                                    &quot;{review.message}&quot;
+                                </div>
 
-                            {/* Stars */}
-                            <div className="flex gap-1 mb-4">
-                                {[...Array(5)].map((_, i) => (
-                                    <svg key={i} className="w-4 h-4 text-yellow-400 fill-yellow-400" viewBox="0 0 20 20">
-                                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                    </svg>
-                                ))}
+                                {/* Speech Bubble Arrow */}
+                                <div className="absolute -bottom-2 left-5 w-4 h-4 bg-white border-b border-r border-gray-100 rotate-45 group-hover:border-blue-100 transition-all duration-500" />
                             </div>
 
-                            {/* Message */}
-                            <p className="text-gray-700 text-[15px] md:text-base leading-relaxed font-medium mb-6">
-                                {review.message}
-                            </p>
-
-                            {/* Reviewer Footer */}
-                            <div className="flex items-center gap-3 pt-4 border-t border-black/5">
-                                <div className="relative w-11 h-11 rounded-full overflow-hidden shrink-0 ring-2 ring-white shadow-md">
-                                    <Image src={review.avatar} alt={review.name} fill className="object-cover" />
+                            {/* Reviewer Section */}
+                            <div className="flex items-center gap-3 px-2">
+                                <div className={`
+                                    w-10 h-10 rounded-full shrink-0 shadow-sm border-2 border-white ring-1 ring-gray-100
+                                    bg-gradient-to-br ${review.accent}
+                                    flex items-center justify-center
+                                `}>
+                                    <span className="text-[#1a3a2a] font-bold text-xs uppercase tracking-tighter">
+                                        {review.name.split(" ").map(n => n[0]).join("").substring(0, 2)}
+                                    </span>
                                 </div>
-                                <div>
-                                    <div className="flex items-center gap-1.5 flex-wrap">
-                                        <span className="font-bold text-[#1a3a2a] text-sm leading-none">{review.name}</span>
-                                        {review.verified && (
-                                            <svg className="w-[14px] h-[14px] text-blue-500 shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                                            </svg>
-                                        )}
-                                        {review.handle && (
-                                            <span className="text-[10px] font-black text-gray-400 uppercase tracking-widest">
-                                                {review.handle}
-                                            </span>
-                                        )}
-                                    </div>
-                                    <span className="text-[11px] text-gray-400 font-medium mt-0.5 block">{t("reviews.supporter")}</span>
+                                <div className="min-w-0">
+                                    <span className="font-medium text-[#1a3a2a] text-sm block capitalize tracking-tight">
+                                        {review.name}
+                                    </span>
                                 </div>
                             </div>
-
-                            {/* Hover Glow Effect */}
-                            <div className="absolute inset-0 rounded-[28px] opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-white/20 pointer-events-none" />
                         </div>
                     ))}
                 </div>
 
+                {/* Pagination Controls */}
+                <div className="flex justify-center items-center gap-6 mb-12">
+                    <button
+                        onClick={() => setCurrentPage(prev => Math.max(0, prev - 1))}
+                        disabled={currentPage === 0}
+                        className={`
+                            group flex items-center justify-center w-12 h-12 rounded-full border-2 
+                            transition-all duration-300
+                            ${currentPage === 0
+                                ? "border-gray-200 text-gray-300 cursor-not-allowed"
+                                : "border-[#2a73c1] text-[#2a73c1] hover:bg-[#2a73c1] hover:text-white cursor-pointer active:scale-90"
+                            }
+                        `}
+                    >
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                        </svg>
+                    </button>
+
+                    <div className="flex gap-2">
+                        {Array.from({ length: Math.ceil(REVIEWS.length / itemsPerPage) }).map((_, idx) => (
+                            <div
+                                key={idx}
+                                className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${currentPage === idx ? "bg-[#2a73c1] w-6" : "bg-gray-300"}`}
+                            />
+                        ))}
+                    </div>
+
+                    <button
+                        onClick={() => setCurrentPage(prev => Math.min(Math.ceil(REVIEWS.length / itemsPerPage) - 1, prev + 1))}
+                        disabled={currentPage >= Math.ceil(REVIEWS.length / itemsPerPage) - 1}
+                        className={`
+                            group flex items-center justify-center w-12 h-12 rounded-full border-2 
+                            transition-all duration-300
+                            ${currentPage >= Math.ceil(REVIEWS.length / itemsPerPage) - 1
+                                ? "border-gray-200 text-gray-300 cursor-not-allowed"
+                                : "border-[#2a73c1] text-[#2a73c1] hover:bg-[#2a73c1] hover:text-white cursor-pointer active:scale-90"
+                            }
+                        `}
+                    >
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                </div>
                 {/* Footer Strip */}
                 <div className="relative bg-white/60 backdrop-blur-md rounded-[32px] border border-white/80 shadow-xl shadow-blue-100/30 p-10 md:p-14 flex flex-col md:flex-row items-center justify-between gap-8 overflow-hidden">
                     {/* Decorative corner element */}
@@ -167,9 +177,12 @@ export default function Reviews() {
                             {t("reviews.cta_description")}
                         </p>
                     </div>
-                    <button className="relative group overflow-hidden bg-[#1f6b64] hover:bg-[#154a45] text-white px-10 py-5 rounded-full text-base font-black transition-all duration-300 shadow-xl shadow-teal-900/20 hover:-translate-y-1 active:scale-95 whitespace-nowrap z-10 tracking-wide">
+                    <button
+                        onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
+                        className="relative group overflow-hidden bg-[#FFD700] hover:bg-[#FFC400] text-[#1a3a2a] px-10 py-5 rounded-full text-base font-black transition-all duration-300 shadow-xl shadow-yellow-900/10 hover:-translate-y-1 active:scale-95 whitespace-nowrap z-10 tracking-wide cursor-pointer"
+                    >
                         <span className="relative z-10">{t("reviews.cta_btn")}</span>
-                        <div className="absolute inset-0 w-1/4 h-full bg-white/10 skew-x-[-20deg] -translate-x-full group-hover:translate-x-[400%] transition-transform duration-700" />
+                        <div className="absolute inset-0 w-1/4 h-full bg-white/20 skew-x-[-20deg] -translate-x-full group-hover:translate-x-[400%] transition-transform duration-700" />
                     </button>
                 </div>
 

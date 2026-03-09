@@ -5,7 +5,7 @@ import { useLanguage } from "@/lib/LanguageContext";
 export default function PremiumShopBanner() {
     const { t } = useLanguage();
     return (
-        <section className="relative w-full bg-[#FFF5E6] py-16 md:py-20 overflow-hidden">
+        <section className="relative w-full bg-[#FFF5E6] py-20 md:py-24 overflow-hidden">
             {/* Scalloped Top Border — Responsive wave count */}
             <div className="absolute top-0 left-0 w-full h-8 z-10 overflow-hidden">
                 {/* Desktop Version (12 waves) */}

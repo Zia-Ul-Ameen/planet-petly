@@ -9,6 +9,7 @@ type Locale = "en" | "es";
 interface LanguageContextType {
     locale: Locale;
     setLocale: (locale: Locale) => void;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     t: (key: string) => any;
 }
 
@@ -22,6 +23,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     useEffect(() => {
         const savedLocale = localStorage.getItem("locale") as Locale;
         if (savedLocale && (savedLocale === "en" || savedLocale === "es")) {
+            // eslint-disable-next-line react-hooks/set-state-in-effect
             setLocaleState(savedLocale);
         }
     }, []);
@@ -34,6 +36,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 
     const t = (key: string) => {
         const keys = key.split(".");
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         let value: any = translations[locale];
         for (const k of keys) {
             if (value && value[k] !== undefined) {

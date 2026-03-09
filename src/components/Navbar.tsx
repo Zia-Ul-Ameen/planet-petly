@@ -12,26 +12,6 @@ const NAV_LINKS_KEYS = [
     { labelKey: "nav.contact", href: "#contact" },
 ] as const;
 
-function CartIcon() {
-    return (
-        <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth={2}
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="w-5 h-5 "
-            aria-hidden="true"
-        >
-            <circle cx="9" cy="21" r="1" />
-            <circle cx="20" cy="21" r="1" />
-            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
-        </svg>
-    );
-}
-
 function HamburgerIcon({ open }: { open: boolean }) {
     return (
         <div className="flex flex-col gap-[5px] w-6">
@@ -131,7 +111,7 @@ export default function Navbar() {
                             <div className="flex items-center gap-2">
                                 <select
                                     value={locale}
-                                    onChange={(e) => setLocale(e.target.value as any)}
+                                    onChange={(e) => setLocale(e.target.value as "en" | "es")}
                                     className="bg-white/10 text-white text-xs font-bold py-1.5 px-2 rounded-lg border border-white/20 focus:outline-none focus:ring-2 focus:ring-yellow-400/50 cursor-pointer appearance-none"
                                 >
                                     <option value="en" className="bg-[#2a7dc9] text-white">EN</option>

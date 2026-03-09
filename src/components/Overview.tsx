@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import BackgroundDecoration from "./FloatingDecorations";
+import { useLanguage } from "@/lib/LanguageContext";
 
 const OVERVIEW_ITEMS = [
     {
@@ -25,6 +26,7 @@ const OVERVIEW_ITEMS = [
 
 
 export default function Overview() {
+    const { t } = useLanguage();
     return (
         <section
             id="overview"
@@ -41,9 +43,12 @@ export default function Overview() {
                     <span className="inline-block px-4 py-1.5 rounded-full bg-[#2a7dc9]/5 text-[#2a7dc9] text-[10px] font-black tracking-widest uppercase mb-6 border border-[#2a7dc9]/10">
                         Designed for Convenience
                     </span>
-                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-[#1a3a2a] leading-[1.1] font-outfit uppercase tracking-tighter mb-8">
-                        Built for <br />
-                        <span className="text-[#2a7dc9]">Everyday Life.</span>
+                    <h2 className="text-4xl w-fit flex flex-col items-start md:text-6xl font-black text-[#1a3a2a] font-outfit mb-3 leading-[1.1] tracking-tight">
+                        {t("overview.title_start")}{" "}
+                        <span className="relative w-fit">
+                            <span className="relative z-10 text-[#2a7dc9]">{t("overview.title_highlight")}</span>
+                            <span className="absolute bottom-1 left-0 w-full h-4 bg-yellow-200/70 -rotate-1 -z-0 rounded" />
+                        </span>
                     </h2>
 
                     {/* Dashed Separator */}
