@@ -14,7 +14,7 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://planetpetly.com"),
-  title: "Dog Poop Bag Holder Tray & Dispenser | 150 Eco Bags",
+  title: "Wall Mounted Pet Waste Bag Holder",
   description:
     "Never search for poop bags again. Organized holder tray with dispenser and 150 compostable bags for easy, mess-free dog walks.",
   keywords: [
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     apple: "/favicon.svg?v=2",
   },
   openGraph: {
-    title: "Dog Poop Bag Holder Tray & Dispenser | 150 Eco Bags",
+    title: "Wall Mounted Pet Waste Bag Holder",
     description:
       "Never search for poop bags again. Organized holder tray with dispenser and 150 compostable bags for easy, mess-free dog walks.",
     url: "https://planetpetly.com",
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dog Poop Bag Holder Tray & Dispenser | 150 Eco Bags",
+    title: "Wall Mounted Pet Waste Bag Holder",
     description: "Never search for poop bags again. Organized holder tray with dispenser and 150 compostable bags for easy, mess-free dog walks.",
     images: ["/meta-share.png"],
   },
