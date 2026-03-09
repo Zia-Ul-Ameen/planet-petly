@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { useLanguage } from "@/lib/LanguageContext";
 
 const StarIcon = () => (
     <svg
@@ -14,40 +15,35 @@ const StarIcon = () => (
     </svg>
 );
 
-const MARQUEE_ITEMS = [
-    "COMING SOON",
-    "REGISTER YOUR EMAIL",
-    "GET NOTIFIED AT LAUNCH",
-    "NO MARKETING EMAILS"
-];
-
-const FEATURES = [
-    {
-        title: "Eco-Friendly Bags",
-        description: "Biodegradable and leak-proof poop bags.",
-        icon: (
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="#2d7a1e">
-                {/* Earth / Globe Icon */}
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93V18c0-1.1-.9-2-2-2h-1v-1l-4.79-4.79C5.08 10.79 5 11.38 5 12c0 3.53 2.61 6.43 6 6.92V20c-5-.5-9-4.75-9-10s4-9.5 9-10v.08c3.48.5 6.2 3.22 6.7 6.7H13v2c1.1 0 2 .9 2 2v3h1c.9 0 1.64.58 1.9 1.39 1.3-1.42 2.1-3.31 2.1-5.39 0-3.35-2.07-6.22-5-7.41V5c0-1.1.9-2 2-2h2v.08c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" className="hidden" />
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
-            </svg>
-        )
-    },
-    {
-        title: "Handy Dispensers",
-        description: "Easy access to bags when you need them.",
-        icon: (
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
-                <path d="M18 6H6c-1.1 0-2 .9-2 2v11c0 1.66 1.34 3 3 3h10c1.66 0 3-1.34 3-3V8c0-1.1-.9-2-2-2z" fill="#2d7a1e" />
-                <path d="M16 6V4c0-1.1-.9-2-2-2h-4c-1.1 0-2 .9-2 2v2" stroke="#2d7a1e" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                <rect x="9" y="11" width="6" height="7" rx="1.5" fill="white" />
-                <path d="M12 11v7" stroke="#e0e0e0" strokeWidth="1" />
-            </svg>
-        )
-    }
-];
+// MARQUEE_ITEMS moved to component to use t()
 
 export default function FeatureHighlight() {
+    const { t } = useLanguage();
+    const marqueeItems = t("feature_highlight.marquee") as string[];
+    const featureItems = t("feature_highlight.features") as { title: string; description: string }[];
+
+    const featuresWithIcons = [
+        {
+            ...featureItems[0],
+            icon: (
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="#2d7a1e">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
+                </svg>
+            )
+        },
+        {
+            ...featureItems[1],
+            icon: (
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                    <path d="M18 6H6c-1.1 0-2 .9-2 2v11c0 1.66 1.34 3 3 3h10c1.66 0 3-1.34 3-3V8c0-1.1-.9-2-2-2z" fill="#2d7a1e" />
+                    <path d="M16 6V4c0-1.1-.9-2-2-2h-4c-1.1 0-2 .9-2 2v2" stroke="#2d7a1e" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    <rect x="9" y="11" width="6" height="7" rx="1.5" fill="white" />
+                    <path d="M12 11v7" stroke="#e0e0e0" strokeWidth="1" />
+                </svg>
+            )
+        }
+    ];
+
     return (
         <section className="relative w-full bg-white overflow-hidden">
             {/* Main Content Area */}
@@ -72,21 +68,20 @@ export default function FeatureHighlight() {
                     <div className="flex flex-col gap-8 md:gap-10">
                         <div className="flex flex-col gap-4">
                             <span className="inline-block w-fit px-4 py-1.5 rounded-full bg-[#2a7dc9]/5 text-[#2a7dc9] text-[10px] font-black tracking-widest uppercase border border-[#2a7dc9]/10">
-                                Designed for Convenience
+                                {t("feature_highlight.badge")}
                             </span>
                             <h2 className="text-4xl md:text-5xl lg:text-6xl font-black leading-tight font-outfit uppercase">
-                                <span className="text-[#1a3a2a]">BUILT FOR</span> <br />
-                                <span className="text-[#2a7dc9]">EVERYDAY LIFE.</span>
+                                <span className="text-[#1a3a2a]">{t("feature_highlight.title_start")}</span> <br />
+                                <span className="text-[#2a7dc9]">{t("feature_highlight.title_highlight")}</span>
                             </h2>
                             <p className="text-gray-500 text-lg max-w-lg leading-relaxed">
-                                Make your dog walks cleaner with biodegradabe poop
-                                bags and convenient dispensers.
+                                {t("feature_highlight.description")}
                             </p>
                         </div>
 
                         {/* Feature List */}
                         <div className="flex flex-col gap-6">
-                            {FEATURES.map((feature, index) => (
+                            {featuresWithIcons.map((feature, index) => (
                                 <div key={index} className="flex gap-5 items-start">
                                     <div className="flex-shrink-0 w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center">
                                         {feature.icon}
@@ -127,7 +122,7 @@ export default function FeatureHighlight() {
                         <div key={`set-${set}`} className="flex items-center gap-8 md:gap-12 text-[#1a3a2a] px-4 md:px-6 shrink-0">
                             {[1, 2, 3].map((group) => (
                                 <div key={`group-${group}`} className="flex items-center gap-8 md:gap-12 font-black text-base md:text-xl tracking-tighter uppercase font-outfit shrink-0">
-                                    {MARQUEE_ITEMS.map((text, idx) => (
+                                    {marqueeItems.map((text, idx) => (
                                         <div key={idx} className="flex items-center gap-2 md:gap-4 shrink-0">
                                             <StarIcon />
                                             <span className="leading-none">{text}</span>

@@ -1,8 +1,10 @@
 "use client";
 
 import Image from "next/image";
+import { useLanguage } from "@/lib/LanguageContext";
 
 export default function BrandingBanner() {
+    const { t } = useLanguage();
     return (
         <section className="relative w-full py-8 md:h-[200px] bg-[#2a7dc9] -mt-10 md:-mt-14 z-20">
             {/* Top Wave (joins with Video Hero) - More pronounced */}
@@ -26,10 +28,10 @@ export default function BrandingBanner() {
                     {/* Left Column — Branding Message */}
                     <div className="flex flex-col justify-center gap-1 md:gap-2 -mt-4 md:-mt-12 text-center md:text-left order-1">
                         <span className="text-white/70 text-lg md:text-2xl font-medium tracking-tight">
-                            Care Smarter. Love Deeper.
+                            {t("branding_banner.sub_title")}
                         </span>
                         <h3 className="text-white text-3xl md:text-5xl lg:text-6xl font-extrabold leading-tight md:leading-none tracking-tighter uppercase font-outfit">
-                            with <span className="text-yellow-400">planet petly</span>
+                            {t("branding_banner.title_start")} <span className="text-yellow-400">{t("branding_banner.title_highlight")}</span>
                         </h3>
                     </div>
 

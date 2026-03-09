@@ -3,12 +3,13 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useLanguage } from "@/lib/LanguageContext";
 
-const NAV_LINKS = [
-    { label: "Home", href: "#hero" },
-    { label: "Products", href: "#products" },
-    { label: "About Us", href: "#about" },
-    { label: "Contact", href: "#contact" },
+const NAV_LINKS_KEYS = [
+    { labelKey: "nav.home", href: "#hero" },
+    { labelKey: "nav.products", href: "#products" },
+    { labelKey: "nav.about", href: "#about" },
+    { labelKey: "nav.contact", href: "#contact" },
 ] as const;
 
 function CartIcon() {
@@ -52,6 +53,7 @@ function HamburgerIcon({ open }: { open: boolean }) {
 
 export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
+    const { locale, setLocale, t } = useLanguage();
 
     const scrollToSection = (
         e: React.MouseEvent<HTMLAnchorElement>,
@@ -101,14 +103,14 @@ export default function Navbar() {
                             className="hidden md:flex items-center gap-2"
                             aria-label="Primary navigation"
                         >
-                            {NAV_LINKS.map((link) => (
+                            {NAV_LINKS_KEYS.map((link) => (
                                 <Link
-                                    key={link.label}
+                                    key={link.labelKey}
                                     href={link.href}
                                     onClick={(e) => scrollToSection(e, link.href)}
                                     className="px-4 py-2 text-sm font-semibold text-white/90 hover:text-white rounded-full transition-all duration-200 hover:bg-white/15"
                                 >
-                                    {link.label}
+                                    {t(link.labelKey)}
                                 </Link>
                             ))}
                         </nav>
@@ -121,8 +123,20 @@ export default function Navbar() {
                                     onClick={(e) => scrollToSection(e, "#contact")}
                                     className={`px-5 py-2.5 text-sm font-extrabold tracking-wide rounded-full border-2 transition-all duration-300 border-white text-white hover:border-yellow-400 hover:bg-yellow-400 hover:text-[#2a7dc9]`}
                                 >
-                                    Notify Me
+                                    {t("nav.notify_me")}
                                 </Link>
+                            </div>
+
+                            {/* Language Switcher */}
+                            <div className="flex items-center gap-2">
+                                <select
+                                    value={locale}
+                                    onChange={(e) => setLocale(e.target.value as any)}
+                                    className="bg-white/10 text-white text-xs font-bold py-1.5 px-2 rounded-lg border border-white/20 focus:outline-none focus:ring-2 focus:ring-yellow-400/50 cursor-pointer appearance-none"
+                                >
+                                    <option value="en" className="bg-[#2a7dc9] text-white">EN</option>
+                                    <option value="es" className="bg-[#2a7dc9] text-white">ES</option>
+                                </select>
                             </div>
 
                             {/* Mobile hamburger */}
@@ -145,14 +159,14 @@ export default function Navbar() {
                 >
                     <nav className="px-5 pb-5 pt-2 mt-2 border-t border-white/20">
                         <ul className="flex flex-col gap-1">
-                            {NAV_LINKS.map((link) => (
-                                <li key={link.label}>
+                            {NAV_LINKS_KEYS.map((link) => (
+                                <li key={link.labelKey}>
                                     <Link
                                         href={link.href}
                                         onClick={(e) => scrollToSection(e, link.href)}
                                         className="block text-base font-semibold text-white/90 py-3 border-b border-white/10 last:border-0 hover:text-white transition-colors"
                                     >
-                                        {link.label}
+                                        {t(link.labelKey)}
                                     </Link>
                                 </li>
                             ))}
@@ -162,7 +176,7 @@ export default function Navbar() {
                                     onClick={(e) => scrollToSection(e, "#contact")}
                                     className="block w-full px-5 py-3 text-sm font-extrabold tracking-widest rounded-full border-2 border-white text-white text-center transition-all duration-300 active:bg-yellow-400 active:text-[#2a7dc9] active:border-yellow-400 uppercase"
                                 >
-                                    Notify Me
+                                    {t("nav.notify_me")}
                                 </Link>
                             </li>
                         </ul>

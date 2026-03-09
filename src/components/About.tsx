@@ -1,6 +1,10 @@
+"use client";
+
 import Image from "next/image";
+import { useLanguage } from "@/lib/LanguageContext";
 
 export default function About() {
+    const { t } = useLanguage();
     return (
         <section id="about" className="relative pt-16 md:pt-24 px-6 bg-[#2a7dc9] overflow-hidden">
             {/* Background Accent Elements */}
@@ -14,29 +18,24 @@ export default function About() {
                     <div className="flex flex-col gap-6">
                         <div className="flex flex-col gap-3">
                             <h2 className="text-4xl mb-4 sm:text-5xl font-black leading-[1] font-outfit text-white uppercase tracking-normal">
-                                THE STORY BEHIND <br />
-                                <span className="text-yellow-400 underline decoration-white/20 underline-offset-8 tracking-tighter">PLANET PETLY</span>
+                                {t("about.title")} <br />
+                                <span className="text-yellow-400 underline decoration-white/20 underline-offset-8 tracking-tighter">{t("about.brand")}</span>
                             </h2>
 
                             <div className="space-y-3.5 text-white text-base sm:text-[17px] leading-snug max-w-2xl font-medium">
-                                <p>Every dog owner knows the moment.</p>
+                                <p>{t("about.p1")}</p>
                                 <p className="text-white/90">
-                                    You're ready to head out for a walk—shoes on, leash in hand—and suddenly
-                                    you're searching for waste bags. Under the sink. In a drawer. By the door.
-                                    Sometimes they're gone when you need them most.
+                                    {t("about.p2")}
                                 </p>
                                 <p className="text-white/90 font-semibold">
-                                    <span className="text-white font-black">At Planet Petly</span>, we believe pet care should be simple, organized, and always
-                                    ready when you are.
+                                    {t("about.p3")}
                                 </p>
                                 <p className="text-white/90">
-                                    That's why we designed a smarter solution—a clean, reliable bag system
-                                    with a convenient dispenser you can keep by the door or grab instantly.
+                                    {t("about.p4")}
                                 </p>
-                                <p className="text-yellow-400 font-black text-lg sm:text-xl">Just grab the dispenser and go.</p>
+                                <p className="text-yellow-400 font-black text-lg sm:text-xl">{t("about.p5")}</p>
                                 <p className="text-white/70 italic text-sm leading-tight max-w-lg">
-                                    Because great pet products shouldn't just exist — they should fit
-                                    naturally into everyday life with your dog.
+                                    {t("about.p6")}
                                 </p>
                             </div>
                         </div>
@@ -45,9 +44,9 @@ export default function About() {
                         {/* Bottom Feature Boxes */}
                         <div className="flex flex-wrap gap-3 max-w-4xl">
                             {[
-                                "Always Ready for Walk Time",
-                                "Reliable Everyday Pet Essentials",
-                                "Smart, Convenient Dispenser Design"
+                                t("about.feature1"),
+                                t("about.feature2"),
+                                t("about.feature3")
                             ].map((text, idx) => (
                                 <div key={idx} className="w-fit p-4 bg-white/5 rounded-2xl border border-white/10 backdrop-blur-sm shadow-xl flex items-center gap-2">
                                     <svg className="w-4 h-4 text-yellow-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">

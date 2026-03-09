@@ -1,6 +1,9 @@
 "use client";
 
+import { useLanguage } from "@/lib/LanguageContext";
+
 export default function PremiumShopBanner() {
+    const { t } = useLanguage();
     return (
         <section className="relative w-full bg-[#FFF5E6] py-16 md:py-20 overflow-hidden">
             {/* Scalloped Top Border — Responsive wave count */}
@@ -24,7 +27,7 @@ export default function PremiumShopBanner() {
             {/* Content Area */}
             <div className="max-w-5xl mx-auto px-6 text-center relative z-20">
                 <h2 className="text-xl md:text-3xl lg:text-4xl font-black text-[#1a3a2a] leading-tight md:leading-snug tracking-tight font-outfit uppercase">
-                    PLANET-FRIENDLY DOG WALK ESSENTIALS — BIODEGRADABLE WASTE BAGS AND CONVENIENT DISPENSERS FOR RESPONSIBLE PET OWNERS.
+                    {t("premium_shop_banner.text")}
                 </h2>
             </div>
 

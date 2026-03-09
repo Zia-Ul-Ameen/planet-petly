@@ -3,6 +3,7 @@ import { Outfit } from "next/font/google";
 import "./globals.css";
 
 import JsonLd from "@/components/JsonLd";
+import { LanguageProvider } from "@/lib/LanguageContext";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -73,8 +74,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={outfit.variable}>
       <body>
-        <JsonLd />
-        {children}
+        <LanguageProvider>
+          <JsonLd />
+          {children}
+        </LanguageProvider>
       </body>
     </html>
   );

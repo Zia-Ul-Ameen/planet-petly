@@ -4,8 +4,10 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { contactSchema, ContactFormData } from "@/lib/schemas";
+import { useLanguage } from "@/lib/LanguageContext";
 
 export default function Contact() {
+    const { t } = useLanguage();
     const [apiError, setApiError] = useState<string | null>(null);
 
     const {
@@ -33,10 +35,10 @@ export default function Contact() {
             if (result.status === "success") {
                 reset();
             } else {
-                setApiError(result.message || "Something went wrong. Please try again.");
+                setApiError(result.message || t("contact.error_generic"));
             }
         } catch (error) {
-            setApiError("Failed to connect to the server. Please check your internet connection.");
+            setApiError(t("contact.error_connection"));
             console.error("Form submission error:", error);
         }
     };
@@ -51,15 +53,15 @@ export default function Contact() {
                         <div className="lg:col-span-5 flex flex-col gap-8">
                             <div>
                                 <span className="inline-block px-4 py-1.5 rounded-full bg-[#2a7dc9]/5 text-[#2a7dc9] text-xs font-black tracking-widest uppercase mb-6 border border-[#2a7dc9]/10">
-                                    Contact Us
+                                    {t("contact.badge")}
                                 </span>
                                 <h2 className="text-4xl md:text-5xl font-black text-[#1a3a2a] leading-tight font-outfit uppercase tracking-tighter mb-4">
-                                    Let&apos;s Start A <br />
-                                    <span className="text-[#2a7dc9]">Conversation.</span>
+                                    {t("contact.title_start")} <br />
+                                    <span className="text-[#2a7dc9]">{t("contact.title_highlight")}</span>
                                 </h2>
                                 <p className="text-gray-500 text-lg">
-                                    Have questions about our products or mission? We&apos;re here to help you and your pet. <br />
-                                    <span className="text-[#2a7dc9] font-medium">Wholesale opportunities also available.</span>
+                                    {t("contact.description")} <br />
+                                    <span className="text-[#2a7dc9] font-medium">{t("contact.wholesale")}</span>
                                 </p>
                             </div>
 
@@ -69,7 +71,7 @@ export default function Contact() {
                                         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
                                     </div>
                                     <div className="flex flex-col">
-                                        <span className="text-xs font-bold text-gray-400 uppercase tracking-widest">Email Us</span>
+                                        <span className="text-xs font-bold text-gray-400 uppercase tracking-widest">{t("contact.email_us")}</span>
                                         <span className="font-medium text-[#1a3a2a] group-hover:text-[#2a7dc9] transition-colors duration-300">customercare@adrarecom.com</span>
                                     </div>
                                 </a>
@@ -80,7 +82,7 @@ export default function Contact() {
                         <div className="lg:col-span-7">
                             {isSubmitSuccessful ? (
                                 <div className="py-12 text-center text-[#2a7dc9] font-black bg-[#2a7dc9]/5 rounded-3xl border border-[#2a7dc9]/10 uppercase font-outfit tracking-widest">
-                                    ✔️ Message sent. Stay paws-itive!
+                                    {t("contact.success_message")}
                                 </div>
                             ) : (
                                 <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
@@ -91,16 +93,16 @@ export default function Contact() {
                                     )}
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                         <div className="space-y-1">
-                                            <input {...register("name")} placeholder="Full Name" className="w-full px-6 py-4 rounded-2xl bg-gray-50 border-transparent focus:bg-white focus:border-[#2a7dc9] focus:ring-0 transition-all text-gray-800 placeholder:text-gray-400 font-medium" />
+                                            <input {...register("name")} placeholder={t("contact.name_placeholder")} className="w-full px-6 py-4 rounded-2xl bg-gray-50 border-transparent focus:bg-white focus:border-[#2a7dc9] focus:ring-0 transition-all text-gray-800 placeholder:text-gray-400 font-medium" />
                                             {errors.name && <p className="text-red-500 text-xs px-2">{errors.name.message}</p>}
                                         </div>
                                         <div className="space-y-1">
-                                            <input {...register("email")} placeholder="Email Address" className="w-full px-6 py-4 rounded-2xl bg-gray-50 border-transparent focus:bg-white focus:border-[#2a7dc9] focus:ring-0 transition-all text-gray-800 placeholder:text-gray-400 font-medium" />
+                                            <input {...register("email")} placeholder={t("contact.email_placeholder")} className="w-full px-6 py-4 rounded-2xl bg-gray-50 border-transparent focus:bg-white focus:border-[#2a7dc9] focus:ring-0 transition-all text-gray-800 placeholder:text-gray-400 font-medium" />
                                             {errors.email && <p className="text-red-500 text-xs px-2">{errors.email.message}</p>}
                                         </div>
                                     </div>
                                     <div className="space-y-1">
-                                        <textarea {...register("message")} placeholder="How can we help?" rows={3} className="w-full px-6 py-4 rounded-2xl bg-gray-50 border-transparent focus:bg-white focus:border-[#2a7dc9] focus:ring-0 transition-all text-gray-800 placeholder:text-gray-400 font-medium resize-none" />
+                                        <textarea {...register("message")} placeholder={t("contact.message_placeholder")} rows={3} className="w-full px-6 py-4 rounded-2xl bg-gray-50 border-transparent focus:bg-white focus:border-[#2a7dc9] focus:ring-0 transition-all text-gray-800 placeholder:text-gray-400 font-medium resize-none" />
                                         {errors.message && <p className="text-red-500 text-xs px-2">{errors.message.message}</p>}
                                     </div>
                                     <button
@@ -108,7 +110,7 @@ export default function Contact() {
                                         disabled={isSubmitting}
                                         className="w-full py-5 bg-[#2a7dc9] text-white font-black rounded-3xl hover:bg-[#2176c1] hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 shadow-xl shadow-blue-500/20 text-xs tracking-[0.2em] uppercase mt-2 cursor-pointer"
                                     >
-                                        {isSubmitting ? "Sending..." : "Submit Message"}
+                                        {isSubmitting ? t("contact.sending") : t("contact.submit")}
                                     </button>
                                 </form>
                             )}

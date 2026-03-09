@@ -4,8 +4,10 @@ import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { contactSchema, ContactFormData } from "@/lib/schemas";
+import { useLanguage } from "@/lib/LanguageContext";
 
 export default function KickstarterModal() {
+    const { t } = useLanguage();
     const [isOpen, setIsOpen] = useState(false);
     const [isVisible, setIsVisible] = useState(false);
     const [apiError, setApiError] = useState<string | null>(null);
@@ -55,10 +57,10 @@ export default function KickstarterModal() {
                 reset();
                 setTimeout(() => closeForm(), 2000);
             } else {
-                setApiError(result.message || "Something went wrong. Please try again.");
+                setApiError(result.message || t("kickstarter.error_generic"));
             }
         } catch (error) {
-            setApiError("Failed to connect to the server. Please check your internet connection.");
+            setApiError(t("kickstarter.error_connection"));
             console.error("Form submission error:", error);
         }
     };
@@ -88,20 +90,20 @@ export default function KickstarterModal() {
                 <div className="p-8 md:p-12">
                     <div className="mb-8">
                         <span className="inline-block px-4 py-1.5 rounded-full bg-[#2a7dc9]/5 text-[#2a7dc9] text-[10px] font-black tracking-widest uppercase mb-4 border border-[#2a7dc9]/10">
-                            Launch Alert 🚀
+                            {t("kickstarter.badge")}
                         </span>
                         <h2 className="text-3xl font-black text-[#1a3a2a] leading-tight font-outfit uppercase tracking-normal mb-2">
-                            🎉 Don’t Miss Our <br />
-                            <span className="text-[#2a7dc9]">Kickstarter Launch!</span>
+                            {t("kickstarter.title_start")} <br />
+                            <span className="text-[#2a7dc9]">{t("kickstarter.title_highlight")}</span>
                         </h2>
                         <p className="text-gray-500 text-sm md:text-md leading-relaxed">
-                            Register now to get notified first and grab early-bird rewards. Join the Planet Petly inner circle today.
+                            {t("kickstarter.description")}
                         </p>
                     </div>
 
                     {isSubmitSuccessful ? (
                         <div className="py-12 text-center text-[#2a7dc9] font-black bg-[#2a7dc9]/5 rounded-3xl border border-[#2a7dc9]/10 uppercase font-outfit tracking-widest transition-all duration-500">
-                            ✔️ Registered successfully!
+                            {t("kickstarter.success")}
                         </div>
                     ) : (
                         <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
@@ -113,7 +115,7 @@ export default function KickstarterModal() {
                             <div className="space-y-1">
                                 <input
                                     {...register("name")}
-                                    placeholder="Full Name"
+                                    placeholder={t("contact.name_placeholder")}
                                     className="w-full px-6 py-4 rounded-2xl bg-gray-50 border-2 border-transparent focus:bg-white focus:border-[#2a7dc9] focus:ring-0 transition-all text-gray-800 placeholder:text-gray-400 font-medium text-base md:text-sm"
                                 />
                                 {errors.name && <p className="text-red-500 text-[10px] px-2 font-bold">{errors.name.message}</p>}
@@ -121,7 +123,7 @@ export default function KickstarterModal() {
                             <div className="space-y-1">
                                 <input
                                     {...register("email")}
-                                    placeholder="Email Address"
+                                    placeholder={t("contact.email_placeholder")}
                                     className="w-full px-6 py-4 rounded-2xl bg-gray-50 border-2 border-transparent focus:bg-white focus:border-[#2a7dc9] focus:ring-0 transition-all text-gray-800 placeholder:text-gray-400 font-medium text-base md:text-sm"
                                 />
                                 {errors.email && <p className="text-red-500 text-[10px] px-2 font-bold">{errors.email.message}</p>}
@@ -129,7 +131,7 @@ export default function KickstarterModal() {
                             <div className="space-y-1">
                                 <textarea
                                     {...register("message")}
-                                    placeholder="Optional Message"
+                                    placeholder={t("contact.message_placeholder")}
                                     rows={2}
                                     className="w-full px-6 py-4 rounded-2xl bg-gray-50 border-2 border-transparent focus:bg-white focus:border-[#2a7dc9] focus:ring-0 transition-all text-gray-800 placeholder:text-gray-400 font-medium text-base md:text-sm resize-none"
                                 />
@@ -139,7 +141,7 @@ export default function KickstarterModal() {
                                 disabled={isSubmitting}
                                 className="w-full py-5 bg-[#2a7dc9] text-white font-black rounded-3xl hover:bg-[#2176c1] hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 shadow-xl shadow-blue-500/20 text-xs tracking-[0.2em] uppercase mt-4 cursor-pointer"
                             >
-                                {isSubmitting ? "Registering..." : "Notify Me First"}
+                                {isSubmitting ? t("kickstarter.registering") : t("kickstarter.submit")}
                             </button>
                         </form>
                     )}

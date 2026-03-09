@@ -1,6 +1,9 @@
 "use client";
 
+import { useLanguage } from "@/lib/LanguageContext";
+
 export default function Hero() {
+    const { t } = useLanguage();
     return (
         <section
             id="hero"
@@ -8,7 +11,7 @@ export default function Hero() {
             aria-label="Hero section"
         >
             {/* Screen-reader heading */}
-            <h1 className="sr-only">Planet Petly – Quality Pet Food</h1>
+            <h1 className="sr-only">{t("hero.sr_heading")}</h1>
 
             {/* Background Video */}
             <video

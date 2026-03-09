@@ -1,0 +1,171 @@
+{
+    "nav": {
+        "home": "Inicio",
+        "products": "Productos",
+        "about": "Sobre Nosotros",
+        "contact": "Contacto",
+        "notify_me": "Notificarme"
+    },
+    "about": {
+        "title": "LA HISTORIA DETRÁS DE",
+        "brand": "PLANET PETLY",
+        "p1": "Todo dueño de perro conoce el momento.",
+        "p2": "Estás listo para salir a caminar—zapatos puestos, correa en mano—y de repente estás buscando bolsas de basura. Debajo del fregadero. En un cajón. Al lado de la puerta. A veces se acaban cuando más las necesitas.",
+        "p3": "En Planet Petly, creemos que el cuidado de las mascotas debe ser simple, organizado y siempre estar listo cuando tú lo estés.",
+        "p4": "Es por eso que diseñamos una solución más inteligente: un sistema de bolsas limpio y confiable con un dispensador conveniente que puedes tener junto a la puerta o agarrar al instante.",
+        "p5": "Simplemente toma el dispensador y vete.",
+        "p6": "Porque los excelentes productos para mascotas no solo deben existir, sino que deben encajar de forma natural en la vida diaria con tu perro.",
+        "feature1": "Siempre Listo para el Paseo",
+        "feature2": "Esenciales Diarios Confiables para Mascotas",
+        "feature3": "Diseño de Dispensador Inteligente y Conveniente"
+    },
+    "hero": {
+        "sr_heading": "Planet Petly – Alimentos para Mascotas de Calidad"
+    },
+    "contact": {
+        "badge": "Contáctanos",
+        "title_start": "Comencemos una",
+        "title_highlight": "Conversación.",
+        "description": "¿Tienes preguntas sobre nuestros productos o misión? Estamos aquí para ayudarte a ti y a tu mascota.",
+        "wholesale": "Oportunidades de venta al por mayor también disponibles.",
+        "email_us": "Envíanos un Correo",
+        "success_message": "✔️ Mensaje enviado. ¡Mantente paws-itivo!",
+        "error_generic": "Algo salió mal. Por favor, inténtelo de nuevo.",
+        "error_connection": "Error al conectar con el servidor. Por favor, compruebe su conexión a Internet.",
+        "name_placeholder": "Nombre Completo",
+        "email_placeholder": "Correo Electrónico",
+        "message_placeholder": "¿Cómo podemos ayudarte?",
+        "submit": "Enviar Mensaje",
+        "sending": "Enviando..."
+    },
+    "faq": {
+        "title": "Preguntas",
+        "title_highlight": "Frecuentes",
+        "description": "Encuentra respuestas a preguntas comunes sobre nuestros productos, envíos y misión sostenible. ¿Necesitas más ayuda? ¡Contáctanos en cualquier momento!",
+        "contact_btn": "Contáctanos",
+        "items": [
+            {
+                "q": "¿Qué productos ofrece Planet Petly?",
+                "a": "Ofrecemos una gama de artículos esenciales para mascotas ecológicos, comenzando con nuestras bolsas de basura biodegradables premium y dispensadores duraderos. Constantemente ampliamos nuestra línea para incluir juguetes sostenibles, alimentos centrados en la nutrición y organizadores para el hogar innovadores."
+            },
+            {
+                "q": "¿Son sus productos realmente ecológicos?",
+                "a": "¡Sí! En Planet Petly, evitamos el 'lavado verde'. Nuestras bolsas de basura están certificadas como compostables o biodegradables donde más importa, y priorizamos los materiales reciclados en nuestro embalaje y producción de artículos rígidos."
+            },
+            {
+                "q": "¿Cuándo estará disponible la línea completa de productos?",
+                "a": "¡Actualmente nos estamos preparando para nuestro lanzamiento oficial a través de Kickstarter! Al registrarte en nuestra lista 'Notificarme', serás el primero en enterarse de nuestras ofertas especiales por reserva anticipada y de las fechas exactas de lanzamiento."
+            },
+            {
+                "q": "¿Ofrecen oportunidades de venta al por mayor?",
+                "a": "Absolutamente. Actualmente nos estamos conectando con tiendas minoristas, vendedores de Amazon y distribuidores antes de nuestro lanzamiento. Consulte nuestra sección de Venta al por mayor o contáctenos directamente en admin@planetpetly.com."
+            },
+            {
+                "q": "¿Cómo puedo mantenerme actualizado sobre Planet Petly?",
+                "a": "¡La mejor manera es uniéndose a nuestra lista de correo! También puede seguir nuestro viaje en las redes sociales para ver actualizaciones entre bastidores de nuestro desarrollo de productos y esfuerzos de sostenibilidad."
+            }
+        ]
+    },
+    "footer": {
+        "connect_title": "Conéctate con Nosotros",
+        "instagram": "Instagram",
+        "facebook": "Facebook",
+        "tiktok": "TikTok",
+        "copyright": "© 2025 Planet Petly. Todos los Derechos Reservados. Creado con amor para las mascotas."
+    },
+    "feature_highlight": {
+        "marquee": [
+            "PRÓXIMAMENTE",
+            "REGISTRA TU CORREO",
+            "RECIBE NOTIFICACIONES AL LANZAMIENTO",
+            "SIN CORREOS DE MARKETING"
+        ],
+        "badge": "Diseñado para la Conveniencia",
+        "title_start": "CONSTRUIDO PARA LA",
+        "title_highlight": "VIDA DIARIA.",
+        "description": "Haz que los paseos de tu perro sean más limpios con bolsas de basura biodegradables y dispensadores convenientes.",
+        "features": [
+            {
+                "title": "Bolsas Ecológicas",
+                "description": "Bolsas de basura biodegradables y a prueba de fugas."
+            },
+            {
+                "title": "Dispensadores Prácticos",
+                "description": "Acceso fácil a las bolsas cuando las necesites."
+            }
+        ]
+    },
+    "branding_banner": {
+        "sub_title": "Cuida con Inteligencia. Ama con Profundidad.",
+        "title_start": "con",
+        "title_highlight": "planet petly"
+    },
+    "premium_shop_banner": {
+        "text": "ESENCIALES PARA EL PASEO DE PERROS RESPETUOSOS CON EL PLANETA — BOLSAS DE BASURA BIODEGRADABLES Y DISPENSADORES CONVENIENTES PARA DUEÑOS DE MASCOTAS RESPONSABLES."
+    },
+    "products": {
+        "title": "Explora nuestros",
+        "title_highlight": "Productos",
+        "description": "Explora nuestros próximos productos para encontrar soluciones innovadoras y de alta calidad diseñadas para satisfacer las necesidades de tu mascota.",
+        "badge": "Próximamente",
+        "items": [
+            {
+                "name": "Dispensador de Pared",
+                "description": "Conveniente dispensador de bolsas de basura montado en la pared para un fácil acceso al salir a caminar."
+            },
+            {
+                "name": "Rollo de Bolsas Biodegradables",
+                "description": "Rollo de repuesto ecológico hecho de material biodegradable. Duradero y a prueba de fugas para los paseos diarios."
+            }
+        ]
+    },
+    "reviews": {
+        "badge": "Lo que dicen los primeros seguidores",
+        "title_start": "Dueños de Perros",
+        "title_highlight": "Ya Están Hablando",
+        "description": "Mensajes reales de dueños de mascotas que descubrieron Planet Petly antes del lanzamiento.",
+        "description_italic": "No pueden esperar.",
+        "supporter": "Primer Seguidor",
+        "cta_title": "Únete a la lista de espera ✨",
+        "cta_description": "Sé el primero en saber cuándo se lanza Planet Petly.",
+        "cta_btn": "Notificarme cuando se lance 🚀",
+        "items": [
+            {
+                "name": "Trent",
+                "message": "Absolutamente me encanta esta idea. ¡Tan conveniente para cada paseo!"
+            },
+            {
+                "name": "Rich & Steeler",
+                "message": "Ooo es encantador. Como entrenador de perros, lo recomiendo a todos mis clientes."
+            },
+            {
+                "name": "luciahvostikova",
+                "message": "Parece interesante. He estado buscando algo como esto por un tiempo."
+            },
+            {
+                "name": "Mabel",
+                "message": "Oh sí, genial. Siempre me quedo sin bolsas en los paseos — ¡esta es la solución!"
+            },
+            {
+                "name": "kathapuranstory",
+                "message": "Oye, eso es maravilloso ❤️ Una solución tan inteligente para los dueños de perros."
+            },
+            {
+                "name": "Life With Czar",
+                "message": "Parece una idea realmente práctica para mantener las bolsas de basura organizadas y fáciles de agarrar antes de los paseos. Me gusta el concepto."
+            }
+        ]
+    },
+    "kickstarter": {
+        "badge": "Alerta de Lanzamiento 🚀",
+        "title_start": "¡No te pierdas nuestro",
+        "title_highlight": "Lanzamiento en Kickstarter!",
+        "description": "Regístrate ahora para ser notificado primero y obtener recompensas por reserva anticipada. Únete al círculo interno de Planet Petly hoy.",
+        "success": "✔️ ¡Registrado con éxito!",
+        "submit": "Notificarme Primero",
+        "registering": "Registrando..."
+    },
+    "language": "Idioma",
+    "english": "Inglés",
+    "spanish": "Español"
+}

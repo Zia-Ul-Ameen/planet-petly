@@ -1,64 +1,70 @@
 "use client";
 
 import Image from "next/image";
+import { useLanguage } from "@/lib/LanguageContext";
 
-const REVIEWS = [
-    {
-        id: 1,
-        name: "Trent",
-        verified: true,
-        avatar: "/overview-1.jpeg",
-        message: "Absolutely love this idea. So convenient for every walk!",
-        accent: "from-blue-50 to-sky-50",
-        border: "border-blue-100"
-    },
-    {
-        id: 2,
-        name: "Rich & Steeler",
-        handle: "Lead",
-        verified: true,
-        avatar: "/overview-2.jpeg",
-        message: "Ooo it's lovely. As a dog trainer, I recommend this to all my clients.",
-        accent: "from-violet-50 to-purple-50",
-        border: "border-violet-100"
-    },
-    {
-        id: 3,
-        name: "luciahvostikova",
-        avatar: "/overview-3.jpeg",
-        message: "Sounds interesting. I've been looking for something like this for a while.",
-        accent: "from-rose-50 to-pink-50",
-        border: "border-rose-100"
-    },
-    {
-        id: 4,
-        name: "Mabel",
-        verified: true,
-        avatar: "/overview-4.jpeg",
-        message: "Oh yes, great. Always running out of bags on walks — this is the solution!",
-        accent: "from-amber-50 to-yellow-50",
-        border: "border-amber-100"
-    },
-    {
-        id: 5,
-        name: "kathapuranstory",
-        avatar: "/overview-2.jpeg",
-        message: "Hey, that's wonderful ❤️ Such a smart solution for dog owners.",
-        accent: "from-teal-50 to-emerald-50",
-        border: "border-teal-100"
-    },
-    {
-        id: 6,
-        name: "Life With Czar",
-        handle: "🐾",
-        avatar: "/product-1.jpeg",
-        message: "It looks like a really practical idea for keeping waste bags organized and easy to grab before walks. I like the concept.",
-        accent: "from-blue-50 to-indigo-50",
-        border: "border-indigo-100"
-    }
-];
+// REVIEWS updated in component to use t()
 
 export default function Reviews() {
+    const { t } = useLanguage();
+    const reviewItems = t("reviews.items") as { name: string; message: string }[];
+
+    const REVIEWS = [
+        {
+            id: 1,
+            name: reviewItems[0].name,
+            verified: true,
+            avatar: "/overview-1.jpeg",
+            message: reviewItems[0].message,
+            accent: "from-blue-50 to-sky-50",
+            border: "border-blue-100"
+        },
+        {
+            id: 2,
+            name: reviewItems[1].name,
+            handle: "Lead",
+            verified: true,
+            avatar: "/overview-2.jpeg",
+            message: reviewItems[1].message,
+            accent: "from-violet-50 to-purple-50",
+            border: "border-violet-100"
+        },
+        {
+            id: 3,
+            name: reviewItems[2].name,
+            avatar: "/overview-3.jpeg",
+            message: reviewItems[2].message,
+            accent: "from-rose-50 to-pink-50",
+            border: "border-rose-100"
+        },
+        {
+            id: 4,
+            name: reviewItems[3].name,
+            verified: true,
+            avatar: "/overview-4.jpeg",
+            message: reviewItems[3].message,
+            accent: "from-amber-50 to-yellow-50",
+            border: "border-amber-100"
+        },
+        {
+            id: 5,
+            name: reviewItems[4].name,
+            avatar: "/overview-2.jpeg",
+            message: reviewItems[4].message,
+            accent: "from-teal-50 to-emerald-50",
+            border: "border-teal-100"
+        },
+        {
+            id: 6,
+            name: reviewItems[5].name,
+            handle: "🐾",
+            avatar: "/product-1.jpeg",
+            message: reviewItems[5].message,
+            accent: "from-blue-50 to-indigo-50",
+            border: "border-indigo-100"
+        }
+    ];
+
     return (
         <section id="reviews" className="relative py-28 px-6 bg-[#f0f4ff] overflow-hidden">
             {/* Decorative Background Blobs */}
@@ -72,18 +78,18 @@ export default function Reviews() {
                 <div className="text-center max-w-3xl mx-auto mb-20">
                     <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/80 backdrop-blur-sm text-[#2a73c1] text-xs font-black tracking-widest uppercase mb-8 border border-blue-100 shadow-sm">
                         <span className="w-2 h-2 rounded-full bg-[#2a73c1] animate-pulse" />
-                        Early Supporters Speaking
+                        {t("reviews.badge")}
                     </div>
                     <h2 className="text-4xl md:text-6xl font-black text-[#1a3a2a] font-outfit mb-6 leading-[1.1] tracking-tight">
-                        Dog Owners Are{" "}
+                        {t("reviews.title_start")}{" "}
                         <span className="relative inline-block">
-                            <span className="relative z-10 text-[#2a73c1]">Already Talking</span>
+                            <span className="relative z-10 text-[#2a73c1]">{t("reviews.title_highlight")}</span>
                             <span className="absolute bottom-1 left-0 w-full h-4 bg-yellow-200/70 -rotate-1 -z-0 rounded" />
                         </span>
                     </h2>
                     <p className="text-gray-500 text-lg md:text-xl leading-relaxed font-medium">
-                        Real messages from pet owners who discovered Planet Petly before launch.
-                        <span className="italic"> They can't wait.</span>
+                        {t("reviews.description")}
+                        <span className="italic"> {t("reviews.description_italic")}</span>
                     </p>
                 </div>
 
@@ -137,7 +143,7 @@ export default function Reviews() {
                                             </span>
                                         )}
                                     </div>
-                                    <span className="text-[11px] text-gray-400 font-medium mt-0.5 block">Early Supporter</span>
+                                    <span className="text-[11px] text-gray-400 font-medium mt-0.5 block">{t("reviews.supporter")}</span>
                                 </div>
                             </div>
 
@@ -155,14 +161,14 @@ export default function Reviews() {
 
                     <div className="text-center md:text-left relative z-10">
                         <p className="text-[#1a3a2a] font-black text-2xl md:text-3xl font-outfit mb-2 tracking-tight">
-                            Join the waiting list ✨
+                            {t("reviews.cta_title")}
                         </p>
                         <p className="text-gray-500 font-medium text-base">
-                            Be the first to know when Planet Petly launches.
+                            {t("reviews.cta_description")}
                         </p>
                     </div>
                     <button className="relative group overflow-hidden bg-[#1f6b64] hover:bg-[#154a45] text-white px-10 py-5 rounded-full text-base font-black transition-all duration-300 shadow-xl shadow-teal-900/20 hover:-translate-y-1 active:scale-95 whitespace-nowrap z-10 tracking-wide">
-                        <span className="relative z-10">Notify Me When it Launches 🚀</span>
+                        <span className="relative z-10">{t("reviews.cta_btn")}</span>
                         <div className="absolute inset-0 w-1/4 h-full bg-white/10 skew-x-[-20deg] -translate-x-full group-hover:translate-x-[400%] transition-transform duration-700" />
                     </button>
                 </div>

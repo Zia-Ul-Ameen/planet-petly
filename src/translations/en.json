@@ -1,0 +1,171 @@
+{
+    "nav": {
+        "home": "Home",
+        "products": "Products",
+        "about": "About Us",
+        "contact": "Contact",
+        "notify_me": "Notify Me"
+    },
+    "about": {
+        "title": "THE STORY BEHIND",
+        "brand": "PLANET PETLY",
+        "p1": "Every dog owner knows the moment.",
+        "p2": "You're ready to head out for a walk—shoes on, leash in hand—and suddenly you're searching for waste bags. Under the sink. In a drawer. By the door. Sometimes they're gone when you need them most.",
+        "p3": "At Planet Petly, we believe pet care should be simple, organized, and always ready when you are.",
+        "p4": "That's why we designed a smarter solution—a clean, reliable bag system with a convenient dispenser you can keep by the door or grab instantly.",
+        "p5": "Just grab the dispenser and go.",
+        "p6": "Because great pet products shouldn't just exist — they should fit naturally into everyday life with your dog.",
+        "feature1": "Always Ready for Walk Time",
+        "feature2": "Reliable Everyday Pet Essentials",
+        "feature3": "Smart, Convenient Dispenser Design"
+    },
+    "hero": {
+        "sr_heading": "Planet Petly – Quality Pet Food"
+    },
+    "contact": {
+        "badge": "Contact Us",
+        "title_start": "Let's Start A",
+        "title_highlight": "Conversation.",
+        "description": "Have questions about our products or mission? We're here to help you and your pet.",
+        "wholesale": "Wholesale opportunities also available.",
+        "email_us": "Email Us",
+        "success_message": "✔️ Message sent. Stay paws-itive!",
+        "error_generic": "Something went wrong. Please try again.",
+        "error_connection": "Failed to connect to the server. Please check your internet connection.",
+        "name_placeholder": "Full Name",
+        "email_placeholder": "Email Address",
+        "message_placeholder": "How can we help?",
+        "submit": "Submit Message",
+        "sending": "Sending..."
+    },
+    "faq": {
+        "title": "Frequently Asked",
+        "title_highlight": "Questions",
+        "description": "Find answers to common questions about our products, shipping, and sustainable mission. Need more help? Contact us anytime!",
+        "contact_btn": "Contact Us",
+        "items": [
+            {
+                "q": "What products does Planet Petly offer?",
+                "a": "We offer a range of eco-friendly pet essentials, starting with our premium biodegradable waste bags and durable dispensers. We're constantly expanding our lineup to include sustainable toys, nutrition-focused food, and innovative home organizers."
+            },
+            {
+                "q": "Are your products truly eco-friendly?",
+                "a": "Yes! At Planet Petly, we avoid 'greenwashing.' Our waste bags are certified compostable or biodegradable where it matters most, and we prioritize recycled materials in our packaging and hard-goods production."
+            },
+            {
+                "q": "When will the full product line be available?",
+                "a": "We are currently preparing for our official launch via Kickstarter! By signing up for our 'Notify Me' list, you'll be the first to know about our early-bird specials and exact launch dates."
+            },
+            {
+                "q": "Do you offer wholesale opportunities?",
+                "a": "Absolutely. We are currently connecting with retail stores, Amazon sellers, and distributors ahead of our launch. Please check our Wholesale section or contact us directly at admin@planetpetly.com."
+            },
+            {
+                "q": "How can I stay updated on Planet Petly?",
+                "a": "The best way is to join our mailing list! You can also follow our journey on social media to see behind-the-scenes updates of our product development and sustainability efforts."
+            }
+        ]
+    },
+    "footer": {
+        "connect_title": "Connect With Us",
+        "instagram": "Instagram",
+        "facebook": "Facebook",
+        "tiktok": "TikTok",
+        "copyright": "© 2025 Planet Petly. All Rights Reserved. Crafted with love for pets."
+    },
+    "feature_highlight": {
+        "marquee": [
+            "COMING SOON",
+            "REGISTER YOUR EMAIL",
+            "GET NOTIFIED AT LAUNCH",
+            "NO MARKETING EMAILS"
+        ],
+        "badge": "Designed for Convenience",
+        "title_start": "BUILT FOR",
+        "title_highlight": "EVERYDAY LIFE.",
+        "description": "Make your dog walks cleaner with biodegradabe poop bags and convenient dispensers.",
+        "features": [
+            {
+                "title": "Eco-Friendly Bags",
+                "description": "Biodegradable and leak-proof poop bags."
+            },
+            {
+                "title": "Handy Dispensers",
+                "description": "Easy access to bags when you need them."
+            }
+        ]
+    },
+    "branding_banner": {
+        "sub_title": "Care Smarter. Love Deeper.",
+        "title_start": "with",
+        "title_highlight": "planet petly"
+    },
+    "premium_shop_banner": {
+        "text": "PLANET-FRIENDLY DOG WALK ESSENTIALS — BIODEGRADABLE WASTE BAGS AND CONVENIENT DISPENSERS FOR RESPONSIBLE PET OWNERS."
+    },
+    "products": {
+        "title": "Explore our",
+        "title_highlight": "Products",
+        "description": "Explore our upcoming products to find high-quality, innovative solutions designed to meet your pet's needs.",
+        "badge": "Coming Soon",
+        "items": [
+            {
+                "name": "Wall-Mounted Roll Dispenser",
+                "description": "Convenient wall-mounted poop bag dispenser for easy access when heading out for a walk."
+            },
+            {
+                "name": "Biodegradable Poop Bag Roll",
+                "description": "Eco-friendly refill roll made from biodegradable material. Durable and leak-proof for everyday walks."
+            }
+        ]
+    },
+    "reviews": {
+        "badge": "Early Supporters Speaking",
+        "title_start": "Dog Owners Are",
+        "title_highlight": "Already Talking",
+        "description": "Real messages from pet owners who discovered Planet Petly before launch.",
+        "description_italic": "They can't wait.",
+        "supporter": "Early Supporter",
+        "cta_title": "Join the waiting list ✨",
+        "cta_description": "Be the first to know when Planet Petly launches.",
+        "cta_btn": "Notify Me When it Launches 🚀",
+        "items": [
+            {
+                "name": "Trent",
+                "message": "Absolutely love this idea. So convenient for every walk!"
+            },
+            {
+                "name": "Rich & Steeler",
+                "message": "Ooo it's lovely. As a dog trainer, I recommend this to all my clients."
+            },
+            {
+                "name": "luciahvostikova",
+                "message": "Sounds interesting. I've been looking for something like this for a while."
+            },
+            {
+                "name": "Mabel",
+                "message": "Oh yes, great. Always running out of bags on walks — this is the solution!"
+            },
+            {
+                "name": "kathapuranstory",
+                "message": "Hey, that's wonderful ❤️ Such a smart solution for dog owners."
+            },
+            {
+                "name": "Life With Czar",
+                "message": "It looks like a really practical idea for keeping waste bags organized and easy to grab before walks. I like the concept."
+            }
+        ]
+    },
+    "kickstarter": {
+        "badge": "Launch Alert 🚀",
+        "title_start": "Don’t Miss Our",
+        "title_highlight": "Kickstarter Launch!",
+        "description": "Register now to get notified first and grab early-bird rewards. Join the Planet Petly inner circle today.",
+        "success": "✔️ Registered successfully!",
+        "submit": "Notify Me First",
+        "registering": "Registering..."
+    },
+    "language": "Language",
+    "english": "English",
+    "spanish": "Spanish"
+}

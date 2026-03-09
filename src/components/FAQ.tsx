@@ -3,29 +3,9 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { useLanguage } from "@/lib/LanguageContext";
 
-const FAQ_DATA = [
-    {
-        question: "What products does Planet Petly offer?",
-        answer: "We offer a range of eco-friendly pet essentials, starting with our premium biodegradable waste bags and durable dispensers. We're constantly expanding our lineup to include sustainable toys, nutrition-focused food, and innovative home organizers.",
-    },
-    {
-        question: "Are your products truly eco-friendly?",
-        answer: "Yes! At Planet Petly, we avoid 'greenwashing.' Our waste bags are certified compostable or biodegradable where it matters most, and we prioritize recycled materials in our packaging and hard-goods production.",
-    },
-    {
-        question: "When will the full product line be available?",
-        answer: "We are currently preparing for our official launch via Kickstarter! By signing up for our 'Notify Me' list, you'll be the first to know about our early-bird specials and exact launch dates.",
-    },
-    {
-        question: "Do you offer wholesale opportunities?",
-        answer: "Absolutely. We are currently connecting with retail stores, Amazon sellers, and distributors ahead of our launch. Please check our Wholesale section or contact us directly at admin@planetpetly.com.",
-    },
-    {
-        question: "How can I stay updated on Planet Petly?",
-        answer: "The best way is to join our mailing list! You can also follow our journey on social media to see behind-the-scenes updates of our product development and sustainability efforts.",
-    },
-];
+// FAQ_DATA removed, now using t("faq.items")
 
 function FAQItem({ question, answer }: { question: string; answer: string }) {
     const [isOpen, setIsOpen] = useState(false);
@@ -65,6 +45,9 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
 }
 
 export default function FAQ() {
+    const { t } = useLanguage();
+    const faqItems = t("faq.items") as { q: string; a: string }[];
+
     return (
         <section id="faq" className="py-24 lg:pt-32 pb-10 px-6 bg-[#fbfaf7] overflow-hidden">
             <div className="max-w-7xl mx-auto">
@@ -74,20 +57,20 @@ export default function FAQ() {
                     <div className="lg:col-span-5 flex flex-col items-start gap-8">
                         <div className="flex flex-col gap-4">
                             <h2 className="text-4xl md:text-6xl font-black text-[#1a3a2a] leading-[1.1] font-outfit uppercase tracking-tighter">
-                                Frequently Asked <br />
-                                <span className="text-[#2a7dc9]">Questions</span>
+                                {t("faq.title")} <br />
+                                <span className="text-[#2a7dc9]">{t("faq.title_highlight")}</span>
                             </h2>
                         </div>
 
                         <p className="text-gray-500 text-lg md:text-xl leading-relaxed max-w-md">
-                            Find answers to common questions about our products, shipping, and sustainable mission. Need more help? Contact us anytime!
+                            {t("faq.description")}
                         </p>
 
                         <Link
                             href="#contact"
                             className="group relative px-8 py-4 bg-[#ffce00] text-[#1a3a2a] font-black text-sm tracking-widest uppercase rounded-full transition-all duration-300 shadow-xl hover:shadow-yellow-200 hover:-translate-y-1 overflow-hidden"
                         >
-                            <span className="relative z-10 font-outfit">Contact Us</span>
+                            <span className="relative z-10 font-outfit">{t("faq.contact_btn")}</span>
                             <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
                         </Link>
 
@@ -105,8 +88,8 @@ export default function FAQ() {
 
                     {/* Right Column: Accordion */}
                     <div className="lg:col-span-7 flex flex-col gap-4">
-                        {FAQ_DATA.map((item, index) => (
-                            <FAQItem key={index} {...item} />
+                        {faqItems.map((item, index) => (
+                            <FAQItem key={index} question={item.q} answer={item.a} />
                         ))}
                     </div>
 
