@@ -41,7 +41,6 @@ export default function About() {
                         </div>
 
                         {/* Bottom Feature Boxes */}
-                        {/* Bottom Feature Boxes */}
                         <div className="flex flex-wrap gap-3 max-w-4xl">
                             {[
                                 t("about.feature1"),
