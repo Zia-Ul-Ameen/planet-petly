@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://planetpetly.com"),
   title: "Wall Mounted Pet Waste Bag Holder",
   description:
-    "Never search for poop bags again. Organized holder tray with dispenser and 150 compostable bags for easy, mess-free dog walks.",
+    "Always be ready for clean, stress-free walks. Convenient holder with built-in dispenser keeps bags within easy reach every time you head out.",
   keywords: [
     "eco-friendly pet products",
     "compostable poop bags",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Wall Mounted Pet Waste Bag Holder",
     description:
-      "Never search for poop bags again. Organized holder tray with dispenser and 150 compostable bags for easy, mess-free dog walks.",
+      "Always be ready for clean, stress-free walks. Convenient holder with built-in dispenser keeps bags within easy reach every time you head out.",
     url: "https://planetpetly.com",
     siteName: "Planet Petly",
     locale: "en_US",
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Wall Mounted Pet Waste Bag Holder",
-    description: "Never search for poop bags again. Organized holder tray with dispenser and 150 compostable bags for easy, mess-free dog walks.",
+    description: "Always be ready for clean, stress-free walks. Convenient holder with built-in dispenser keeps bags within easy reach every time you head out.",
     images: ["/meta-share.png"],
   },
   robots: {

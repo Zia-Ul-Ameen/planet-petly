@@ -13,7 +13,7 @@ export default function About() {
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[200px] bg-blue-400/20 blur-[100px] -rotate-45 pointer-events-none" />
 
             <div className="max-w-7xl mx-auto relative z-10">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
 
                     {/* Left: Content Card */}
                     <div className="flex flex-col gap-8 md:gap-10">
@@ -70,7 +70,7 @@ export default function About() {
                         </div>
 
                         {/* Feature Pills */}
-                        <div className="flex flex-wrap gap-3 pt-2">
+                        <div className="flex flex-wrap justify-center md:justify-start gap-3 pt-2">
                             {[
                                 t("about.feature1"),
                                 t("about.feature2"),
@@ -90,9 +90,8 @@ export default function About() {
                         </div>
                     </div>
 
-                    {/* Right: Premium Visual */}
-                    <div className="relative group hidden lg:block">
-                        <div className="relative rounded-[32px] overflow-hidden border border-white/20 shadow-2xl aspect-[4/5] lg:aspect-square">
+                    <div className="relative group w-full">
+                        <div className="relative rounded-[32px] overflow-hidden border border-white/20 shadow-2xl aspect-[1/1] lg:aspect-square">
                             <Image
                                 src="/about-us.jpeg"
                                 alt="Planet Petly Vision"

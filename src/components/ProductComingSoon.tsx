@@ -30,7 +30,7 @@ export default function ProductComingSoon() {
                 {/* Section Header */}
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-6 md:mb-12">
                     <div className="max-w-xl">
-                        <h2 className="text-4xl w-fit flex flex-col items-start md:text-6xl font-black text-[#1a3a2a] font-outfit mb-3 leading-[1.1] tracking-tight">
+                        <h2 className="text-4xl w-fit flex flex-col items-start md:text-6xl font-black text-[#1a3a2a] font-outfit mb-4 leading-[1.1] tracking-tight">
                             {t("products.title_start")}{" "}
                             <span className="relative w-fit">
                                 <span className="relative z-10 text-[#2a7dc9]">{t("products.title_highlight")}</span>
@@ -46,18 +46,18 @@ export default function ProductComingSoon() {
                 {/* Product Grid — 4 Columns for smaller cards */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 lg:gap-8">
                     {COMING_SOON_PRODUCTS.map((product) => (
-                        <div key={product.id} className="group flex flex-col bg-gray-50 rounded-2xl overflow-hidden border border-gray-100 shadow-md hover:shadow-lg">
+                        <div key={product.id} className="group flex flex-col bg-white rounded-[32px] overflow-hidden border border-gray-100 shadow-lg hover:shadow-2xl hover:shadow-blue-900/10 transition-all duration-500 hover:-translate-y-2 cursor-default">
                             {/* Product Image Area — Compact Square */}
                             <div className="relative aspect-square w-full overflow-hidden bg-white">
                                 <Image
                                     src={product.image}
                                     alt={product.name}
                                     fill
-                                    className="object-cover"
+                                    className="object-cover transition-transform duration-700 group-hover:scale-102"
                                 />
                                 {/* Coming Soon Overlay — Smaller Badge */}
-                                <div className="absolute top-4 right-4">
-                                    <span className="bg-[#ffce00] text-black text-[10px] font-black tracking-widest uppercase px-3 py-1 rounded-full shadow-md">
+                                <div className="absolute top-4 right-4 z-10 transition-transform duration-500 group-hover:-translate-y-1">
+                                    <span className="bg-[#ffce00] text-[#1a3a2a] text-[10px] font-black tracking-widest uppercase px-4 py-1.5 rounded-full shadow-lg">
                                         {t("products.badge")}
                                     </span>
                                 </div>

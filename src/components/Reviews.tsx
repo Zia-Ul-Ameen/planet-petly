@@ -61,7 +61,7 @@ export default function Reviews() {
 
                 {/* Header */}
                 <div className="text-center w-full mx-auto mb-8">
-                    <h2 className="text-4xl w-fit mx-auto flex flex-col items-center md:text-6xl font-black text-[#1a3a2a] font-outfit mb-3 leading-[1.1] tracking-tight text-center">
+                    <h2 className="text-4xl w-fit mx-auto flex flex-col items-center md:text-6xl font-black text-[#1a3a2a] font-outfit mb-4 leading-[1.1] tracking-tight text-center">
                         {t("reviews.title_start")}{" "}
                         <span className="relative w-fit">
                             <span className="relative z-10 text-[#2a73c1]">{t("reviews.title_highlight")}</span>

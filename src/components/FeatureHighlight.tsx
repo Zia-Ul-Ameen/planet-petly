@@ -70,7 +70,7 @@ export default function FeatureHighlight() {
                             <span className="inline-block w-fit px-4 py-1.5 rounded-full bg-[#2a7dc9]/5 text-[#2a7dc9] text-[10px] font-black tracking-widest uppercase border border-[#2a7dc9]/10">
                                 {t("feature_highlight.badge")}
                             </span>
-                            <h2 className="text-4xl w-fit flex flex-col items-start md:text-6xl font-black text-[#1a3a2a] font-outfit mb-3 leading-[1.1] tracking-tight">
+                            <h2 className="text-4xl w-fit flex flex-col items-start md:text-6xl font-black text-[#1a3a2a] font-outfit leading-[1.1] tracking-tight">
                                 {t("feature_highlight.title_start")}{" "}
                                 <span className="relative w-fit">
                                     <span className="relative z-10 text-[#2a7dc9]">{t("feature_highlight.title_highlight")}</span>

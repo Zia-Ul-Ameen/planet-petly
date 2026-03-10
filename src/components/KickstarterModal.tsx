@@ -92,14 +92,14 @@ export default function KickstarterModal() {
                         <span className="inline-block px-4 py-1.5 rounded-full bg-[#2a7dc9]/5 text-[#2a7dc9] text-[10px] font-black tracking-widest uppercase mb-4 border border-[#2a7dc9]/10">
                             {t("kickstarter.badge")}
                         </span>
-                        <h2 className="text-3xl w-fit flex flex-col items-start font-black text-[#1a3a2a] font-outfit mb-3 leading-[1.1] tracking-tight">
+                        <h2 className="text-3xl md:text-4xl w-fit flex flex-col items-start font-black text-[#1a3a2a] font-outfit mb-4 leading-[1.1] tracking-normal">
                             {t("kickstarter.title_start")}{" "}
                             <span className="relative w-fit">
                                 <span className="relative z-10 text-[#2a73c1]">{t("kickstarter.title_highlight")}</span>
                                 <span className="absolute bottom-1 left-0 w-full h-4 bg-yellow-200/70 -rotate-1 -z-0 rounded" />
                             </span>
                         </h2>
-                        <p className="text-gray-500 text-sm md:text-md leading-relaxed">
+                        <p className="text-gray-500 text-md md:text-lg leading-relaxed">
                             {t("kickstarter.description")}
                         </p>
                     </div>

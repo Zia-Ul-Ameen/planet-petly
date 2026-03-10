@@ -46,7 +46,7 @@ export default function Contact() {
     return (
         <section id="contact" className="relative pb-10 px-6 z-20 pt-16 overflow-visible bg-white">
             <div className="max-w-6xl mx-auto -mb-32 md:-mb-48 lg:-mb-56 relative z-30">
-                <div className="bg-white rounded-[44px] p-8 lg:p-14 shadow-[0_32px_80px_-20px_rgba(0,0,0,0.15)] border border-gray-100">
+                <div className="bg-white rounded-[44px] p-8 lg:p-14 shadow-[0_32px_80px_-20px_rgba(0,0,0,0.35)] border border-gray-100">
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
 
                         {/* Info Side */}
@@ -55,7 +55,7 @@ export default function Contact() {
                                 <span className="inline-block px-4 py-1.5 rounded-full bg-[#2a7dc9]/5 text-[#2a7dc9] text-xs font-black tracking-widest uppercase mb-6 border border-[#2a7dc9]/10">
                                     {t("contact.badge")}
                                 </span>
-                                <h2 className="text-4xl w-fit flex flex-col items-start md:text-6xl font-black text-[#1a3a2a] font-outfit mb-3 leading-[1.1] tracking-tight">
+                                <h2 className="text-4xl w-fit flex flex-col items-start md:text-6xl font-black text-[#1a3a2a] font-outfit mb-4 md:leading-[1] leading-[1.1] tracking-tight">
                                     {t("contact.title_start")}{" "}
                                     <span className="relative w-fit">
                                         <span className="relative z-10 text-[#2a73c1]">{t("contact.title_highlight")}</span>
