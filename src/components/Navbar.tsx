@@ -111,11 +111,13 @@ export default function Navbar() {
                             <div className="flex items-center gap-2">
                                 <select
                                     value={locale}
-                                    onChange={(e) => setLocale(e.target.value as "en" | "es")}
+                                    onChange={(e) => setLocale(e.target.value as "en" | "es" | "fr" | "tr")}
                                     className="bg-white/10 text-white text-xs font-bold py-1.5 px-2 rounded-lg border border-white/20 focus:outline-none focus:ring-2 focus:ring-yellow-400/50 cursor-pointer appearance-none"
                                 >
                                     <option value="en" className="bg-[#2a7dc9] text-white">EN</option>
                                     <option value="es" className="bg-[#2a7dc9] text-white">ES</option>
+                                    <option value="fr" className="bg-[#2a7dc9] text-white">FR</option>
+                                    <option value="tr" className="bg-[#2a7dc9] text-white">TR</option>
                                 </select>
                             </div>
 

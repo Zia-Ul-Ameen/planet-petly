@@ -3,8 +3,10 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from "react";
 import en from "@/translations/en.json";
 import es from "@/translations/es.json";
+import fr from "@/translations/fr.json";
+import tr from "@/translations/tr.json";
 
-type Locale = "en" | "es";
+type Locale = "en" | "es" | "fr" | "tr";
 
 interface LanguageContextType {
     locale: Locale;
@@ -13,7 +15,7 @@ interface LanguageContextType {
     t: (key: string) => any;
 }
 
-const translations = { en, es };
+const translations = { en, es, fr, tr };
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
@@ -22,7 +24,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 
     useEffect(() => {
         const savedLocale = localStorage.getItem("locale") as Locale;
-        if (savedLocale && (savedLocale === "en" || savedLocale === "es")) {
+        if (savedLocale && (savedLocale === "en" || savedLocale === "es" || savedLocale === "fr" || savedLocale === "tr")) {
             // eslint-disable-next-line react-hooks/set-state-in-effect
             setLocaleState(savedLocale);
         }

@@ -1,0 +1,201 @@
+{
+    "nav": {
+        "home": "Accueil",
+        "products": "Produits",
+        "about": "À Propos",
+        "contact": "Contact",
+        "notify_me": "M'avertir"
+    },
+    "about": {
+        "title": "L'HISTOIRE DE",
+        "brand": "PLANET PETLY",
+        "p1": "Chaque propriétaire de chien connaît ce moment.",
+        "p2": "Vous êtes prêt à sortir pour une promenade—chaussures aux pieds, laisse à la main—et soudain, vous cherchez des sacs à déjections. Sous l'évier. Dans un tiroir. Près de la porte. Parfois, ils ont disparu au moment où vous en avez le plus besoin.",
+        "p3": "Chez Planet Petly, nous pensons que les soins des animaux de compagnie devraient être simples, organisés et toujours prêts quand vous l'êtes.",
+        "p4": "C'est pourquoi nous avons conçu une solution plus intelligente—un système de sacs propre et fiable avec un distributeur pratique que vous pouvez garder près de la porte ou saisir instantanément.",
+        "p5": "Il suffit de saisir le distributeur et de partir.",
+        "p6": "Parce que de bons produits pour animaux de compagnie ne devraient pas seulement exister — ils devraient s'intégrer naturellement dans la vie quotidienne avec votre chien.",
+        "feature1": "Toujours prêt pour la promenade",
+        "feature2": "L'essentiel quotidien fiable pour animaux",
+        "feature3": "Design de distributeur intelligent et pratique"
+    },
+    "hero": {
+        "sr_heading": "Planet Petly – Nourriture pour Animaux de Qualité"
+    },
+    "contact": {
+        "badge": "Contactez-nous",
+        "title_start": "Commençons Une",
+        "title_highlight": "Conversation.",
+        "description": "Vous avez des questions sur nos produits ou notre mission ? Nous sommes là pour vous aider, vous et votre animal.",
+        "wholesale": "Opportunités de vente en gros également disponibles.",
+        "email_us": "Envoyez-nous un Email",
+        "success_message": "✔️ Message envoyé. Restez positifs !",
+        "error_generic": "Quelque chose s'est mal passé. Veuillez réessayer.",
+        "error_connection": "Échec de la connexion au serveur. Veuillez vérifier votre connexion internet.",
+        "name_placeholder": "Nom complet",
+        "email_placeholder": "Adresse Email",
+        "message_placeholder": "Comment pouvons-nous aider ?",
+        "submit": "Envoyer le Message",
+        "sending": "Envoi en cours..."
+    },
+    "faq": {
+        "title": "Questions",
+        "title_highlight": "Fréquemment Posées",
+        "description": "Trouvez des réponses aux questions courantes sur nos produits, l'expédition et notre mission durable. Besoin d'aide supplémentaire ? Contactez-nous à tout moment !",
+        "contact_btn": "Contactez-nous",
+        "items": [
+            {
+                "q": "Quels produits propose Planet Petly ?",
+                "a": "Nous proposons une gamme de produits essentiels écologiques pour les animaux de compagnie, à commencer par nos sacs à déjections biodégradables de première qualité et nos distributeurs durables. Nous élargissons constamment notre gamme pour inclure des jouets durables, des aliments axés sur la nutrition et des organisateurs pour la maison innovants."
+            },
+            {
+                "q": "Vos produits sont-ils vraiment écologiques ?",
+                "a": "Oui ! Chez Planet Petly, nous évitons le 'greenwashing'. Nos sacs à déjections sont certifiés compostables ou biodégradables là où cela compte le plus, et nous privilégions les matériaux recyclés dans nos emballages et la production de biens matériels."
+            },
+            {
+                "q": "Quand la gamme complète de produits sera-t-elle disponible ?",
+                "a": "Nous préparons actuellement notre lancement officiel via Kickstarter ! En vous inscrivant à notre liste 'M'avertir', vous serez les premiers informés de nos offres exclusives et de nos dates de lancement exactes."
+            },
+            {
+                "q": "Proposez-vous des opportunités de vente en gros ?",
+                "a": "Absolument. Nous sommes actuellement en contact avec des magasins de détail, des vendeurs Amazon et des distributeurs en vue de notre lancement. Veuillez consulter notre section Vente en gros ou nous contacter directement à admin@planetpetly.com."
+            },
+            {
+                "q": "Comment puis-je rester informé sur Planet Petly ?",
+                "a": "La meilleure façon est de vous inscrire à notre liste de diffusion ! Vous pouvez également suivre notre aventure sur les réseaux sociaux pour voir les coulisses du développement de nos produits et de nos efforts en matière de développement durable."
+            }
+        ]
+    },
+    "footer": {
+        "connect_title": "Connectez-vous Avec Nous",
+        "instagram": "Instagram",
+        "facebook": "Facebook",
+        "tiktok": "TikTok",
+        "copyright": "© 2025 Planet Petly. Tous droits réservés. Conçu avec amour pour les animaux."
+    },
+    "feature_highlight": {
+        "marquee": [
+            "BIENTÔT DISPONIBLE",
+            "ENREGISTREZ VOTRE EMAIL",
+            "SOYEZ AVERTI AU LANCEMENT",
+            "AUCUN EMAIL MARKETING"
+        ],
+        "badge": "Conçu pour la Commodité",
+        "title_start": "Conçu Pour",
+        "title_highlight": "La Vie Quotidienne.",
+        "description": "Rendez vos promenades avec votre chien plus propres avec des sacs à déjections biodégradables et des distributeurs pratiques.",
+        "features": [
+            {
+                "title": "Sacs Écologiques",
+                "description": "Sacs à déjections biodégradables et étanches."
+            },
+            {
+                "title": "Distributeurs Pratiques",
+                "description": "Accès facile aux sacs quand vous en avez besoin."
+            }
+        ]
+    },
+    "overview": {
+        "title_start": "Conçu pour",
+        "title_highlight": "La Vie Quotidienne."
+    },
+    "branding_banner": {
+        "sub_title": "Prenez soin plus intelligemment. Aimez plus profondément.",
+        "title_start": "avec",
+        "title_highlight": "planet petly"
+    },
+    "premium_shop_banner": {
+        "text": "DES ESSENTIELS DE PROMENADE POUR CHIENS RESPECTUEUX DE LA PLANÈTE — SACS À DÉJECTIONS BIODÉGRADABLES ET DISTRIBUTEURS PRATIQUES POUR PROPRIÉTAIRES D'ANIMAUX RESPONSABLES."
+    },
+    "products": {
+        "title_start": "Découvrez Nos",
+        "title_highlight": "Produits",
+        "description": "Découvrez nos produits à venir pour trouver des solutions innovantes et de haute qualité conçues pour répondre aux besoins de votre animal.",
+        "badge": "Bientôt Disponible",
+        "items": [
+            {
+                "name": "Distributeur de Rouleaux Mural",
+                "description": "Distributeur mural de sacs à crottes pratique pour un accès facile au moment de sortir se promener."
+            },
+            {
+                "name": "Rouleau de Sacs à Crottes Biodégradable",
+                "description": "Rouleau de recharge écologique fait de matériel biodégradable. Durable et sans fuite pour les balades de tous les jours."
+            }
+        ]
+    },
+    "reviews": {
+        "badge": "Les Premiers Soutiens Parlent",
+        "title_start": "Les Propriétaires D'Animaux En",
+        "title_highlight": "Parlent Déjà",
+        "description": "Vrais messages de propriétaires d'animaux qui ont découvert Planet Petly avant le lancement.",
+        "description_italic": "Ils ont hâte.",
+        "supporter": "Premier Soutien",
+        "cta_title": "Rejoignez La Liste D'attente ✨",
+        "cta_description": "Soyez le premier à savoir quand Planet Petly sera lancé.",
+        "cta_btn": "M'avertir Au Lancement 🚀",
+        "items": [
+            {
+                "name": "rudy.booboo",
+                "message": "J'adore cette idée ! Ce serait un plaisir d'en savoir plus 😊"
+            },
+            {
+                "name": "Simba",
+                "message": "Wow c'est sympa de votre part et bien ❤️ ... Je vous souhaite bonne chance ❤️"
+            },
+            {
+                "name": "beandourocane",
+                "message": "Salut 🐶🐾 super sympa votre projet !! ... Oui ça a l'air vraiment utile 🐶🐾"
+            },
+            {
+                "name": "groza",
+                "message": "Salut, j'ai regardé votre travail et ça m'a beaucoup plu. En tant que propriétaire de chien, je peux dire que c'est très pratique."
+            },
+            {
+                "name": "Trent",
+                "message": "Absolument"
+            },
+            {
+                "name": "Rich & Steeler",
+                "message": "Ooo c'est charmant"
+            },
+            {
+                "name": "kathapuranstori...",
+                "message": "Hé, c'est merveilleux ❤️"
+            },
+            {
+                "name": "Kiara",
+                "message": "Salut, nous adorerions absolument vous soutenir dans votre parcours 😍"
+            },
+            {
+                "name": "Wilson Squad...",
+                "message": "Ce serait incroyable pour nous :)"
+            },
+            {
+                "name": "ياسمين",
+                "message": "Je vais sûrement commander Merci beaucoup"
+            },
+            {
+                "name": "Mabel",
+                "message": "Oh oui super"
+            },
+            {
+                "name": "Muffin Toffee",
+                "message": "Hey ! Trop bien ! Dites-m'en plus sur la façon dont ça va marcher ?"
+            }
+        ]
+    },
+    "kickstarter": {
+        "badge": "Alerte Lancement 🚀",
+        "title_start": "Ne Manquez Pas Notre",
+        "title_highlight": "Lancement Kickstarter !",
+        "description": "Inscrivez-vous maintenant pour être informé en premier et obtenir les récompenses early bird. Rejoignez le cercle des initiés de Planet Petly dès aujourd'hui.",
+        "success": "✔️ Inscrit avec succès !",
+        "submit": "M'avertir En Premier",
+        "registering": "Inscription en cours..."
+    },
+    "language": "Langue",
+    "english": "Anglais",
+    "spanish": "Espagnol",
+    "french": "Français",
+    "turkish": "Turc"
+}

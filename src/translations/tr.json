@@ -1,0 +1,201 @@
+{
+    "nav": {
+        "home": "Ana Sayfa",
+        "products": "Ürünler",
+        "about": "Hakkımızda",
+        "contact": "İletişim",
+        "notify_me": "Bana Bildir"
+    },
+    "about": {
+        "title": "HİKAYENİN ARKASINDA",
+        "brand": "PLANET PETLY",
+        "p1": "Her köpek sahibi bu anı bilir.",
+        "p2": "Yürüyüşe çıkmaya hazırsınız—ayakkabılar giyildi, tasma elde—ve birden atık torbalarını arıyorsunuz. Lavabonun altında. Bir çekmecede. Kapının yanında. Bazen onlara en çok ihtiyaç duyduğunuz anda yok olurlar.",
+        "p3": "Planet Petly'de evcil hayvan bakımının basit, düzenli ve her zaman siz hazır olduğunuzda hazır olması gerektiğine inanıyoruz.",
+        "p4": "Bu yüzden daha akıllı bir çözüm tasarladık—kapının yanında tutabileceğiniz veya anında kapabileceğiniz kullanışlı bir dağıtıcıya sahip temiz, güvenilir bir torba sistemi.",
+        "p5": "Sadece dağıtıcıyı alın ve çıkın.",
+        "p6": "Çünkü harika evcil hayvan ürünleri sadece var olmamalı — köpeğinizle olan günlük yaşantınıza doğal bir şekilde uymalıdır.",
+        "feature1": "Yürüyüş Zamanı İçin Her Zaman Hazır",
+        "feature2": "Güvenilir Günlük Evcil Hayvan İhtiyaçları",
+        "feature3": "Akıllı, Kullanışlı Dağıtıcı Tasarımı"
+    },
+    "hero": {
+        "sr_heading": "Planet Petly – Kaliteli Evcil Hayvan Maması"
+    },
+    "contact": {
+        "badge": "Bize Ulaşın",
+        "title_start": "Bir",
+        "title_highlight": "Sohbet Başlatalım.",
+        "description": "Ürünlerimiz veya misyonumuz hakkında sorularınız mı var? Size ve evcil hayvanınıza yardım etmek için buradayız.",
+        "wholesale": "Toptan satış fırsatları da mevcuttur.",
+        "email_us": "Bize E-posta Gönderin",
+        "success_message": "✔️ Mesaj gönderildi. Pozitif kalın!",
+        "error_generic": "Bir şeyler ters gitti. Lütfen tekrar deneyin.",
+        "error_connection": "Sunucuya bağlanılamadı. Lütfen internet bağlantınızı kontrol edin.",
+        "name_placeholder": "Ad Soyad",
+        "email_placeholder": "E-posta Adresi",
+        "message_placeholder": "Nasıl yardımcı olabiliriz?",
+        "submit": "Mesajı Gönder",
+        "sending": "Gönderiliyor..."
+    },
+    "faq": {
+        "title": "Sıkça Sorulan",
+        "title_highlight": "Sorular",
+        "description": "Ürünlerimiz, gönderim ve sürdürülebilir misyonumuz hakkındaki sık sorulan soruların cevaplarını bulun. Daha fazla yardıma mı ihtiyacınız var? İstediğiniz zaman bizimle iletişime geçin!",
+        "contact_btn": "Bize Ulaşın",
+        "items": [
+            {
+                "q": "Planet Petly hangi ürünleri sunuyor?",
+                "a": "Ödüllü doğada çözünebilir atık torbalarımızdan ve dayanıklı dağıtıcılarımızdan başlayarak, çevre dostu evcil hayvan ürünleri yelpazesi sunuyoruz. Serimizi, sürdürülebilir oyuncaklar, beslenmeye odaklı mamalar ve yenilikçi ev düzenleyicileri içerecek şekilde sürekli genişletiyoruz."
+            },
+            {
+                "q": "Ürünleriniz gerçekten çevre dostu mu?",
+                "a": "Evet! Planet Petly olarak sahte çevrecilikten (greenwashing) kaçınıyoruz. Atık torbalarımız en çok önem taşıyan yerlerde gübreleşebilir veya doğada çözünebilir sertifikalıdır ve ambalajımız ile sert donanım üretimimizde geri dönüştürülmüş materyallere öncelik veriyoruz."
+            },
+            {
+                "q": "Tüm ürün yelpazesi ne zaman satışa sunulacak?",
+                "a": "Şu anda Kickstarter üzerinden resmi lansmanımıza hazırlanıyoruz! 'Bana Bildir' listemize kaydolarak, erken kayıt avantajlarından ve kesin lansman tarihlerinden ilk siz haberdar olursunuz."
+            },
+            {
+                "q": "Toptan satış fırsatları sunuyor musunuz?",
+                "a": "Kesinlikle. Lansmanımız öncesinde perakende mağazaları, Amazon satıcıları ve distribütörlerle bağlantı kuruyoruz. Lütfen Toptan Satış bölümümüzü kontrol edin veya doğrudan admin@planetpetly.com adresinden bizimle iletişime geçin."
+            },
+            {
+                "q": "Planet Petly hakkındaki güncellemelerden nasıl haberdar olabilirim?",
+                "a": "Bunun en iyi yolu e-posta listemize katılmaktır! Ürün geliştirmemiz ve sürdürülebilirlik çabalarımızın perde arkası güncellemelerini görmek için bizi sosyal medyada da takip edebilirsiniz."
+            }
+        ]
+    },
+    "footer": {
+        "connect_title": "Bizimle Bağlantı Kurun",
+        "instagram": "Instagram",
+        "facebook": "Facebook",
+        "tiktok": "TikTok",
+        "copyright": "© 2025 Planet Petly. Tüm Hakları Saklıdır. Evcil hayvanlara sevgiyle hazırlandı."
+    },
+    "feature_highlight": {
+        "marquee": [
+            "YAKINDA",
+            "E-POSTA ADRESİNİZİ KAYDEDİN",
+            "LANSMANDA HABERDAR OLUN",
+            "PAZARLAMA E-POSTASI YOK"
+        ],
+        "badge": "Kolaylık İçin Tasarlandı",
+        "title_start": "Günlük Hayat İçin",
+        "title_highlight": "Geliştirildi.",
+        "description": "Doğada çözünebilen kaka torbaları ve pratik dağıtıcılarla köpek gezdirmelerinizi daha temiz hale getirin.",
+        "features": [
+            {
+                "title": "Çevre Dostu Torbalar",
+                "description": "Doğada çözünebilen ve sızdırmaz kaka torbaları."
+            },
+            {
+                "title": "Kullanışlı Dağıtıcılar",
+                "description": "İhtiyacınız olduğunda torbalara kolay erişim."
+            }
+        ]
+    },
+    "overview": {
+        "title_start": "Günlük Hayat İçin",
+        "title_highlight": "Geliştirildi."
+    },
+    "branding_banner": {
+        "sub_title": "Daha Akıllıca İlgilenin. Daha Derin Sevin.",
+        "title_start": "ile",
+        "title_highlight": "planet petly"
+    },
+    "premium_shop_banner": {
+        "text": "GEZEGEN DOSTU KÖPEK GEZDİRME EŞYALARI — SORUMLU EVCİL HAYVAN SAHİPLERİ İÇİN DOĞADA ÇÖZÜNEBİLİR ATIK TORBALARI VE KULLANIŞLI DAĞITICILAR."
+    },
+    "products": {
+        "title_start": "Ürünlerimizi",
+        "title_highlight": "Keşfedin",
+        "description": "Evcil hayvanınızın ihtiyaçlarını karşılamak üzere tasarlanmış yüksek kaliteli, yenilikçi çözümler bulmak için yaklaşan ürünlerimizi keşfedin.",
+        "badge": "Yakında",
+        "items": [
+            {
+                "name": "Duvara Monte Rulo Dağıtıcı",
+                "description": "Yürüyüşe çıkarken kolay erişim için pratik duvara monte kaka torbası dağıtıcısı."
+            },
+            {
+                "name": "Doğada Çözünebilir Kaka Torbası Rulosu",
+                "description": "Doğada çözünebilir malzemeden yapılmış çevre dostu yedek rulo. Günlük yürüyüşler için dayanıklı ve sızdırmaz."
+            }
+        ]
+    },
+    "reviews": {
+        "badge": "İlk Destekçilerimiz Konuşuyor",
+        "title_start": "Evcil Hayvan Sahipleri",
+        "title_highlight": "Şimdiden Konuşuyor",
+        "description": "Lansmandan önce Planet Petly'yi keşfeden evcil hayvan sahiplerinden gerçek mesajlar.",
+        "description_italic": "Sabırsızlanıyorlar.",
+        "supporter": "Erken Destekçi",
+        "cta_title": "Bekleme Listesine Katıl ✨",
+        "cta_description": "Planet Petly lansmanında ilk bilen siz olun.",
+        "cta_btn": "Kalkışta Bana Bildir 🚀",
+        "items": [
+            {
+                "name": "rudy.booboo",
+                "message": "Bu fikri sevdim! Daha fazlasını öğrenmekten mutluluk duyarım 😊"
+            },
+            {
+                "name": "Simba",
+                "message": "Vay canına, bu çok hoş ve güzel ❤️ ... Size iyi şanslar diliyorum ❤️"
+            },
+            {
+                "name": "beandourocane",
+                "message": "Merhaba 🐶🐾 projeniz çok güzel!! ... Evet gerçekten faydalı görünüyor 🐶🐾"
+            },
+            {
+                "name": "groza",
+                "message": "Merhaba, işinize baktım ve çalışmalarınızı gerçekten beğendim. Bir köpek sahibi olarak çok pratik olduğunu söyleyebilirim."
+            },
+            {
+                "name": "Trent",
+                "message": "Kesinlikle"
+            },
+            {
+                "name": "Rich & Steeler",
+                "message": "Ooo bu çok tatlı"
+            },
+            {
+                "name": "kathapuranstori...",
+                "message": "Hey, bu harika ❤️"
+            },
+            {
+                "name": "Kiara",
+                "message": "Merhaba, yolculuğunuzda sizi desteklemeyi kesinlikle çok isteriz 😍"
+            },
+            {
+                "name": "Wilson Squad...",
+                "message": "Bu bizim için inanılmaz olurdu :)"
+            },
+            {
+                "name": "ياسمين",
+                "message": "Kesinlikle sipariş vereceğim Çok teşekkür ederim"
+            },
+            {
+                "name": "Mabel",
+                "message": "Oh evet harika"
+            },
+            {
+                "name": "Muffin Toffee",
+                "message": "Hey! Ne kadar güzel! Bana bunun nasıl işleyeceğinden bahseder misiniz?"
+            }
+        ]
+    },
+    "kickstarter": {
+        "badge": "Lansman Uyarısı 🚀",
+        "title_start": "Kaçırmayın",
+        "title_highlight": "Kickstarter Lansmanı!",
+        "description": "İlk defa haberdar olmak ve erken kalkış ödüllerini kapmak için hemen kaydolun. Bugün Planet Petly iç çemberine katılın.",
+        "success": "✔️ Başarıyla kaydedildi!",
+        "submit": "İlk Bana Bildir",
+        "registering": "Kaydediliyor..."
+    },
+    "language": "Dil",
+    "english": "İngilizce",
+    "spanish": "İspanyolca",
+    "french": "Fransızca",
+    "turkish": "Türkçe"
+}
