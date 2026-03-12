@@ -25,10 +25,10 @@ export default function ProductComingSoon() {
     ];
 
     return (
-        <section id="products" className="py-20 md:py-24 bg-white px-6">
+        <section id="products" className="py-20 md:py-24 bg-white">
             <div className="max-w-[1280px] mx-auto">
                 {/* Section Header */}
-                <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-6 md:mb-12">
+                <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-6 md:mb-12 px-6">
                     <div className="max-w-xl">
                         <h2 className="text-4xl w-fit flex flex-col items-start md:text-6xl font-black text-[#1a3a2a] font-outfit mb-4 leading-[1.1] tracking-tight">
                             {t("products.title_start")}{" "}
@@ -43,10 +43,10 @@ export default function ProductComingSoon() {
                     </div>
                 </div>
 
-                {/* Product Grid — 4 Columns for smaller cards */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 lg:gap-8">
+                {/* Product Grid — 2 Columns on mobile, 3 for desktop */}
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-1 md:gap-8 px-2">
                     {COMING_SOON_PRODUCTS.map((product) => (
-                        <div key={product.id} className="group flex flex-col bg-white rounded-[32px] overflow-hidden border border-gray-100 shadow-lg hover:shadow-2xl hover:shadow-blue-900/10 transition-all duration-500 hover:-translate-y-2 cursor-default">
+                        <div key={product.id} className="group flex flex-col bg-white rounded-2xl md:rounded-[32px] overflow-hidden border border-gray-100 shadow-lg hover:shadow-2xl hover:shadow-blue-900/10 transition-all duration-500 hover:-translate-y-2 cursor-default">
                             {/* Product Image Area — Compact Square */}
                             <div className="relative aspect-square w-full overflow-hidden bg-white">
                                 <Image
@@ -56,19 +56,19 @@ export default function ProductComingSoon() {
                                     className="object-cover transition-transform duration-700 group-hover:scale-102"
                                 />
                                 {/* Coming Soon Overlay — Smaller Badge */}
-                                <div className="absolute top-4 right-4 z-10 transition-transform duration-500 group-hover:-translate-y-1">
-                                    <span className="bg-[#ffce00] text-[#1a3a2a] text-[10px] font-black tracking-widest uppercase px-4 py-1.5 rounded-full shadow-lg">
+                                <div className="absolute top-1 md:top-4 right-1 md:right-4 z-10 transition-transform duration-500 group-hover:-translate-y-1">
+                                    <span className="bg-[#ffce00] text-[#1a3a2a] text-[8px] md:text-[10px] font-black tracking-widest uppercase px-2 md:px-4 py-1.5 rounded-full shadow-lg">
                                         {t("products.badge")}
                                     </span>
                                 </div>
                             </div>
 
                             {/* Product Info */}
-                            <div className="p-2 flex flex-col items-center text-center">
-                                <h3 className="text-2xl font-extrabold text-[#1a3a2a] mb-1">
+                            <div className="p-3 md:p-4 flex flex-col items-center text-center">
+                                <h3 className="text-lg md:text-2xl font-extrabold text-[#1a3a2a] mb-1 leading-tight">
                                     {product.name}
                                 </h3>
-                                <p className="text-gray-500 text-sm max-w-sm leading-relaxed">
+                                <p className="text-gray-400 text-sm md:text-sm max-w-sm leading-relaxed line-clamp-3 md:line-clamp-none">
                                     {product.description}
                                 </p>
                             </div>

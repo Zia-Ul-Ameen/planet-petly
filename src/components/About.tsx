@@ -13,7 +13,7 @@ export default function About() {
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[200px] bg-blue-400/20 blur-[100px] -rotate-45 pointer-events-none" />
 
             <div className="max-w-7xl mx-auto relative z-10">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20 items-center">
 
                     {/* Left: Content Card */}
                     <div className="flex flex-col gap-8 md:gap-10">
@@ -70,7 +70,7 @@ export default function About() {
                         </div>
 
                         {/* Feature Pills */}
-                        <div className="flex flex-wrap justify-center md:justify-start gap-3 pt-2">
+                        <div className="flex flex-wrap justify-center md:justify-start gap-3">
                             {[
                                 t("about.feature1"),
                                 t("about.feature2"),

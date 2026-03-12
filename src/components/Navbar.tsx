@@ -112,12 +112,15 @@ export default function Navbar() {
                                 <select
                                     value={locale}
                                     onChange={(e) => setLocale(e.target.value as "en" | "es" | "fr" | "tr")}
-                                    className="bg-white/10 text-white text-xs font-bold py-1.5 px-2 rounded-lg border border-white/20 focus:outline-none focus:ring-2 focus:ring-yellow-400/50 cursor-pointer appearance-none"
+                                    className="bg-white/10 text-white text-xs font-bold py-1.5 px-3 rounded-lg border border-white/20 focus:outline-none focus:ring-2 focus:ring-yellow-400/50 cursor-pointer appearance-none transition-all duration-200 text-center"
+                                    style={{
+                                        width: locale === 'en' ? '65px' : locale === 'es' ? '69px' : locale === 'fr' ? '73px' : '62px'
+                                    }}
                                 >
-                                    <option value="en" className="bg-[#2a7dc9] text-white">EN</option>
-                                    <option value="es" className="bg-[#2a7dc9] text-white">ES</option>
-                                    <option value="fr" className="bg-[#2a7dc9] text-white">FR</option>
-                                    <option value="tr" className="bg-[#2a7dc9] text-white">TR</option>
+                                    <option value="en" className="bg-[#2a7dc9] text-white">English</option>
+                                    <option value="es" className="bg-[#2a7dc9] text-white">Español</option>
+                                    <option value="fr" className="bg-[#2a7dc9] text-white">Français</option>
+                                    <option value="tr" className="bg-[#2a7dc9] text-white">Türkçe</option>
                                 </select>
                             </div>
 
