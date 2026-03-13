@@ -111,16 +111,17 @@ export default function Navbar() {
                             <div className="flex items-center gap-2">
                                 <select
                                     value={locale}
-                                    onChange={(e) => setLocale(e.target.value as "en" | "es" | "fr" | "tr")}
+                                    onChange={(e) => setLocale(e.target.value as "en" | "es" | "fr" | "tr" | "pt")}
                                     className="bg-white/10 text-white text-xs font-bold py-1.5 px-3 rounded-lg border border-white/20 focus:outline-none focus:ring-2 focus:ring-yellow-400/50 cursor-pointer appearance-none transition-all duration-200 text-center"
                                     style={{
-                                        width: locale === 'en' ? '65px' : locale === 'es' ? '69px' : locale === 'fr' ? '73px' : '62px'
+                                        width: locale === 'en' ? '65px' : locale === 'es' ? '69px' : locale === 'fr' ? '73px' : locale === 'pt' ? '78px' : '62px'
                                     }}
                                 >
                                     <option value="en" className="bg-[#2a7dc9] text-white">English</option>
                                     <option value="es" className="bg-[#2a7dc9] text-white">Español</option>
                                     <option value="fr" className="bg-[#2a7dc9] text-white">Français</option>
                                     <option value="tr" className="bg-[#2a7dc9] text-white">Türkçe</option>
+                                    <option value="pt" className="bg-[#2a7dc9] text-white">Português</option>
                                 </select>
                             </div>
 

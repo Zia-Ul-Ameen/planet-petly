@@ -5,8 +5,9 @@ import en from "@/translations/en.json";
 import es from "@/translations/es.json";
 import fr from "@/translations/fr.json";
 import tr from "@/translations/tr.json";
+import pt from "@/translations/pt.json";
 
-type Locale = "en" | "es" | "fr" | "tr";
+type Locale = "en" | "es" | "fr" | "tr" | "pt";
 
 interface LanguageContextType {
     locale: Locale;
@@ -15,7 +16,7 @@ interface LanguageContextType {
     t: (key: string) => any;
 }
 
-const translations = { en, es, fr, tr };
+const translations = { en, es, fr, tr, pt };
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
@@ -24,7 +25,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 
     useEffect(() => {
         const savedLocale = localStorage.getItem("locale") as Locale;
-        if (savedLocale && (savedLocale === "en" || savedLocale === "es" || savedLocale === "fr" || savedLocale === "tr")) {
+        if (savedLocale && (savedLocale === "en" || savedLocale === "es" || savedLocale === "fr" || savedLocale === "tr" || savedLocale === "pt")) {
             // eslint-disable-next-line react-hooks/set-state-in-effect
             setLocaleState(savedLocale);
         }
