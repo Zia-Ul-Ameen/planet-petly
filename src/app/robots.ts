@@ -7,7 +7,7 @@ export default function robots(): MetadataRoute.Robots {
         rules: {
             userAgent: '*',
             allow: '/',
-            disallow: '/private/',
+            disallow: ['/private/', '/manifest.webmanifest'],
         },
         sitemap: 'https://planetpetly.com/sitemap.xml',
     }

@@ -74,7 +74,7 @@ export default function Navbar() {
                                 width={180}
                                 height={40}
                                 priority
-                                className="brightness-0 invert w-[140px] md:w-[180px] h-auto"
+                                className="brightness-0 invert w-[140px] md:w-[190px] h-auto"
                             />
                         </Link>
 
@@ -88,7 +88,7 @@ export default function Navbar() {
                                     key={link.labelKey}
                                     href={link.href}
                                     onClick={(e) => scrollToSection(e, link.href)}
-                                    className="px-4 py-2 text-sm font-semibold text-white/90 hover:text-white rounded-full transition-all duration-200 hover:bg-white/15"
+                                    className="px-4 py-2 text-md font-semibold text-white/90 hover:text-white rounded-full transition-all duration-200 hover:bg-white/15"
                                 >
                                     {t(link.labelKey)}
                                 </Link>
@@ -111,17 +111,20 @@ export default function Navbar() {
                             <div className="flex items-center gap-2">
                                 <select
                                     value={locale}
-                                    onChange={(e) => setLocale(e.target.value as "en" | "es" | "fr" | "tr" | "pt")}
-                                    className="bg-white/10 text-white text-xs font-bold py-1.5 px-3 rounded-lg border border-white/20 focus:outline-none focus:ring-2 focus:ring-yellow-400/50 cursor-pointer appearance-none transition-all duration-200 text-center"
-                                    style={{
-                                        width: locale === 'en' ? '65px' : locale === 'es' ? '69px' : locale === 'fr' ? '73px' : locale === 'pt' ? '83px' : '62px'
-                                    }}
+                                    onChange={(e) => setLocale(e.target.value as any)}
+                                    className="bg-white/10 text-white text-xs font-bold py-1.5 px-2 rounded-lg border border-white/20 focus:outline-none focus:ring-2 focus:ring-yellow-400/50 cursor-pointer appearance-none transition-all duration-200 text-center uppercase"
+                                    style={{ textAlignLast: 'center' }}
                                 >
                                     <option value="en" className="bg-[#2a7dc9] text-white">English</option>
                                     <option value="es" className="bg-[#2a7dc9] text-white">Español</option>
                                     <option value="fr" className="bg-[#2a7dc9] text-white">Français</option>
                                     <option value="tr" className="bg-[#2a7dc9] text-white">Türkçe</option>
                                     <option value="pt" className="bg-[#2a7dc9] text-white">Português</option>
+                                    <option value="ja" className="bg-[#2a7dc9] text-white">日本語</option>
+                                    <option value="pl" className="bg-[#2a7dc9] text-white">Polski</option>
+                                    <option value="de" className="bg-[#2a7dc9] text-white">Deutsch</option>
+                                    <option value="sk" className="bg-[#2a7dc9] text-white">Slovenčina</option>
+                                    <option value="bg" className="bg-[#2a7dc9] text-white">Български</option>
                                 </select>
                             </div>
 

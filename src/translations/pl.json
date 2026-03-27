@@ -1,0 +1,208 @@
+{
+    "nav": {
+        "home": "Główna",
+        "products": "Produkty",
+        "about": "O nas",
+        "contact": "Kontakt",
+        "notify_me": "Powiadom mnie"
+    },
+    "about": {
+        "title": "HISTORIA ZA",
+        "brand": "PLANET PETLY",
+        "p1": "Każdy właściciel psa zna ten moment.",
+        "p2": "Jesteś gotowy na spacer — buty na nogach, smycz w ręku — i nagle szukasz woreczków na odchody. Pod zlewozmywakiem. W szufladzie. Przy drzwiach. Czasem ich nie ma, kiedy najbardziej ich potrzebujesz.",
+        "p3": "W Planet Petly wierzymy, że opieka nad zwierzęciem powinna być prosta, uporządkowana i zawsze gotowa wtedy, gdy Ty jesteś.",
+        "p4": "Dlatego zaprojektowaliśmy inteligentniejsze rozwiązanie — czysty, niezawodny system woreczków z wygodnym dyspenserem, który możesz trzymać przy drzwiach lub błyskawicznie zabrać ze sobą.",
+        "p5": "Po prostu weź dyspenser i ruszaj w drogę.",
+        "p6": "Ponieważ świetne artykuły dla zwierząt nie powinny po prostu istnieć — powinny naturalnie wpisywać się w codzienne życie z Twoim psem.",
+        "feature1": "Zawsze gotowi do spaceru",
+        "feature2": "Niezawodne codzienne niezbędniki",
+        "feature3": "Inteligentny, wygodny design dyspensera"
+    },
+    "hero": {
+        "sr_heading": "Planet Petly – Wysokiej jakości karma dla zwierząt"
+    },
+    "contact": {
+        "badge": "Kontakt",
+        "title_start": "Zacznijmy",
+        "title_highlight": "Rozmowę.",
+        "description": "Masz pytania dotyczące naszych produktów lub misji? Jesteśmy tutaj, aby pomóc Tobie i Twojemu pupilowi.",
+        "wholesale": "Dostępne również oferty hurtowe.",
+        "email_us": "Napisz do nas",
+        "success_message": "✔️ Wiadomość wysłana. Miłego dnia z pupilem!",
+        "error_generic": "Coś poszło nie tak. Spróbuj ponownie.",
+        "error_connection": "Nie udało się połączyć z serwerem. Sprawdź połączenie z internetem.",
+        "name_placeholder": "Imię i Nazwisko",
+        "email_placeholder": "Adres E-mail",
+        "message_placeholder": "Jak możemy pomóc?",
+        "submit": "Wyślij Wiadomość",
+        "sending": "Wysyłanie..."
+    },
+    "faq": {
+        "title": "Często Zadawane",
+        "title_highlight": "Pytania",
+        "description": "Znajdź odpowiedzi na najczęstsze pytania dotyczące naszych produktów, wysyłki i zrównoważonej misji. Potrzebujesz więcej pomocy? Skontaktuj się z nami!",
+        "contact_btn": "Kontakt",
+        "items": [
+            {
+                "q": "Jakie produkty oferuje Planet Petly?",
+                "a": "Oferujemy gamę ekologicznych niezbędników dla zwierząt, zaczynając od naszych biodegradowalnych woreczków i trwałych dyspenserów. Stale powiększamy naszą ofertę o zrównoważone zabawki, karmę prozdrowotną oraz innowacyjne organizery domowe."
+            },
+            {
+                "q": "Czy Wasze produkty są naprawdę ekologiczne?",
+                "a": "Tak! W Planet Petly unikamy 'eko-ściemy'. Nasze woreczki posiadają certyfikaty biodegradowalności/kompostowalności tam, gdzie ma to największe znaczenie, a w opakowaniach i produkcji artykułów twardych priorytetowo traktujemy materiały z recyklingu."
+            },
+            {
+                "q": "Kiedy pełna linia produktów będzie dostępna?",
+                "a": "Obecnie przygotowujemy się do naszej oficjalnej premiery na Kickstarterze! Zapisując się do listy 'Powiadom mnie', jako pierwszy dowiesz się o promocjach 'early-bird' i dokładnych datach premiery."
+            },
+            {
+                "q": "Czy oferujecie sprzedaż hurtową?",
+                "a": "Oczywiście. Nawiązujemy obecnie kontakty ze sklepami detalicznymi, sprzedawcami Amazon i dystrybutorami przed naszą premierą. Sprawdź naszą sekcję Hurtową lub skontaktuj się bezpośrednio pod adresem admin@planetpetly.com."
+            },
+            {
+                "q": "Jak mogę otrzymywać aktualności od Planet Petly?",
+                "a": "Najlepszym sposobem jest dołączenie do naszej listy mailingowej! Możesz także śledzić naszą podróż w mediach społecznościowych, aby zobaczyć aktualizacje zza kulis dotyczące rozwoju naszych produktów i wysiłków na rzecz zrównoważonego rozwoju."
+            }
+        ]
+    },
+    "footer": {
+        "connect_title": "Połącz się z nami",
+        "instagram": "Instagram",
+        "facebook": "Facebook",
+        "tiktok": "TikTok",
+        "youtube": "YouTube",
+        "copyright": "© 2025 Planet Petly. Wszelkie prawa zastrzeżone. Stworzone z miłością do zwierząt."
+    },
+    "feature_highlight": {
+        "marquee": [
+            "WKRÓTCE",
+            "ZAREJESTRUJ E-MAIL",
+            "POWIADOM O PREMIERZE",
+            "BRAK E-MAILI MARKETINGOWYCH"
+        ],
+        "badge": "Zaprojektowane dla wygody",
+        "title_start": "Z myślą o",
+        "title_highlight": "Codzienności.",
+        "description": "Zadbaj o czystość podczas spacerów z biodegadowalnymi woreczkami i wygodnymi dyspenserami.",
+        "features": [
+            {
+                "title": "Ekologiczne Woreczki",
+                "description": "Biodegradowalne i szczelne woreczki na odchody."
+            },
+            {
+                "title": "Poręczne Dyspensery",
+                "description": "Łatwy dostęp do woreczków, kiedy ich potrzebujesz."
+            }
+        ]
+    },
+    "overview": {
+        "title_start": "Z myślą o",
+        "title_highlight": "Codzienności."
+    },
+    "branding_banner": {
+        "sub_title": "Dbaj mądrzej. Kochaj mocniej.",
+        "title_start": "z",
+        "title_highlight": "planet petly"
+    },
+    "premium_shop_banner": {
+        "text": "NIEZBĘDNIKI NA SPACER PRZYJAZNE DLA PLANETY — BIODEGRADOWALNE WORECZKI I WYGODNE DYSPENSERY DLA ODPOWIEDZIALNYCH WŁAŚCICIELI ZWIERZĄT."
+    },
+    "products": {
+        "title_start": "Poznaj Nasze",
+        "title_highlight": "Produkty",
+        "description": "Odkryj nasze nadchodzące produkty — wysokiej jakości, innowacyjne rozwiązania zaprojektowane z myślą o potrzebach Twojego pupila.",
+        "badge": "Wkrótce",
+        "items": [
+            {
+                "name": "Naścienny Dyspenser do Rolek",
+                "description": "Wygodny naścienny dyspenser na woreczki, ułatwiający dostęp przed wyjściem na spacer."
+            },
+            {
+                "name": "Biodegradowalna Rolka Woreczków",
+                "description": "Ekologiczny wkład wykonany z materiału biodegradowalnego. Wytrzymałe i szczelne na codzienne spacery."
+            }
+        ]
+    },
+    "reviews": {
+        "badge": "Głos naszych pierwszych zwolenników",
+        "title_start": "Właściciele już o nas",
+        "title_highlight": "Mówią",
+        "description": "Prawdziwe wiadomości od właścicieli zwierząt, którzy odkryli Planet Petly przed premierą.",
+        "description_italic": "Nie mogą się doczekać.",
+        "supporter": "Pierwszy Zwolennik",
+        "cta_title": "Dołącz do listy oczekujących ✨",
+        "cta_description": "Bądź pierwszą osobą, która dowie się o premierze Planet Petly.",
+        "cta_btn": "Powiadom mnie o premierze 🚀",
+        "items": [
+            {
+                "name": "rudy.booboo",
+                "message": "Świetny pomysł! Chętnie dowiem się więcej 😊"
+            },
+            {
+                "name": "Simba",
+                "message": "Wow, to super ❤️ ... życzę powodzenia ❤️"
+            },
+            {
+                "name": "beandourocane",
+                "message": "Cześć 🐶🐾 bardzo fajny projekt!! ... Tak, wydaje się naprawdę przydatny 🐶🐾"
+            },
+            {
+                "name": "groza",
+                "message": "Cześć, przyjrzałam się Waszej pracy i bardzo mi się spodobała. Jako właścicielka psa powiem, że to bardzo wygodne."
+            },
+            {
+                "name": "Trent",
+                "message": "Zdecydowanie"
+            },
+            {
+                "name": "Rich & Steeler",
+                "message": "Ooo, śliczne"
+            },
+            {
+                "name": "kathapuranstori...",
+                "message": "Hej, to wspaniałe ❤️"
+            },
+            {
+                "name": "Kiara",
+                "message": "Cześć, z przyjemnością wesprzemy Was w Waszej podróży 😍"
+            },
+            {
+                "name": "Wilson Squad...",
+                "message": "To byłoby dla nas niesamowite :)"
+            },
+            {
+                "name": "ياسمين",
+                "message": "Na pewno zamówię. Dziękuję bardzo"
+            },
+            {
+                "name": "Mabel",
+                "message": "O tak, super"
+            },
+            {
+                "name": "Muffin Toffee",
+                "message": "Hej! Tak miło! Powiesz mi więcej o tym, jak to będzie działać?"
+            }
+        ]
+    },
+    "kickstarter": {
+        "badge": "Alert Premiery 🚀",
+        "title_start": "Nie Przegap Naszej",
+        "title_highlight": "Premiery na Kickstarterze!",
+        "description": "Zarejestruj się teraz, aby otrzymać powiadomienie jako pierwszy i zgarnąć nagrody early-bird. Dołącz do wewnętrznego kręgu Planet Petly już dziś.",
+        "success": "✔️ Zarejestrowano pomyślnie!",
+        "submit": "Powiadom mnie o premierze",
+        "registering": "Rejestracja..."
+    },
+    "language": "Język",
+    "english": "Angielski",
+    "spanish": "Hiszpański",
+    "french": "Francuski",
+    "turkish": "Turecki",
+    "portuguese": "Portugalski",
+    "japanese": "Japoński",
+    "polish": "Polski",
+    "german": "Niemiecki",
+    "slovak": "Słowacki",
+    "bulgarian": "Bułgarski"
+}

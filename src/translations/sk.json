@@ -1,0 +1,208 @@
+{
+    "nav": {
+        "home": "Domov",
+        "products": "Produkty",
+        "about": "O nás",
+        "contact": "Kontakt",
+        "notify_me": "Upozorniť ma"
+    },
+    "about": {
+        "title": "PRÍBEH ZA",
+        "brand": "PLANET PETLY",
+        "p1": "Každý majiteľ psa pozná túto chvíľu.",
+        "p2": "Ste pripravený ísť von na prechádzku – topánky obuté, vôdzka v ruke – a zrazu hľadáte vrecká na odpad. Pod drezom. V zásuvke. Pri dverách. Niekedy sú preč práve vtedy, keď ich najviac potrebujete.",
+        "p3": "V Planet Petly veríme, že starostlivosť o domáce zvieratá by mala byť jednoduchá, organizovaná a vždy pripravená, keď ste i vy.",
+        "p4": "Preto sme navrhli inteligentnejšie riešenie – čistý a spoľahlivý systém vreciek s pohodlným zásobníkom, ktorý môžete mať pri dverách alebo okamžite vziať so sebou.",
+        "p5": "Stačí vziať zásobník a ísť.",
+        "p6": "Pretože skvelé produkty pre zvieratá by nemali len existovať – mali by prirodzene zapadať do každodenného života s vaším psom.",
+        "feature1": "Vždy pripravení na prechádzku",
+        "feature2": "Spoľahlivé každodenné potreby",
+        "feature3": "Inteligentný a pohodlný dizajn zásobníka"
+    },
+    "hero": {
+        "sr_heading": "Planet Petly – Kvalitné krmivo pre domáce zvieratá"
+    },
+    "contact": {
+        "badge": "Kontaktujte nás",
+        "title_start": "Začnime",
+        "title_highlight": "Rozhovor.",
+        "description": "Máte otázky o našich produktoch alebo misii? Sme tu, aby sme pomohli vám aj vášmu miláčikovi.",
+        "wholesale": "K dispozícii sú aj veľkoobchodné príležitosti.",
+        "email_us": "Napíšte nám e-mail",
+        "success_message": "✔️ Správa odoslaná. Zostaňte paws-itívni!",
+        "error_generic": "Niečo sa pokazilo. Skúste to znova.",
+        "error_connection": "Nepodarilo sa pripojiť k serveru. Skontrolujte svoje internetové pripojenie.",
+        "name_placeholder": "Celé meno",
+        "email_placeholder": "E-mailová adresa",
+        "message_placeholder": "Ako vám môžeme pomôcť?",
+        "submit": "Odoslať správu",
+        "sending": "Odosielanie..."
+    },
+    "faq": {
+        "title": "Často kladené",
+        "title_highlight": "Otázky",
+        "description": "Nájdite odpovede na bežné otázky o našich produktoch, doprave a udržateľnej misii. Potrebujete ďalšiu pomoc? Kontaktujte nás kedykoľvek!",
+        "contact_btn": "Kontaktujte nás",
+        "items": [
+            {
+                "q": "Aké produkty ponúka Planet Petly?",
+                "a": "Ponúkame rad ekologických potrieb pre domáce zvieratá, počnúc našimi prémiovými biologicky rozložiteľnými vreckami a odolnými zásobníkmi. Neustále rozširujeme našu ponuku o udržateľné hračky, krmivo zamerané na výživu a inovatívne domáce organizéry."
+            },
+            {
+                "q": "Sú vaše produkty skutočne ekologické?",
+                "a": "Áno! V Planet Petly sa vyhýbame 'greenwashingu'. Naše vrecká sú certifikované ako kompostovateľné alebo biologicky rozložiteľné tam, kde na tom najviac záleží, a pri balení a výrobe tvrdého tovaru uprednostňujeme recyklované materiály."
+            },
+            {
+                "q": "Kedy bude k dispozícii kompletný produktový rad?",
+                "a": "Momentálne sa pripravujeme na oficiálne spustenie prostredníctvom Kickstarteru! Registráciou do nášho zoznamu 'Upozorniť ma' sa ako prví dozviete o našich early-bird ponukách a presných dátumoch spustenia."
+            },
+            {
+                "q": "Ponúkate veľkoobchodné príležitosti?",
+                "a": "Absolútne. Pred naším spustením sa momentálne spájame s maloobchodnými predajňami, predajcami na Amazone a distribútormi. Pozrite si našu sekciu Veľkoobchod alebo nás kontaktujte priamo na admin@planetpetly.com."
+            },
+            {
+                "q": "Ako môžem ostať informovaný o Planet Petly?",
+                "a": "Najlepší spôsob je prihlásiť sa do nášho mailing listu! Svoju cestu môžete sledovať aj na sociálnych sieťach a vidieť aktualizácie zo zákulisia nášho vývoja produktov a úsilia o udržateľnosť."
+            }
+        ]
+    },
+    "footer": {
+        "connect_title": "Spojte sa s nami",
+        "instagram": "Instagram",
+        "facebook": "Facebook",
+        "tiktok": "TikTok",
+        "youtube": "YouTube",
+        "copyright": "© 2025 Planet Petly. Všetky práva vyhradené. Vytvorené s láskou k zvieratám."
+    },
+    "feature_highlight": {
+        "marquee": [
+            "UŽ ČOSKORO",
+            "ZAREGISTRUJTE SVOJ E-MAIL",
+            "DOSTAŇTE UPOZORNENIE PRI SPUSTENÍ",
+            "ŽIADNE MARKETINGOVÉ E-MAILY"
+        ],
+        "badge": "Navrhnuté pre pohodlie",
+        "title_start": "Vyrobené pre",
+        "title_highlight": "Každodenný život.",
+        "description": "Urobte prechádzky so psom čistejšími s biologicky rozložiteľnými vreckami a pohodlnými zásobníkmi.",
+        "features": [
+            {
+                "title": "Ekologické vrecká",
+                "description": "Biologicky rozložiteľné vrecká, ktoré nepretekajú."
+            },
+            {
+                "title": "Praktické zásobníky",
+                "description": "Jednoduchý prístup k vreckám, keď ich potrebujete."
+            }
+        ]
+    },
+    "overview": {
+        "title_start": "Vyrobené pre",
+        "title_highlight": "Každodenný život."
+    },
+    "branding_banner": {
+        "sub_title": "Starajte sa múdrejšie. Milujte hlbšie.",
+        "title_start": "s",
+        "title_highlight": "planet petly"
+    },
+    "premium_shop_banner": {
+        "text": "EKOLOGICKÉ POTREBY PRE PRECHÁDZKY SO PSOM — BIOLOGICKY ROZLOŽITEĽNÉ VRECKÁ A POHODLNÉ ZÁSOBNÍKY PRE ZODPOVEDNÝCH MAJITEĽOV ZVIERAT."
+    },
+    "products": {
+        "title_start": "Preskúmajte naše",
+        "title_highlight": "Produkty",
+        "description": "Preskúmajte naše pripravované produkty a nájdite vysokokvalitné inovatívne riešenia navrhnuté pre potreby vášho miláčika.",
+        "badge": "Už čoskoro",
+        "items": [
+            {
+                "name": "Nástenný zásobník na rolky",
+                "description": "Pohodlný nástenný zásobník na vrecká pre ľahký prístup pri odchode na prechádzku."
+            },
+            {
+                "name": "Biologicky rozložiteľná rolka vreciek",
+                "description": "Ekologická náhradná rolka vyrobená z biologicky rozložiteľného materiálu. Odolná na každodenné prechádzky."
+            }
+        ]
+    },
+    "reviews": {
+        "badge": "Hlasy prvých podporovateľov",
+        "title_start": "Majitelia miláčikov už",
+        "title_highlight": "o nás hovoria",
+        "description": "Skutočné správy od majiteľov zvierat, ktorí objavili Planet Petly pred spustením.",
+        "description_italic": "Nemôžu sa dočkať.",
+        "supporter": "Prvý podporovateľ",
+        "cta_title": "Pripojte sa k zoznamu čakateľov ✨",
+        "cta_description": "Buďte prví, kto sa dozvie o spustení Planet Petly.",
+        "cta_btn": "Upozorniť ma pri spustení 🚀",
+        "items": [
+            {
+                "name": "rudy.booboo",
+                "message": "Skvelý nápad! Rád by som sa dozvedel viac 😊"
+            },
+            {
+                "name": "Simba",
+                "message": "Wow, to je od vás milé a dobré ❤️ ... prajem vám veľa šťastia ❤️"
+            },
+            {
+                "name": "beandourocane",
+                "message": "Ahoj 🐶🐾 veľmi pekný projekt!! ... Áno, zdá sa, že je to naozaj užitočné 🐶🐾"
+            },
+            {
+                "name": "groza",
+                "message": "Ahoj, pozerala som si tvoju prácu a veľmi sa mi páči. Ako majiteľka psa môžem povedať, že je to veľmi pohodlné."
+            },
+            {
+                "name": "Trent",
+                "message": "Rozhodne"
+            },
+            {
+                "name": "Rich & Steeler",
+                "message": "Ooo, je to milé"
+            },
+            {
+                "name": "kathapuranstori...",
+                "message": "Hej, to je úžasné ❤️"
+            },
+            {
+                "name": "Kiara",
+                "message": "Ahoj, veľmi radi by sme vás na vašej ceste podporili 😍"
+            },
+            {
+                "name": "Wilson Squad...",
+                "message": "To by bolo pre nás úžasné :)"
+            },
+            {
+                "name": "ياسمين",
+                "message": "Určite si objednám. Veľmi pekne ďakujem"
+            },
+            {
+                "name": "Mabel",
+                "message": "O áno, skvelé"
+            },
+            {
+                "name": "Muffin Toffee",
+                "message": "Hej! Také milé! Povedz mi viac o tom, ako to bude fungovať?"
+            }
+        ]
+    },
+    "kickstarter": {
+        "badge": "Upozornenie na spustenie 🚀",
+        "title_start": "Nepremeškajte náš",
+        "title_highlight": "Spustenie na Kickstarteri!",
+        "description": "Zaregistrujte sa teraz, aby ste boli prvý informovaný a získali early-bird odmeny. Pridajte sa do vnútorného kruhu Planet Petly ešte dnes.",
+        "success": "✔️ Úspešne zaregistrované!",
+        "submit": "Dajte mi vedieť ako prvému",
+        "registering": "Registrácia..."
+    },
+    "language": "Jazyk",
+    "english": "Angličtina",
+    "spanish": "Španielčina",
+    "french": "Francúzština",
+    "turkish": "Turečtina",
+    "portuguese": "Portugalčina",
+    "japanese": "Japončina",
+    "polish": "Poľština",
+    "german": "Nemčina",
+    "slovak": "Slovenčina",
+    "bulgarian": "Bulharčina"
+}

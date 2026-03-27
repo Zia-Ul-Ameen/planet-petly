@@ -1,0 +1,208 @@
+{
+    "nav": {
+        "home": "Startseite",
+        "products": "Produkte",
+        "about": "Über uns",
+        "contact": "Kontakt",
+        "notify_me": "Benachrichtigen"
+    },
+    "about": {
+        "title": "DIE GESCHICHTE INTER",
+        "brand": "PLANET PETLY",
+        "p1": "Jeder Hundebesitzer kennt diesen Moment.",
+        "p2": "Sie sind bereit für den Spaziergang – Schuhe an, Leine in der Hand – und plötzlich suchen Sie nach Kotbeuteln. Unter der Spüle. In einer Schublade. An der Tür. Manchmal sind sie genau dann leer, wenn man sie am dringendsten braucht.",
+        "p3": "Wir bei Planet Petly glauben, dass Tierpflege einfach, organisiert und immer bereit sein sollte, wenn Sie es sind.",
+        "p4": "Deshalb haben wir eine intelligentere Lösung entworfen – ein sauberes, zuverlässiges Beutelsystem mit einem praktischen Spender, den Sie direkt an der Tür aufbewahren oder sofort mitnehmen können.",
+        "p5": "Einfach den Spender schnappen und los geht's.",
+        "p6": "Weil großartige Heimtierprodukte nicht nur existieren sollten – sie sollten sich natürlich in den Alltag mit Ihrem Hund einfügen.",
+        "feature1": "Immer bereit zum Spaziergang",
+        "feature2": "Zuverlässige Alltags-Essentials für Haustiere",
+        "feature3": "Smartes, praktisches Spender-Design"
+    },
+    "hero": {
+        "sr_heading": "Planet Petly – Qualitätstiernahrung"
+    },
+    "contact": {
+        "badge": "Kontaktiere uns",
+        "title_start": "Lass uns ein",
+        "title_highlight": "Gespräch beginnen.",
+        "description": "Haben Sie Fragen zu unseren Produkten oder unserer Mission? Wir sind hier, um Ihnen und Ihrem Haustier zu helfen.",
+        "wholesale": "Großhandelsmöglichkeiten ebenfalls verfügbar.",
+        "email_us": "E-Mail schreiben",
+        "success_message": "✔️ Nachricht gesendet. Bleiben Sie paws-itiv!",
+        "error_generic": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.",
+        "error_connection": "Verbindung zum Server fehlgeschlagen. Bitte prüfen Sie Ihre Internetverbindung.",
+        "name_placeholder": "Vollständiger Name",
+        "email_placeholder": "E-Mail-Adresse",
+        "message_placeholder": "Wie können wir helfen?",
+        "submit": "Nachricht senden",
+        "sending": "Wird gesendet..."
+    },
+    "faq": {
+        "title": "Häufig gestellte",
+        "title_highlight": "Fragen",
+        "description": "Finden Sie Antworten auf häufige Fragen zu unseren Produkten, zum Versand und zu unserer nachhaltigen Mission. Benötigen Sie weitere Hilfe? Kontaktieren Sie uns jederzeit!",
+        "contact_btn": "Kontakt",
+        "items": [
+            {
+                "q": "Welche Produkte bietet Planet Petly an?",
+                "a": "Wir bieten eine Reihe umweltfreundlicher Essentials für Haustiere an, beginnend mit unseren hochwertigen biologisch abbaubaren Kotbeuteln und langlebigen Spendern. Wir erweitern unser Sortiment ständig um nachhaltiges Spielzeug, ernährungsfokussiertes Futter und innovative Heim-Organizer."
+            },
+            {
+                "q": "Sind Ihre Produkte wirklich umweltfreundlich?",
+                "a": "Ja! Bei Planet Petly vermeiden wir 'Greenwashing'. Unsere Kotbeutel sind zertifiziert kompostierbar oder biologisch abbaubar, wo es am wichtigsten ist, und wir priorisieren recycelte Materialien in unserer Verpackung und Hardware-Produktion."
+            },
+            {
+                "q": "Wann wird die volle Produktpalette verfügbar sein?",
+                "a": "Wir bereiten uns derzeit auf unseren offiziellen Launch über Kickstarter vor! Mit der Anmeldung für unsere 'Benachrichtigungsliste' erfahren Sie als Erste von unseren Early-Bird-Specials und den genauen Launch-Terminen."
+            },
+            {
+                "q": "Bieten Sie Großhandelsmöglichkeiten an?",
+                "a": "Absolut. Wir vernetzen uns derzeit vor unserem Launch mit Einzelhandelsschäften, Amazon-Händlern und Distributoren. Bitte prüfen Sie unseren Großhandelsbereich oder kontaktieren Sie uns direkt unter admin@planetpetly.com."
+            },
+            {
+                "q": "Wie bleibe ich über Planet Petly auf dem Laufenden?",
+                "a": "Der beste Weg ist unser Newsletter! Folgen Sie uns auch auf Social Media, um Einblicke hinter die Kulissen unserer Produktentwicklung und Nachhaltigkeitsbemühungen zu erhalten."
+            }
+        ]
+    },
+    "footer": {
+        "connect_title": "Verbinden Sie sich mit uns",
+        "instagram": "Instagram",
+        "facebook": "Facebook",
+        "tiktok": "TikTok",
+        "youtube": "YouTube",
+        "copyright": "© 2025 Planet Petly. Alle Rechte vorbehalten. Mit Liebe für Haustiere gemacht."
+    },
+    "feature_highlight": {
+        "marquee": [
+            "DEMNÄCHST",
+            "E-MAIL REGISTRIEREN",
+            "BEI LAUNCH INFORMIERT WERDEN",
+            "KEINE MARKETING-EMAILS"
+        ],
+        "badge": "Auf Komfort ausgelegt",
+        "title_start": "Für den",
+        "title_highlight": "Alltag gemacht.",
+        "description": "Machen Sie Ihre Hundespaziergänge sauberer mit biologisch abbaubaren Kotbeuteln und praktischen Spendern.",
+        "features": [
+            {
+                "title": "Umweltfreundliche Beutel",
+                "description": "Biologisch abbaubare und auslaufsichere Kotbeutel."
+            },
+            {
+                "title": "Handliche Spender",
+                "description": "Einfacher Zugriff auf Beutel, wenn Sie sie brauchen."
+            }
+        ]
+    },
+    "overview": {
+        "title_start": "Für den",
+        "title_highlight": "Alltag gemacht."
+    },
+    "branding_banner": {
+        "sub_title": "Cleverer pflegen. Tiefer lieben.",
+        "title_start": "mit",
+        "title_highlight": "planet petly"
+    },
+    "premium_shop_banner": {
+        "text": "UMWELTFREUNDLICHE GASSIGEH-ESSENTIALS — BIOLOGISCH ABBAUBARE KOTBEUTEL UND PRAKTISCHE SPENDER FÜR VERANTWORTUNGSBEWUSSTE HAUSTIERBESITZER."
+    },
+    "products": {
+        "title_start": "Entdecken Sie unsere",
+        "title_highlight": "Produkte",
+        "description": "Entdecken Sie unsere kommenden Produkte – hochwertige, innovative Lösungen, entwickelt für die Bedürfnisse Ihres Haustieres.",
+        "badge": "Demnächst",
+        "items": [
+            {
+                "name": "Wandmontierter Rollenspender",
+                "description": "Praktischer wandmontierter Kotbeutelspender für den einfachen Zugriff vor dem Gassigehen."
+            },
+            {
+                "name": "Biologisch abbaubare Kotbeutel-Rolle",
+                "description": "Umweltfreundliche Nachfüllrolle aus biologisch abbaubarem Material. Reißfest und auslaufsicher für tägliche Spaziergänge."
+            }
+        ]
+    },
+    "reviews": {
+        "badge": "Frühe Unterstützer",
+        "title_start": "Haustierbesitzer",
+        "title_highlight": "sprechen bereits",
+        "description": "Echte Nachrichten von Tierbesitzern, die Planet Petly vor dem Launch entdeckt haben.",
+        "description_italic": "Sie können es kaum erwarten.",
+        "supporter": "Früher Unterstützer",
+        "cta_title": "Auf die Warteliste treten ✨",
+        "cta_description": "Seien Sie die Ersten, die vom Launch von Planet Petly erfahren.",
+        "cta_btn": "Bei Launch benachrichtigen 🚀",
+        "items": [
+            {
+                "name": "rudy.booboo",
+                "message": "Tolle Idee! Würde gerne mehr erfahren 😊"
+            },
+            {
+                "name": "Simba",
+                "message": "Wow, das ist nett von dir und gut ❤️ ... viel Glück ❤️"
+            },
+            {
+                "name": "beandourocane",
+                "message": "Hallo 🐶🐾 sehr schönes Projekt!! ... Ja, es scheint wirklich nützlich zu sein 🐶🐾"
+            },
+            {
+                "name": "groza",
+                "message": "Hallo, ich habe mir deine Arbeit angesehen und sie hat mir sehr gut gefallen. Als Hundebesitzer kann ich sagen, dass es sehr praktisch ist."
+            },
+            {
+                "name": "Trent",
+                "message": "Absolut"
+            },
+            {
+                "name": "Rich & Steeler",
+                "message": "Ooo, schön"
+            },
+            {
+                "name": "kathapuranstori...",
+                "message": "Hey, das ist wunderbar ❤️"
+            },
+            {
+                "name": "Kiara",
+                "message": "Hallo, wir würden euch sehr gerne auf eurem Weg unterstützen 😍"
+            },
+            {
+                "name": "Wilson Squad...",
+                "message": "Das wäre fantastisch für uns :)"
+            },
+            {
+                "name": "ياسمين",
+                "message": "Ich werde sicher bestellen, vielen Dank"
+            },
+            {
+                "name": "Mabel",
+                "message": "Oh ja super"
+            },
+            {
+                "name": "Muffin Toffee",
+                "message": "Hey! So toll! Erzähl mir mehr darüber, wie das funktionieren wird?"
+            }
+        ]
+    },
+    "kickstarter": {
+        "badge": "Launch-Alarm 🚀",
+        "title_start": "Nicht verpassen",
+        "title_highlight": "Kickstarter Launch!",
+        "description": "Registrieren Sie sich jetzt, um zuerst benachrichtigt zu werden und Early-Bird-Belohnungen zu erhalten. Treten Sie dem Planet Petly Inner Circle bei.",
+        "success": "✔️ Erfolgreich registriert!",
+        "submit": "Zuerst benachrichtigen",
+        "registering": "Wird registriert..."
+    },
+    "language": "Sprache",
+    "english": "Englisch",
+    "spanish": "Spanisch",
+    "french": "Französisch",
+    "turkish": "Türkisch",
+    "portuguese": "Portugiesisch",
+    "japanese": "Japanisch",
+    "polish": "Polnisch",
+    "german": "Deutsch",
+    "slovak": "Slowakisch",
+    "bulgarian": "Bulgarisch"
+}

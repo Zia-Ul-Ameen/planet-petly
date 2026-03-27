@@ -14,7 +14,7 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://planetpetly.com"),
-  title: "Wall Mounted Pet Waste Bag Holder",
+  title: "Planet Petly | Wall Mounted Pet Waste Bag Holder",
   description:
     "Always be ready for clean, stress-free walks. Convenient holder with built-in dispenser keeps bags within easy reach every time you head out.",
   keywords: [
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     apple: "/favicon.svg?v=2",
   },
   openGraph: {
-    title: "Wall Mounted Pet Waste Bag Holder",
+    title: "Planet Petly | Wall Mounted Pet Waste Bag Holder",
     description:
       "Always be ready for clean, stress-free walks. Convenient holder with built-in dispenser keeps bags within easy reach every time you head out.",
     url: "https://planetpetly.com",
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Wall Mounted Pet Waste Bag Holder",
+    title: "Planet Petly | Wall Mounted Pet Waste Bag Holder",
     description: "Always be ready for clean, stress-free walks. Convenient holder with built-in dispenser keeps bags within easy reach every time you head out.",
     images: ["/meta-share.png"],
   },
