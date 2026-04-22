@@ -3,6 +3,12 @@
 @theme {
   --color-primary: #2e4437;
   --color-secondary: #d8cdbf;
+  --color-brand-green: #2d6a4f;
+  --color-brand-green-pale: #d1fae5;
+  --color-brand-navy: #1a3a2a;
+  --color-brand-amber: #ffce00;
+  --color-brand-amber-dark: #e6b800;
+  --color-brand-gray: #6b7280;
 
   --font-family-sans: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
 
@@ -14,8 +20,8 @@ html {
 }
 
 body {
-  background-color: #2a7dc9;
-  color: #2e4437;
+  background-color: #f8f5f0;
+  color: #1a3a2a;
   font-family: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -35,6 +41,28 @@ button {
 
   50% {
     transform: translateY(-16px);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 

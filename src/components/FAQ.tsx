@@ -32,7 +32,7 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
 
     return (
         <div
-            className={`group bg-white rounded-2xl border transition-all duration-300 ${isOpen ? "border-[#2a7dc9] shadow-lg shadow-blue-500/5 scale-[1.01]" : "border-gray-100 hover:border-gray-200"
+            className={`group bg-white rounded-2xl border transition-all duration-300 ${isOpen ? "border-[#2a7dc9] shadow-lg shadow-green-800/5 scale-[1.01]" : "border-gray-100 hover:border-gray-200"
                 }`}
         >
             <button
@@ -85,10 +85,9 @@ export default function FAQ() {
 
                         <Link
                             href="#contact"
-                            className="group relative px-8 py-4 bg-[#ffce00] text-[#1a3a2a] font-black text-sm tracking-widest uppercase rounded-full transition-all duration-300 shadow-xl hover:shadow-yellow-200 hover:-translate-y-1 overflow-hidden"
+                            className="inline-flex items-center px-8 py-4 bg-[#2a7dc9] text-white font-extrabold text-sm tracking-wide rounded-full shadow-lg shadow-[#2a7dc9]/25 hover:bg-[#2176c1] hover:-translate-y-0.5 transition-all duration-200"
                         >
-                            <span className="relative z-10 font-outfit">Contact Us</span>
-                            <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
+                            Contact Us
                         </Link>
 
                         {/* Decorative Brand Element (Official Favicon) */}

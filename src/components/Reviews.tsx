@@ -127,7 +127,7 @@ export default function Reviews() {
                                     <div className="flex items-center gap-1.5 flex-wrap">
                                         <span className="font-bold text-[#1a3a2a] text-sm leading-none">{review.name}</span>
                                         {review.verified && (
-                                            <svg className="w-[14px] h-[14px] text-blue-500 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                            <svg className="w-[14px] h-[14px] text-green-800 shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                                             </svg>
                                         )}
@@ -161,9 +161,8 @@ export default function Reviews() {
                             Be the first to know when Planet Petly launches.
                         </p>
                     </div>
-                    <button className="relative group overflow-hidden bg-[#1f6b64] hover:bg-[#154a45] text-white px-10 py-5 rounded-full text-base font-black transition-all duration-300 shadow-xl shadow-teal-900/20 hover:-translate-y-1 active:scale-95 whitespace-nowrap z-10 tracking-wide">
-                        <span className="relative z-10">Notify Me When it Launches 🚀</span>
-                        <div className="absolute inset-0 w-1/4 h-full bg-white/10 skew-x-[-20deg] -translate-x-full group-hover:translate-x-[400%] transition-transform duration-700" />
+                    <button className="inline-flex items-center px-10 py-4 bg-[#2a7dc9] text-white font-extrabold text-base tracking-wide rounded-full shadow-lg shadow-[#2a7dc9]/25 hover:bg-[#2176c1] hover:-translate-y-0.5 active:scale-[0.98] transition-all duration-200 whitespace-nowrap z-10">
+                        Notify Me When it Launches 🚀
                     </button>
                 </div>
 

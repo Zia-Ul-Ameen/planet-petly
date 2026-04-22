@@ -1,5 +1,4 @@
 import Hero from "@/components/Hero";
-import BrandingBanner from "@/components/BrandingBanner";
 import ProductComingSoon from "@/components/ProductComingSoon";
 import PremiumShopBanner from "@/components/PremiumShopBanner";
 import FeatureHighlight from "@/components/FeatureHighlight";
@@ -17,7 +16,6 @@ export default function HomePage() {
     <main className="relative">
       <Navbar />
       <Hero />
-      <BrandingBanner />
       <ProductComingSoon />
       <PremiumShopBanner />
       <FeatureHighlight />

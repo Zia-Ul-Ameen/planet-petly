@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function BrandingBanner() {
     return (
-        <section className="relative w-full py-8 md:h-[200px] bg-[#2a7dc9] -mt-10 md:-mt-14 z-20">
+        <section className="relative w-full py-8 md:h-[200px] bg-[#2d6a4f] -mt-10 md:-mt-14 z-20">
             {/* Top Wave (joins with Video Hero) - More pronounced */}
             <div className="absolute top-0 left-0 w-full -translate-y-[98%] z-0 leading-none" aria-hidden="true">
                 <svg
@@ -16,7 +16,7 @@ export default function BrandingBanner() {
                 >
                     <path
                         d="M0,60 C360,120 720,0 1080,60 C1260,90 1440,30 1440,60 L1440,120 L0,120 Z"
-                        fill="#2a7dc9"
+                        fill="#2d6a4f"
                     />
                 </svg>
             </div>

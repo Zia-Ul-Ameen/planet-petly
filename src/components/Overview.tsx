@@ -38,12 +38,12 @@ export default function Overview() {
 
             <div className="max-w-7xl mx-auto relative z-10">
                 <div className="mb-16">
-                    <span className="inline-block px-4 py-1.5 rounded-full bg-[#2a7dc9]/5 text-[#2a7dc9] text-[10px] font-black tracking-widest uppercase mb-6 border border-[#2a7dc9]/10">
+                    <span className="inline-block px-4 py-1.5 rounded-full bg-[#2d6a4f]/5 text-[#2d6a4f] text-[10px] font-black tracking-widest uppercase mb-6 border border-[#2d6a4f]/10">
                         Designed for Convenience
                     </span>
                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-[#1a3a2a] leading-[1.1] font-outfit uppercase tracking-tighter mb-8">
                         Built for <br />
-                        <span className="text-[#2a7dc9]">Everyday Life.</span>
+                        <span className="text-[#2d6a4f]">Everyday Life.</span>
                     </h2>
 
                     {/* Dashed Separator */}
@@ -70,7 +70,7 @@ export default function Overview() {
                             {/* Overlay Label */}
                             <div className="absolute bottom-6 left-6 right-6">
                                 <div className="bg-white/90 backdrop-blur-md p-5 rounded-2xl shadow-xl transform transition-all duration-500 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 border border-white/20">
-                                    <span className="text-[10px] font-black uppercase tracking-[0.2em] text-[#2a7dc9] block mb-1">Feature 0{index + 1}</span>
+                                    <span className="text-[10px] font-black uppercase tracking-[0.2em] text-[#2d6a4f] block mb-1">Feature 0{index + 1}</span>
                                     <p className="font-bold text-[#1a3a2a] text-sm leading-tight uppercase font-outfit">{item.alt}</p>
                                 </div>
                             </div>
