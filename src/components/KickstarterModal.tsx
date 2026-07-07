@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 
-const KICKSTARTER_URL = "https://www.kickstarter.com/projects/planetpetly/planetpetly-wall-mounted-multi-roll-poop-bag-dispenser?ref=profile_created&category_id=28";
+const KICKSTARTER_URL = "https://www.kickstarter.com/projects/planetpetlyofficial/planetpetly-wall-mounted-multi-roll-poop-bag-dispenser-0?ref=3mibxs";
 
 export default function KickstarterModal() {
     const [isOpen, setIsOpen] = useState(false);
