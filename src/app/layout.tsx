@@ -4,6 +4,7 @@ import Script from "next/script";
 import "./globals.css";
 
 import JsonLd from "@/components/JsonLd";
+import { SITE_URL, META_PIXEL_ID } from "@/lib/config";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -13,7 +14,7 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://planetpetly.com"),
+  metadataBase: new URL(SITE_URL),
   title: "Dog Poop Bag Holder Tray & Dispenser | 150 Eco Bags",
   description:
     "Never search for poop bags again. Organized holder tray with dispenser and 150 compostable bags for easy, mess-free dog walks.",
@@ -37,7 +38,7 @@ export const metadata: Metadata = {
     title: "Dog Poop Bag Holder Tray & Dispenser | 150 Eco Bags",
     description:
       "Never search for poop bags again. Organized holder tray with dispenser and 150 compostable bags for easy, mess-free dog walks.",
-    url: "https://planetpetly.com",
+    url: SITE_URL,
     siteName: "Planet Petly",
     locale: "en_US",
     type: "website",
@@ -88,7 +89,7 @@ export default function RootLayout({
             t.src=v;s=b.getElementsByTagName(e)[0];
             s.parentNode.insertBefore(t,s)}(window, document,'script',
             'https://connect.facebook.net/en_US/fbevents.js');
-            fbq('init', '887782824304159');
+            fbq('init', '${META_PIXEL_ID}');
             fbq('track', 'PageView');
           `}
         </Script>
@@ -97,7 +98,7 @@ export default function RootLayout({
             height="1"
             width="1"
             style={{ display: 'none' }}
-            src="https://www.facebook.com/tr?id=887782824304159&ev=PageView&noscript=1"
+            src={`https://www.facebook.com/tr?id=${META_PIXEL_ID}&ev=PageView&noscript=1`}
             alt=""
           />
         </noscript>

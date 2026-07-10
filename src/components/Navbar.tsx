@@ -1,39 +1,66 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import AnnouncementBar from "@/components/AnnouncementBar";
+import { usePathname } from "next/navigation";
 
 const NAV_LINKS = [
-    { label: "Home", href: "#hero" },
-    { label: "Products", href: "#products" },
-    { label: "About Us", href: "#about" },
-    { label: "Contact", href: "#contact" },
+    { label: "Home", href: "/#hero" },
+    { label: "Products", href: "/#products" },
+    { label: "About Us", href: "/#about" },
+    { label: "Contact", href: "/#contact" },
 ] as const;
 
 export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
     const [barVisible, setBarVisible] = useState(true);
+    const headerRef = useRef<HTMLElement>(null);
+    const pathname = usePathname();
+
+    const updateHeaderHeight = () => {
+        if (typeof window !== "undefined" && headerRef.current) {
+            const height = headerRef.current.offsetHeight;
+            document.documentElement.style.setProperty('--nav-height', `${height}px`);
+        }
+    };
 
     useEffect(() => {
         setScrolled(window.scrollY > 20);
         const handleScroll = () => setScrolled(window.scrollY > 20);
         window.addEventListener("scroll", handleScroll, { passive: true });
-        return () => window.removeEventListener("scroll", handleScroll);
+        
+        // Measure initial height and listen to window resize
+        updateHeaderHeight();
+        window.addEventListener("resize", updateHeaderHeight);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+            window.removeEventListener("resize", updateHeaderHeight);
+        };
     }, []);
+
+    useEffect(() => {
+        // Measure height when banner visibility changes
+        const timer = setTimeout(updateHeaderHeight, 50);
+        return () => clearTimeout(timer);
+    }, [barVisible]);
 
     const scrollToSection = (
         e: React.MouseEvent<HTMLAnchorElement>,
         href: string
     ) => {
+        if (pathname !== "/") {
+            return;
+        }
         e.preventDefault();
-        const id = href.replace("#", "");
+        const id = href.replace(/^\/?#/, "");
         const element = document.getElementById(id);
         if (element) {
-            const navHeight = 100;
+            const navHeight = headerRef.current ? headerRef.current.offsetHeight : 80;
             const top = element.getBoundingClientRect().top + window.scrollY - navHeight;
             window.scrollTo({ top, behavior: "smooth" });
         }
@@ -43,8 +70,10 @@ export default function Navbar() {
 
     return (
         <>
-            <header className="fixed left-0 right-0 z-50 transition-all duration-300 top-0">
-                <AnnouncementBar onDismiss={() => setBarVisible(false)} />
+            <header ref={headerRef} className="fixed left-0 right-0 z-50 transition-all duration-300 top-0">
+                {barVisible && (
+                    <AnnouncementBar onDismiss={() => setBarVisible(false)} />
+                )}
 
                 {/* Main nav bar */}
                 <div
@@ -57,8 +86,8 @@ export default function Navbar() {
 
                             {/* Logo */}
                             <Link
-                                href="#hero"
-                                onClick={(e) => scrollToSection(e, "#hero")}
+                                href="/#hero"
+                                onClick={(e) => scrollToSection(e, "/#hero")}
                                 aria-label="Planet Petly home"
                                 className="flex-shrink-0 group"
                             >
@@ -68,7 +97,7 @@ export default function Navbar() {
                                     width={180}
                                     height={40}
                                     priority
-                                    className="w-[160px] md:w-[200px] h-auto transition-transform duration-300 group-hover:scale-105"
+                                    className="w-[160px] md:w-[200px] h-auto transition-transform duration-300 group-hover:scale-102"
                                 />
                             </Link>
 
@@ -90,8 +119,8 @@ export default function Navbar() {
                             <div className="flex items-center gap-3">
                                 <div className="hidden md:block">
                                     <Link
-                                        href="#contact"
-                                        onClick={(e) => scrollToSection(e, "#contact")}
+                                        href="/#contact"
+                                        onClick={(e) => scrollToSection(e, "/#contact")}
                                         className="inline-flex items-center px-5 py-2.5 text-sm font-extrabold tracking-wide rounded-full bg-[#2a7dc9] text-white shadow-lg shadow-[#2a7dc9]/25 hover:bg-[#2176c1] hover:-translate-y-0.5 transition-all duration-200"
                                     >
                                         Notify Me
@@ -132,8 +161,8 @@ export default function Navbar() {
                                 ))}
                                 <li className="pt-4">
                                     <Link
-                                        href="#contact"
-                                        onClick={(e) => scrollToSection(e, "#contact")}
+                                        href="/#contact"
+                                        onClick={(e) => scrollToSection(e, "/#contact")}
                                         className="block w-full px-5 py-3 text-sm font-extrabold tracking-wide rounded-full bg-[#2a7dc9] text-white text-center transition-all duration-200 hover:bg-[#2176c1]"
                                     >
                                         Notify Me

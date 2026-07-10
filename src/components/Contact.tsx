@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { contactSchema, ContactFormData } from "@/lib/schemas";
+import { SUPPORT_EMAIL, FORM_API_URL } from "@/lib/config";
 
 export default function Contact() {
     const [apiError, setApiError] = useState<string | null>(null);
@@ -20,7 +21,7 @@ export default function Contact() {
     const onSubmit = async (data: ContactFormData) => {
         setApiError(null);
         try {
-            const response = await fetch("https://planetpetly.com/api/submit-form.php", {
+            const response = await fetch(FORM_API_URL, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -64,13 +65,13 @@ export default function Contact() {
                             </div>
 
                             <div className="flex flex-col gap-6">
-                                <a href="mailto:customercare@adrarecom.com" className="flex items-center gap-4 group cursor-pointer">
+                                <a href={`mailto:${SUPPORT_EMAIL}`} className="flex items-center gap-4 group cursor-pointer">
                                     <div className="w-12 h-12 rounded-2xl bg-gray-50 flex items-center justify-center text-brand-navy group-hover:bg-[#2a7dc9] group-hover:text-white transition-all duration-300">
                                         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
                                     </div>
                                     <div className="flex flex-col">
                                         <span className="text-xs font-bold text-gray-400 uppercase tracking-widest">Email Us</span>
-                                        <span className="font-medium text-[#2a7dc9] group-hover:text-[#2176c1] transition-colors duration-300">customercare@adrarecom.com</span>
+                                        <span className="font-medium text-[#2a7dc9] group-hover:text-[#2a7dc9]/80 transition-colors duration-300">{SUPPORT_EMAIL}</span>
                                     </div>
                                 </a>
                             </div>

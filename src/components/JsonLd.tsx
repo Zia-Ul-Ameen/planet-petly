@@ -1,4 +1,5 @@
 import React from 'react';
+import { SITE_URL, SUPPORT_EMAIL, INSTAGRAM_URL, FACEBOOK_URL, TIKTOK_URL } from '@/lib/config';
 
 export default function JsonLd() {
     const organizationData = {
@@ -6,18 +7,18 @@ export default function JsonLd() {
         "@type": "Organization",
         "name": "Planet Petly",
         "alternateName": "Petly",
-        "url": "https://planetpetly.com",
-        "logo": "https://planetpetly.com/logo.svg",
-        "image": "https://planetpetly.com/overview-1.jpeg",
+        "url": SITE_URL,
+        "logo": `${SITE_URL}/logo.svg`,
+        "image": `${SITE_URL}/overview-1.jpeg`,
         "sameAs": [
-            "https://www.instagram.com/planetpetly",
-            "https://www.facebook.com/profile.php?id=61583994294451",
-            "https://www.tiktok.com/@planetpetly.com?_r=1&_t=ZS-94UFqTFHEAS"
+            INSTAGRAM_URL,
+            FACEBOOK_URL,
+            TIKTOK_URL
         ],
         "description": "Planet Petly is a premium pet brand dedicated to high-performance, eco-friendly pet essentials. We specialize in sustainable waste bags, holders, and innovative pet care solutions.",
         "contactPoint": {
             "@type": "ContactPoint",
-            "email": "customercare@adrarecom.com",
+            "email": SUPPORT_EMAIL,
             "contactType": "customer support"
         }
     };
@@ -33,7 +34,7 @@ export default function JsonLd() {
         },
         "offers": {
             "@type": "Offer",
-            "url": "https://planetpetly.com",
+            "url": SITE_URL,
             "priceCurrency": "USD",
             "availability": "https://schema.org/PreOrder"
         }

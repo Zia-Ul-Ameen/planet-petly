@@ -2,8 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-
-const KICKSTARTER_URL = "https://www.kickstarter.com/projects/planetpetlyofficial/planetpetly-wall-mounted-multi-roll-poop-bag-dispenser-0?ref=3mibxs";
+import { KICKSTARTER_URL } from "@/lib/config";
 
 export default function KickstarterModal() {
     const [isOpen, setIsOpen] = useState(false);
@@ -31,7 +30,7 @@ export default function KickstarterModal() {
 
             {/* Modal */}
             <div
-                className={`relative w-full max-w-lg bg-white rounded-[32px] overflow-hidden shadow-[0_40px_80px_-10px_rgba(0,0,0,0.25)] transform transition-all duration-300 ${isVisible ? "scale-100 translate-y-0" : "scale-95 translate-y-6"}`}
+                className={`relative w-full max-w-xl bg-white rounded-[32px] overflow-hidden shadow-[0_40px_80px_-10px_rgba(0,0,0,0.25)] transform transition-all duration-300 ${isVisible ? "scale-100 translate-y-0" : "scale-95 translate-y-6"}`}
             >
                 {/* Close */}
                 <button
@@ -46,7 +45,7 @@ export default function KickstarterModal() {
                 {/* Hero Image */}
                 <div className="relative w-full h-52 sm:h-60 bg-[#2a7dc9]/10">
                     <Image
-                        src="/kickstarter.jpeg"
+                        src="/images/kickstarter-dailog.png"
                         alt="PlanetPetly on Kickstarter"
                         fill
                         className="object-cover object-top"
@@ -55,17 +54,17 @@ export default function KickstarterModal() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                     <span className="absolute bottom-4 left-5 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#05ce78] text-white text-[11px] font-black tracking-wide uppercase">
                         <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
-                        Live on Kickstarter
+                        Almost Live on Kickstarter
                     </span>
                 </div>
 
                 {/* Content */}
                 <div className="px-6 pt-5 pb-7">
-                    <h2 className="text-2xl sm:text-3xl font-black text-[#1a3a2a] leading-tight font-outfit mb-2">
-                        🌿 We&apos;re Live on Kickstarter!
+                    <h2 className="text-2xl sm:text-2xl font-black text-[#1a3a2a] leading-tight font-outfit mb-2">
+                        🌿 We're Almost Live on Kickstarter!
                     </h2>
                     <p className="text-gray-500 text-sm sm:text-base leading-relaxed mb-5">
-                        Be one of the first to own PlanetPetly — the world&apos;s first wall-mounted biodegradable dog bag dispenser. <span className="font-semibold text-[#1a3a2a]">Early bird pricing ends soon.</span>
+                        Be the first to grab PlanetPetly — the world's first wall-mounted biodegradable dog bag dispenser. <span className="font-semibold text-[#1a3a2a]">Early bird pricing goes live soon.</span>
                     </p>
 
                     <a
@@ -80,8 +79,8 @@ export default function KickstarterModal() {
                         </svg>
                     </a>
 
-                    <p className="text-center text-gray-400 text-xs font-medium mt-3">
-                        Join 100+ dog owners making walks cleaner &amp; greener
+                    <p className="text-center text-gray-400 text-sm font-medium mt-3">
+                        Join 200+ dog owners waiting for launch day
                     </p>
                 </div>
             </div>

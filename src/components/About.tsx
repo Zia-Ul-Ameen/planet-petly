@@ -10,7 +10,7 @@ export default function About() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center mb-24">
 
                     {/* Left: Content */}
-                    <div className="flex flex-col gap-6">
+                    <div className="flex flex-col gap-6 order-2 lg:order-1">
                         <div className="flex flex-col gap-4">
                             <span className="inline-block w-fit px-4 py-1.5 rounded-full bg-[#2a7dc9]/8 text-[#2a7dc9] text-[10px] font-black tracking-widest uppercase border border-[#2a7dc9]/15">
                                 Our Story
@@ -42,15 +42,27 @@ export default function About() {
                     </div>
 
                     {/* Right: Image */}
-                    <div className="relative group hidden lg:block">
+                    <div className="relative group order-1 lg:order-2 w-full">
                         <div className="absolute -inset-4 bg-[#2a7dc9]/5 rounded-[40px] scale-95 group-hover:scale-100 transition-transform duration-700 opacity-50" />
-                        <div className="relative rounded-[32px] overflow-hidden border border-[#2a7dc9]/10 shadow-2xl aspect-[4/5] lg:aspect-square">
+                        <div className="relative rounded-[32px] overflow-hidden border border-[#2a7dc9]/10 shadow-2xl lg:aspect-square">
+                            {/* Mobile Image */}
                             <Image
-                                src="/about-us.jpeg"
-                                alt="Planet Petly Vision"
-                                fill
-                                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                                src="/images/overview-2.png"
+                                alt="Planet Petly Mobile Vision"
+                                width={1200}
+                                height={800}
+                                className="w-full h-auto block lg:hidden object-cover transition-transform duration-700 group-hover:scale-101"
+                                priority
                             />
+                            {/* Desktop Image */}
+                            <div className="hidden lg:block relative w-full h-full">
+                                <Image
+                                    src="/images/story-behind.png"
+                                    alt="Planet Petly Vision"
+                                    fill
+                                    className="object-cover transition-transform duration-700 group-hover:scale-101"
+                                />
+                            </div>
                         </div>
                     </div>
                 </div>

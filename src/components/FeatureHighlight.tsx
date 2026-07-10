@@ -53,13 +53,22 @@ export default function FeatureHighlight() {
 
                     <div className="relative group">
                         <div className="absolute -inset-4 bg-[#2a7dc9]/5 rounded-[40px] scale-95 group-hover:scale-100 transition-transform duration-700 opacity-50" />
-                        <div className="relative rounded-[32px] overflow-hidden shadow-2xl">
+                        <div className="relative lg:block hidden rounded-[32px] overflow-hidden shadow-2xl">
                             <Image
-                                src="/make-life-easy.jpeg"
+                                src="/images/build-for.png"
                                 alt="Maintain Your Dog Healthier"
                                 width={800}
                                 height={800}
-                                className="w-full h-auto object-cover aspect-video lg:aspect-[15/16] transition-transform duration-700 group-hover:scale-105"
+                                className="w-full h-auto object-cover aspect-video lg:aspect-square transition-transform duration-700 group-hover:scale-101"
+                            />
+                        </div>
+                        <div className="relative lg:hidden rounded-[32px] overflow-hidden shadow-2xl">
+                            <Image
+                                src="/images/overview-1.png"
+                                alt="Maintain Your Dog Healthier"
+                                width={800}
+                                height={800}
+                                className="w-full h-auto object-cover lg:aspect-square transition-transform duration-700 group-hover:scale-101"
                             />
                         </div>
                     </div>

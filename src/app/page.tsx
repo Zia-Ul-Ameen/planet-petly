@@ -2,9 +2,7 @@ import Hero from "@/components/Hero";
 import ProductComingSoon from "@/components/ProductComingSoon";
 import PremiumShopBanner from "@/components/PremiumShopBanner";
 import FeatureHighlight from "@/components/FeatureHighlight";
-import Overview from "@/components/Overview";
 import FAQ from "@/components/FAQ";
-import Reviews from "@/components/Reviews";
 import Contact from "@/components/Contact";
 import About from "@/components/About";
 import Navbar from "@/components/Navbar";
@@ -19,9 +17,7 @@ export default function HomePage() {
       <ProductComingSoon />
       <PremiumShopBanner />
       <FeatureHighlight />
-      {/* <Overview /> */}
       <About />
-      {/* <Reviews /> */}
       <FAQ />
       <Contact />
       <Footer />

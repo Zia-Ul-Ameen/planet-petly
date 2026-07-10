@@ -2,8 +2,8 @@
 
 import { useState } from 'react';
 import { X } from 'lucide-react';
+import { KICKSTARTER_URL } from "@/lib/config";
 
-const KICKSTARTER_URL = "https://www.kickstarter.com/projects/planetpetly/planetpetly-wall-mounted-multi-roll-poop-bag-dispenser?ref=profile_created&category_id=28";
 
 export default function AnnouncementBar({ onDismiss }: { onDismiss?: () => void }) {
   const [visible, setVisible] = useState(true);
