@@ -6,24 +6,32 @@ import Image from "next/image";
 
 const FAQ_DATA = [
     {
-        question: "What products does Planet Petly offer?",
-        answer: "We offer a range of eco-friendly pet essentials, starting with our premium biodegradable waste bags and durable dispensers. We're constantly expanding our lineup to include sustainable toys, nutrition-focused food, and innovative home organizers.",
+        question: "What is PlanetPetly?",
+        answer: "PlanetPetly creates practical pet-care products designed to make everyday routines cleaner, easier, and more organized for pet parents.",
     },
     {
-        question: "Are your products truly eco-friendly?",
-        answer: "Yes! At Planet Petly, we avoid 'greenwashing.' Our waste bags are certified compostable or biodegradable where it matters most, and we prioritize recycled materials in our packaging and hard-goods production.",
+        question: "What comes with the PlanetPetly wall-mounted poop bag station?",
+        answer: "The complete set includes the wall-mounted organizer, a portable dispenser, removable side hooks, mounting screws and wall plugs, adhesive pads, and 10 rolls containing 150 poop bags.",
     },
     {
-        question: "When will the full product line be available?",
-        answer: "We are currently preparing for our official launch via Kickstarter! By signing up for our 'Notify Me' list, you'll be the first to know about our early-bird specials and exact launch dates.",
+        question: "How many poop bag rolls can the organizer hold?",
+        answer: "The organizer can store up to 15 standard-size poop bag rolls, helping you keep refills ready near your door.",
     },
     {
-        question: "Do you offer wholesale opportunities?",
-        answer: "Absolutely. We are currently connecting with retail stores, Amazon sellers, and distributors ahead of our launch. Please check our Wholesale section or contact us directly at admin@planetpetly.com.",
+        question: "Does it fit standard poop bag rolls?",
+        answer: "Yes. PlanetPetly is designed to fit most standard dog poop bag rolls measuring approximately 6 cm in length and 3 cm in diameter.",
     },
     {
-        question: "How can I stay updated on Planet Petly?",
-        answer: "The best way is to join our mailing list! You can also follow our journey on social media to see behind-the-scenes updates of our product development and sustainability efforts.",
+        question: "Can I install it without drilling?",
+        answer: "Yes. You can install it using the included adhesive pads on suitable smooth surfaces or use the included screws and wall plugs for a more secure installation.",
+    },
+    {
+        question: "Are the PlanetPetly poop bags compostable?",
+        answer: "Yes. Our bags are made using PBAT and PLA-based materials and are certified compostable according to applicable compostability standards. Always follow your local composting and waste-disposal guidelines.",
+    },
+    {
+        question: "Where do you ship?",
+        answer: "Shipping availability, delivery times, and charges depend on your location. The available shipping options will be shown during checkout.",
     },
 ];
 
@@ -64,7 +72,10 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
     );
 }
 
-export default function FAQ() {
+interface FAQEntry { question: string; answer: string; }
+
+export default function FAQ({ items }: { items?: FAQEntry[] }) {
+    const data = items ?? FAQ_DATA;
     return (
         <section id="faq" className="py-24 lg:pt-32 pb-10 px-6 bg-[#fbfaf7] overflow-hidden">
             <div className="max-w-7xl mx-auto">
@@ -104,7 +115,7 @@ export default function FAQ() {
 
                     {/* Right Column: Accordion */}
                     <div className="lg:col-span-7 flex flex-col gap-4">
-                        {FAQ_DATA.map((item, index) => (
+                        {data.map((item, index) => (
                             <FAQItem key={index} {...item} />
                         ))}
                     </div>

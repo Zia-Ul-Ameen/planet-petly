@@ -9,6 +9,8 @@ export default function KickstarterModal() {
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
+        const SEEN_KEY = 'pp_modal_seen';
+        if (sessionStorage.getItem(SEEN_KEY)) return;
         const timer = setTimeout(() => {
             setIsOpen(true);
             setTimeout(() => setIsVisible(true), 10);
@@ -17,6 +19,7 @@ export default function KickstarterModal() {
     }, []);
 
     const close = () => {
+        sessionStorage.setItem('pp_modal_seen', '1');
         setIsVisible(false);
         setTimeout(() => setIsOpen(false), 300);
     };
@@ -43,7 +46,7 @@ export default function KickstarterModal() {
                 </button>
 
                 {/* Hero Image */}
-                <div className="relative w-full h-52 sm:h-60 bg-[#2a7dc9]/10">
+                <div className="relative w-full h-74 bg-[#2a7dc9]/10">
                     <Image
                         src="/images/kickstarter-dailog.png"
                         alt="PlanetPetly on Kickstarter"

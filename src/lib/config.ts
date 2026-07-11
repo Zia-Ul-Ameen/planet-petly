@@ -10,7 +10,7 @@ export const BRAND_NAME = process.env.NEXT_PUBLIC_BRAND_NAME ?? "Planet Petly";
 export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://planetpetly.com";
 
 // ─── Contact ─────────────────────────────────────────────────────────────────
-export const SUPPORT_EMAIL = process.env.NEXT_PUBLIC_SUPPORT_EMAIL ?? "support@planetpetly.com";
+export const SUPPORT_EMAIL = process.env.NEXT_PUBLIC_SUPPORT_EMAIL ?? "contact@planetpetly.com";
 
 // ─── External Links ──────────────────────────────────────────────────────────
 export const KICKSTARTER_URL =

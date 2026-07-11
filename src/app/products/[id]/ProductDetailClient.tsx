@@ -17,6 +17,26 @@ const OVERVIEW_IMAGES = [
   { src: '/images/overview-6.png', alt: 'Product overview 6' },
 ];
 
+const PRODUCT_FAQ: Record<string, { question: string; answer: string }[]> = {
+  'product-b': [
+    { question: 'How many bags are included in one refill box?', answer: 'Each PlanetPetly refill box includes 16 rolls, with 15 bags per roll, for a total of 240 bags.' },
+    { question: 'What size are the refill rolls?', answer: 'Each roll is approximately 6 cm / 2.4 in long and 3 cm / 1.2 in diameter, designed to fit most standard dog poop bag dispensers.' },
+    { question: 'Do these refill rolls fit the PlanetPetly Wall-Mounted Organizer?', answer: 'Yes. PlanetPetly refill rolls are designed to fit perfectly inside the PlanetPetly Wall-Mounted Poop Bag Organizer.' },
+    { question: 'Are the bags compostable?', answer: 'Yes. PlanetPetly bags are certified compostable and made with plant-based materials for responsible everyday cleanups.' },
+    { question: 'Are the bags leak-resistant?', answer: 'Yes. The bags are designed to be extra thick and leak-resistant for safe and clean pet waste pickup.' },
+    { question: 'Are the bags easy to open and tear?', answer: 'Yes. Each bag is designed with easy-tear perforations and an easy-open feel for quick use during walks.' },
+    { question: 'Can I use these bags for cat litter?', answer: 'Yes. They can be used for dog waste, cat litter cleanups, and other small pet waste needs.' },
+  ],
+  'product-a': [
+    { question: 'What is the PlanetPetly Wall-Mounted Poop Bag Organizer?', answer: 'PlanetPetly is a wall-mounted organizer designed to keep poop bags, refills, your portable dispenser, and leash in one clean place near the door, so you are always ready before every walk.' },
+    { question: 'How many rolls can it hold?', answer: 'The organizer can hold up to 15 bag rolls inside, with one roll ready at the bottom pull slot for quick access.' },
+    { question: 'Can I install it without drilling?', answer: 'Yes. PlanetPetly includes both 3M adhesive pads and screws, so you can choose the mounting method that works best for your wall.' },
+    { question: 'Does it come with a portable dispenser?', answer: 'Yes. The kit includes a portable green dispenser that can hang on the side hook and be taken with you during walks.' },
+    { question: 'Does it fit standard poop bag rolls?', answer: 'Yes. PlanetPetly is designed to fit most standard-size dog poop bag rolls, including PlanetPetly compostable refill rolls.' },
+    { question: 'Are the included bags compostable?', answer: 'Yes. The included pet waste bags are certified compostable and made for everyday cleanups.' },
+  ],
+};
+
 interface Product {
   id: string;
   name: string;
@@ -96,14 +116,6 @@ export default function ProductDetailClient({ product }: { product: Product }) {
 
           {/* RIGHT: Product Info */}
           <div className="flex flex-col gap-6">
-            {/* Stars */}
-            <div className="flex items-center gap-1">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} size={16} className="fill-[#ffce00] text-[#ffce00]" />
-              ))}
-              <span className="ml-2 text-sm text-gray-500 font-medium">4.9 · Early Access</span>
-            </div>
-
             {/* Name */}
             <div>
               <h1 className="text-[clamp(1.75rem,3.5vw,2.75rem)] font-black leading-tight text-[#1a3a2a]">
@@ -146,13 +158,16 @@ export default function ProductDetailClient({ product }: { product: Product }) {
 
             {/* CTA */}
             <div className="pt-2">
-              <Link
-                href="/#contact"
-                className="w-full flex items-center justify-center gap-2 px-6 py-4 rounded-full font-black text-white text-sm tracking-wide shadow-lg transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl"
+              <button
+                onClick={() => {
+                  const el = document.getElementById('contact');
+                  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }}
+                className="w-full flex items-center justify-center gap-2 px-6 py-4 rounded-full font-black text-white text-sm tracking-wide shadow-lg transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl cursor-pointer"
                 style={{ backgroundColor: accentColor }}
               >
                 Notify Me When Available
-              </Link>
+              </button>
             </div>
 
             {/* Trust Badges */}
@@ -213,7 +228,7 @@ export default function ProductDetailClient({ product }: { product: Product }) {
       </section>
 
       {/* FAQ from homepage */}
-      <FAQ />
+      <FAQ items={PRODUCT_FAQ[product.id]} />
 
       {/* Contact Form from homepage */}
       <Contact />

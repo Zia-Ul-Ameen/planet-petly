@@ -49,7 +49,7 @@ export default function Footer() {
                                 <span className="w-6 h-6 md:w-8 md:h-8 rounded-full bg-white/10 flex items-center justify-center text-white group-hover:bg-yellow-400 group-hover:text-[#2a7dc9] transition-all shrink-0">
                                     <svg className="w-3 h-3 md:w-4 md:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
                                 </span>
-                                support@planetpetly.com
+                                {SUPPORT_EMAIL}
                             </a>
                             <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 md:gap-3 hover:text-yellow-400 transition-colors group">
                                 <span className="w-6 h-6 md:w-8 md:h-8 rounded-full bg-white/10 flex items-center justify-center text-white group-hover:bg-yellow-400 group-hover:text-[#2a7dc9] transition-all shrink-0">
