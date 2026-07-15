@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import Image from "next/image";
 
 const FAQ_DATA = [
@@ -94,12 +93,15 @@ export default function FAQ({ items }: { items?: FAQEntry[] }) {
                             Find answers to common questions about our products, shipping, and sustainable mission. Need more help? Contact us anytime!
                         </p>
 
-                        <Link
-                            href="#contact"
-                            className="inline-flex items-center px-8 py-4 bg-[#2a7dc9] text-white font-extrabold text-sm tracking-wide rounded-full shadow-lg shadow-[#2a7dc9]/25 hover:bg-[#2176c1] hover:-translate-y-0.5 transition-all duration-200"
+                        <button
+                            onClick={() => {
+                                const el = document.getElementById('contact');
+                                if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                            }}
+                            className="inline-flex items-center px-8 py-4 bg-[#2a7dc9] text-white font-extrabold text-sm tracking-wide rounded-full shadow-lg shadow-[#2a7dc9]/25 hover:bg-[#2176c1] hover:-translate-y-0.5 transition-all duration-200 cursor-pointer"
                         >
                             Contact Us
-                        </Link>
+                        </button>
 
                         {/* Decorative Brand Element (Official Favicon) */}
                         <div className="mt-12 hidden lg:block opacity-[0.06]">

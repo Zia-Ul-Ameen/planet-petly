@@ -2,9 +2,23 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { SUPPORT_EMAIL, INSTAGRAM_URL, FACEBOOK_URL, TIKTOK_URL } from "@/lib/config";
 
 export default function Footer() {
+    const pathname = usePathname();
+
+    const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+        if (pathname !== "/") return;
+        e.preventDefault();
+        const id = href.replace(/^\/?#/, "").replace(/^.*#/, "");
+        const element = document.getElementById(id);
+        if (element) {
+            const top = element.getBoundingClientRect().top + window.scrollY - 80;
+            window.scrollTo({ top, behavior: "smooth" });
+        }
+        window.history.pushState(null, "", href);
+    };
     return (
         <footer className="relative bg-[#2a7dc9] text-white pt-24 md:pt-32 overflow-hidden">
 
@@ -39,9 +53,9 @@ export default function Footer() {
                 <div className="w-full h-px border-t border-dashed border-white/20 mb-4 md:mb-12" />
 
                 {/* Footer Content Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-4 md:gap-16 items-start">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-4 md:gap-10 items-start">
 
-                    {/* Left: Contact Info */}
+                    {/* Left: Connect With Us */}
                     <div className="lg:col-span-4 space-y-2 md:space-y-6">
                         <h4 className="text-sm md:text-xl font-black font-outfit uppercase tracking-tight">Connect With Us</h4>
                         <div className="flex flex-col gap-2 md:gap-4 text-white/60 font-medium text-sm md:text-base">
@@ -72,20 +86,47 @@ export default function Footer() {
                         </div>
                     </div>
 
-                    {/* Right: Navigation */}
-                    <div className="lg:col-span-8 w-full">
+                    {/* Center: Business Info */}
+                    <div className="lg:col-span-4 space-y-2 md:space-y-5">
                         <div className="md:hidden w-full h-px border-t border-dashed border-white/20 mb-4" />
-                        <div className="flex flex-wrap gap-x-6 gap-y-3 md:gap-x-20 md:gap-y-8">
+                        <h4 className="text-sm md:text-xl font-black font-outfit uppercase tracking-tight">Business Info</h4>
+                        <div className="flex flex-col gap-2 md:gap-3 text-white/60 font-medium text-sm md:text-base">
+                            {/* Address with pin icon */}
+                            <div className="flex items-start gap-2 md:gap-3">
+                                <span className="w-6 h-6 md:w-8 md:h-8 rounded-full bg-white/10 flex items-center justify-center text-white shrink-0 mt-0.5">
+                                    <svg className="w-3 h-3 md:w-4 md:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                                </span>
+                                <address className="not-italic leading-relaxed text-xs md:text-sm">
+                                    <span className="block font-bold text-white/80 text-sm md:text-base not-italic">ADRARECOM LLC</span>
+                                    30 N Gould St Ste R<br />
+                                    Sheridan, WY 82801<br />
+                                    United States
+                                </address>
+                            </div>
+                            {/* Disclaimer note */}
+                            <p className="text-white/35 text-md leading-relaxed border-l-2 border-white/20 pl-3 ml-1 mt-1">
+                                This is our registered business address and is <strong className="text-white/50">not</strong> a retail store, warehouse, or customer-return facility. Please contact us before sending any product or correspondence.
+                            </p>
+                        </div>
+                    </div>
+
+                    {/* Right: Quick Links */}
+                    <div className="lg:col-span-4 w-full">
+                        <div className="md:hidden w-full h-px border-t border-dashed border-white/20 mb-4" />
+                        <h4 className="text-sm md:text-xl font-black flex lg:justify-end font-outfit uppercase tracking-tight mb-2 md:mb-6">Quick Links</h4>
+                        <div className="flex flex-wrap gap-x-6 gap-y-2 lg:items-end md:flex-col md:gap-x-0 md:gap-y-3">
                             {[
                                 { label: "Home", href: "/#hero" },
-                                { label: "About Us", href: "/#about" },
                                 { label: "Products", href: "/#products" },
-                                { label: "Contact", href: "/#contact" }
+                                { label: "About Us", href: "/#about" },
+                                { label: "FAQ", href: "/#faq" },
+                                { label: "Contact Us", href: "/#contact" },
                             ].map((link) => (
                                 <Link
                                     key={link.label}
                                     href={link.href}
-                                    className="text-sm md:text-2xl font-black font-outfit uppercase tracking-tight text-white/90 hover:text-yellow-400 transition-colors"
+                                    onClick={(e) => scrollToSection(e as React.MouseEvent<HTMLAnchorElement>, link.href)}
+                                    className="text-xs md:text-sm font-semibold font-outfit uppercase tracking-wide text-white hover:!text-yellow-400 opacity-70 hover:opacity-100 transition-all duration-200 inline-block"
                                 >
                                     {link.label}
                                 </Link>
@@ -95,14 +136,17 @@ export default function Footer() {
                 </div>
 
                 {/* Bottom Legal */}
-                <div className="mt-4 md:mt-18 pt-4 md:pt-10 pb-2 border-t border-white/10 text-center md:text-left">
+                <div className="mt-4 md:mt-12 pt-4 md:pt-8 pb-2 border-t border-white/10 flex flex-col md:flex-row md:items-center md:justify-between gap-2 text-center md:text-left">
                     <p className="text-white/30 text-xs font-bold uppercase tracking-[0.2em]">
-                        &copy; 2025 Planet Petly. All Rights Reserved. Crafted with love for pets.
+                        &copy; {new Date().getFullYear()} Planet Petly. All Rights Reserved. Crafted with love for pets.
+                    </p>
+                    <p className="text-white/30 text-[10px] md:text-xs uppercase tracking-widest">
+                        A brand of ADRARECOM LLC &mdash; Wyoming LLC
                     </p>
                 </div>
             </div>
 
-            <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-white/5 blur-[150px] rounded-full translate-y-1/2 translate-x-1/3" />
+            <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-white/5 blur-[150px] rounded-full translate-y-1/2 translate-x-1/3 pointer-events-none" />
         </footer>
     );
 }

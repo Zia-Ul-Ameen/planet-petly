@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import ProductDetailClient from '@/app/products/[id]/ProductDetailClient';
 
-export type ProductId = 'wall-mounted-multi-roll-poop-bag-dispenser' | 'biodegradable-bag-roll';
+export type ProductId = 'wall-mounted-multi-roll-poop-bag-dispenser' | 'certified-compostable-pet-waste-bags';
 
 export const PRODUCTS: Record<
   ProductId,
@@ -43,7 +43,7 @@ export const PRODUCTS: Record<
       '/images/product-a4.png',
     ],
   },
-  'biodegradable-bag-roll': {
+  'certified-compostable-pet-waste-bags': {
     id: 'product-b',
     name: 'Certified Compostable Pet Waste Bags',
     tagline: 'Good for your dog. Better for the planet.',

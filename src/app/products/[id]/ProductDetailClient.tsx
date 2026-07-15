@@ -8,6 +8,7 @@ import Navbar from '@/components/Navbar';
 import FAQ from '@/components/FAQ';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
+import { KICKSTARTER_URL } from '@/lib/config';
 
 const OVERVIEW_IMAGES = [
   { src: '/images/overview-1.png', alt: 'Product overview 1' },
@@ -158,16 +159,15 @@ export default function ProductDetailClient({ product }: { product: Product }) {
 
             {/* CTA */}
             <div className="pt-2">
-              <button
-                onClick={() => {
-                  const el = document.getElementById('contact');
-                  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }}
-                className="w-full flex items-center justify-center gap-2 px-6 py-4 rounded-full font-black text-white text-sm tracking-wide shadow-lg transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl cursor-pointer"
+              <a
+                href={KICKSTARTER_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full flex items-center justify-center gap-2 px-6 py-4 rounded-full font-black text-white text-sm tracking-wide shadow-lg transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl"
                 style={{ backgroundColor: accentColor }}
               >
                 Notify Me When Available
-              </button>
+              </a>
             </div>
 
             {/* Trust Badges */}

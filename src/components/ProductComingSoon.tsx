@@ -5,8 +5,8 @@ import Link from 'next/link';
 
 const PRODUCTS = [
   {
-    id: 'biodegradable-bag-roll',
-    name: 'Biodegradable Bag Roll',
+    id: 'certified-compostable-pet-waste-bags',
+    name: 'Certified Compostable Pet Waste Bags',
     image: '/images/product-b1.png',
     featured: false,
   },

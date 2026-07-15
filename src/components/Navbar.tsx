@@ -6,6 +6,7 @@ import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import AnnouncementBar from "@/components/AnnouncementBar";
 import { usePathname } from "next/navigation";
+import { KICKSTARTER_URL } from "@/lib/config";
 
 const NAV_LINKS = [
     { label: "Home", href: "/#hero" },
@@ -118,13 +119,14 @@ export default function Navbar() {
                             {/* Right CTA + mobile hamburger */}
                             <div className="flex items-center gap-3">
                                 <div className="hidden md:block">
-                                    <Link
-                                        href="/#contact"
-                                        onClick={(e) => scrollToSection(e, "/#contact")}
+                                    <a
+                                        href={KICKSTARTER_URL}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
                                         className="inline-flex items-center px-5 py-2.5 text-sm font-extrabold tracking-wide rounded-full bg-[#2a7dc9] text-white shadow-lg shadow-[#2a7dc9]/25 hover:bg-[#2176c1] hover:-translate-y-0.5 transition-all duration-200"
                                     >
                                         Notify Me
-                                    </Link>
+                                    </a>
                                 </div>
 
                                 {/* Mobile hamburger */}
@@ -160,13 +162,14 @@ export default function Navbar() {
                                     </li>
                                 ))}
                                 <li className="pt-4">
-                                    <Link
-                                        href="/#contact"
-                                        onClick={(e) => scrollToSection(e, "/#contact")}
+                                    <a
+                                        href={KICKSTARTER_URL}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
                                         className="block w-full px-5 py-3 text-sm font-extrabold tracking-wide rounded-full bg-[#2a7dc9] text-white text-center transition-all duration-200 hover:bg-[#2176c1]"
                                     >
                                         Notify Me
-                                    </Link>
+                                    </a>
                                 </li>
                             </ul>
                         </nav>
