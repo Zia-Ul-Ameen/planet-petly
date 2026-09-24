@@ -41,8 +41,7 @@ export const SOCIAL_LINKS = [
 
 // ─── Contact form API ────────────────────────────────────────────────────────
 export const FORM_API_URL =
-  process.env.NEXT_PUBLIC_FORM_API_URL ??
-  "https://planetpetly.com/api/submit-form.php";
+  process.env.NEXT_PUBLIC_FORM_API_URL ?? "/api/contact";
 
 // ─── Analytics ───────────────────────────────────────────────────────────────
 export const META_PIXEL_ID =
